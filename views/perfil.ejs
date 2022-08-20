@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/perfil.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin+Condensed" />
+    <title>Perfil</title>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <section id="logo" >
+            <img class="logoHeader" src="/images/imagensEmComum/logo.png" alt="">
+        </section>
+        <section id="localizacaoHeader">
+            <img class="localizacao" src="/images/icons/localizacao.png" alt="">
+            <p> Londrina - PR</p>
+        </section>
+        <section id="buscarBotao">
+            <img class="buscar" src="./images/icons/pesquisa.png" alt="">
+        </section>
+        <section id="buscar">
+            <p>Buscar</p>
+        </section>
+        <section id="iconeLogin">
+            <img class="loginAcesso" src="/images/icons/perfil.png" alt="perfil">
+            <p class="loginTexto" >Login</p>
+        </section>
+        <section id="iconeCarrinho">
+            <img class="carrinhoAcesso" src="/images/icons/carrinho.png" alt="">
+            <p class="carrinhoTexto">Carrinho</p>
+        </section>
+    </header>
+    <div id="conteudo">
+        <!-- Dados Usuario -->
+        <section id="usuario">
+            <div id="imagem">
+                <img class="perfilImagem" src="/images/perfil/persona.png" alt="">
+                <div id="editarDados">
+                    <img  src="/images/icons/editarDados.png"  alt="" ><p>Editar</p>
+                    <img  src="/images/icons/mais.png"  alt="" ><p>Adicionar</p>
+                </div>
+            </div>
+            <div id="usuarioTexto">
+                <p id = "usuarioNome">Ana<img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" ></p>
+                <p id = "usuarioSobrenome">Souza</p> 
+                <ul id="dados">
+                   <li><h5>Email: </h5> ana.r.sou@email.com <img id="editar" src="/images/icons/editar.png"  alt="" ></li>
+                   <li><h5>Usuario: </h5> AnaSou</li>
+                   <li><h5>Local: </h5> Londrina - PR</li>
+                </ul>
+            </div>
+            <!-- Dados Historico Ultimo Ingresso Comprado -->
+            <div id="usuarioIngressos">
+                <div id="usuarioTexto">
+                    <p id = "ingressos">Ingressos Ana<img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" ></p>
+                    <div  id="dadosIngressos">
+                    <img class="perfilImagemIngresso" src="/images/perfil/coldplay.png" alt="">
+                    <ul id="dadosCompra">
+                        <li><h4 id = "showNome">Coldplay<h4></li>
+                        <li><h4 id = "showNomePessoa">Ana Souza<h4></li>
+                        <li><h5>Unidade: </h5> 1 Inteira </li>
+                        <li><h5>End:  </h5> Av Saul Elkind, S/N, SP </li>
+                        <li><h5>Data Show: </h5>  20/06/2022 <h5> Hora: </h5> 19:30</li>
+                        <li><h5>Data Compra: </h5> 18/04/2022 <h5> Hora: </h5> 07:45</li>
+                        <li><h5>Área:  </h5> Pista <h5> Valor: </h5> R$690,00</li>
+                        <li><bottom id="botao"> Ingressos </bottom></li>
+                    </ul> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="formulario">
+            <!-- Formulario Cadastro Dados Usuario -->
+            <div id="cadastro">
+               <ul><form action="" method="post">
+                    <li><label for="Nome"></label>
+                    <input type="text" name="Nome" id="Nome" placeholder="Nome"/></li>
+
+                <li><label for="CPF"></label>
+                    <input type="text" name="CPF" id="CPF" placeholder="CPF"/></li>
+
+                <li><label for="Email"></label>
+                    <input type="text" name="Email" id="Email" placeholder="Email"/></li>
+
+                <li><label for="Celular"></label>
+                    <input type="text" name="Celular" id="Celular" placeholder="Celular"/></li>
+                </form></ul>
+            </div> 
+            <!-- Banner Ingressos Historico -->
+            <div id="IngressosHistorico">
+                <div id="botoes">
+                <img id="botaoEsquerdo"  src="/images/icons/setaEsquerda.png"  alt="" >
+                <img id="showsImagem"  src="/images/perfil/shows.png"  alt="" >
+                <img id="botaoDireito"  src="/images/icons/setaDireita.png"  alt="" >
+                </div>
+            </div>
+            
+        </section>
+    </div>  
+    <!--Footer--> 
+    <footer>
+        <section id="ondeEstamos">
+                <img src="/images/icons/localizacaoFooter.png" alt="">
+                <div class="textoFooter">
+                    <p class="footerTitulo">Onde Estamos?</p>
+                    <p class="footerTexto">Av Saul Elkind, S/N, Conjunto Semiramis,<br>Londrina - PR</p>
+                </div>
+        </section>
+        <section id="faleConosco">
+                <img src="./images/icons/balao.png" alt="">
+                <div class="textoFooter">
+                    <p class="footerTitulo">Fale conosco:</p>
+                    <p class="footerTexto">e-mail: emailtickets@tickets.com.br<br>Central de Atendimento: 1111 1111 1111</p>
+                </div>
+        </section>
+            <div class="instagram">
+                <a href="https://www.instagram.com/essantana/" target="_blank">
+                <img src="/images/icons/instagram.png" alt="">
+                </a>
+            </div>
+            <div class="facebook">
+                <a href="https://www.facebook.com.br/elvis.s.santana" target="_blank">
+                <img src="/images/icons/facebook.png">
+                </a>
+            </div>
+        </section>
+</footer>
+</body>
+</html>

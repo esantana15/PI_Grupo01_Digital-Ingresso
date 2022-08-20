@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2? family= Cabin+Condensed:wght@400;500;600;700 & display=swap');
+*{
+    font-family: 'Cabin Condensed', sem serifa;
+}
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px; margin: 0;
+    background-color: #1F2239;
+}
+
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 17vh;
+    
+    
+    
+}
+
+#logo .logoHeader {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    padding: 30px 0px 0px 98px;
+   
+
+
+}
+
+#localizacaoHeader .localizacao {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 17px;
+    height:3vh;
+    margin-left: -150px;
+    
+}
+
+#localizacaoHeader p {
+        
+    color: #EDE3F5;
+    margin-left: -120px;
+    margin-top: 20px;
+    font-family: bakbak one;
+    font-size: 11px;
+        
+}
+
+#buscarBotao {
+    height: 2px;
+    margin-top: 45px;
+    margin-left: 455px;
+    
+}
+
+#buscar {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #3E3863;
+    width: 615px;
+    height: 30px;
+    margin-top: -145px;
+    margin-bottom: 46px;
+    margin-left: 360px; 
+    justify-content: space-between;
+
+}
+
+#buscar p {
+    font-size: 11px;
+    font-family: bakbak one;
+    opacity: 55%;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #EDE3F5;
+}
+header #iconeLogin .loginAcesso {
+    position: absolute;
+    margin-left: 132px;
+    margin-top: -155px;
+    height: 21px;
+}
+
+header #iconeLogin .loginTexto {
+    color: #554E80;
+    position: absolute;
+    font-size: 10px;
+    font-family: bakbak one;
+    margin-left: 130px;
+    margin-top: -128px;
+}
+
+header #iconeCarrinho .carrinhoAcesso {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -155px;
+    height: 21px;
+}
+header #iconeCarrinho .carrinhoTexto {
+    color: #554E80;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -128px;
+    font-size: 10px;
+    font-family: bakbak one;
+}
+#conteudo {
+    color:#EDE3F5 ;
+    background-image: url(../login-cadastro/assets/imagens/imagemFundo.png);
+    height: auto;
+    max-width: 100%;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 65vh;
+  }
+  
+  .left-login > h1 {
+    font-family: 3vw;
+    color: var(--first-color);
+    
+  }
+  
+  .right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+.logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-logo{
+    margin: 10px;
+}
+
+#headerCardLogin{
+    width:30vw;
+    display:flex;
+    flex-wrap: wrap;
+} 
+
+#btnLoginSignUpSelect{
+    display:inline;
+    width:10vw;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #3E3863;
+    background:#EDE3F5;
+    cursor: pointer;
+}
+
+.btnLoginSignUp {
+    display:inline;
+    width:10vw;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #EDE3F5;
+    background:#3E3863;
+    cursor: pointer;
+}
+
+.card-login {
+    position: flex;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background:rgba(22, 23, 44, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    margin-bottom: 47vh;
+    margin-top: 20vw;
+    margin-right: 10vw;
+    height: 60%;
+}
+  
+  .card-login > h1 {
+    color: var(--dark-color);
+    font-weight: 800;
+  }
+  
+  .textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #3E3863;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  .textfield > label {
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .textfield > input::placeholder {
+    color: var(--text-color);
+  }
+  
+  .btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #423C6C;
+    background: #EDE3F5;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+  }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 70px 0px 70px;
+    background-color: #1F2239;
+    align-items: center;
+    height: 16vh;
+    width: 100wv;
+}
+
+footer #ondeEstamos {
+    display: flex;
+    width: 320px;
+    padding-left: 78px;
+}
+
+footer #ondeEstamos img{
+    height: 25px;
+    padding-right: 15px ;
+}
+
+footer .footerTitulo {
+    text-align: left;
+    font-family: bakbak one;
+    font-size: 12px;
+    color: #EDE3F5;
+    
+    
+}
+
+footer .footerTexto {
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    color: #EDE3F5;
+    line-height: 20px;
+}
+
+footer #faleConosco {
+    
+    display: flex;
+    width: 250px;
+    padding-left: 100px;
+    
+}
+
+footer #faleConosco img{
+
+    height: 25px;
+    padding-right: 15px;
+    
+}
+footer .instagram {
+
+    margin-left: 280px;
+}
+
+footer .facebook {
+
+    margin-left: 50px;
+}
+
+footer .instagram img {
+    width: 25px;
+    
+}
+
+footer .facebook img {
+    width: 25px;
+
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    background: rgba(22, 23, 44, 0.8);
+    width: 40%;
+    min-width: 300;
+    padding: 40px;
+    border-radius: 20px;
+    height: 70%;
+    position: relative;
+}
+
+.input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #3E3863;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.btn-cadastrar{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #423C6C;
+    background: #EDE3F5;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.texo-modal{
+    color:#f0ffffde;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-container.mostrar{
+    display: flex;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0,-60,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.mostrar .modal{
+    animation: modal .3s;
+}
+
+.fechar{
+    position: absolute;
+    font-size: 1.2em;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #EDE3F5;
+    color: #EDE3F5;
+    background:#3E3863;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.3);
+}

@@ -1,0 +1,509 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px; margin: 0;
+    background-color: #1F2239;
+}
+
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 17vh;
+    
+    
+}
+
+#logo .logoHeader {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    padding: 30px 0px 0px 98px;
+   
+
+
+}
+
+#localizacaoHeader .localizacao {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 17px;
+    height:3vh;
+    margin-left: -150px;
+    
+}
+
+#localizacaoHeader p {
+        
+    color: #EDE3F5;
+    margin-left: -120px;
+    margin-top: 20px;
+    font-family: bakbak one;
+    font-size: 11px;
+        
+}
+
+#buscarBotao {
+    height: 2px;
+    margin-top: 45px;
+    margin-left: 455px;
+
+}
+
+#buscar {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #3E3863;
+    width: 615px;
+    height: 30px;
+    margin-top: -145px;
+    margin-bottom: 46px;
+    margin-left: 360px; 
+    justify-content: space-between;
+
+}
+
+#buscar p {
+    font-size: 11px;
+    font-family: bakbak one;
+    opacity: 55%;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #EDE3F5;
+}
+header #iconeLogin .loginAcesso {
+    position: absolute;
+    margin-left: 132px;
+    margin-top: -155px;
+    height: 21px;
+}
+
+header #iconeLogin .loginTexto {
+    color: #554E80;
+    position: absolute;
+    font-size: 10px;
+    font-family: bakbak one;
+    margin-left: 130px;
+    margin-top: -128px;
+}
+
+header #iconeCarrinho .carrinhoAcesso {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -155px;
+    height: 21px;
+}
+header #iconeCarrinho .carrinhoTexto {
+    color: #554E80;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -128px;
+    font-size: 10px;
+    font-family: bakbak one;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 70px 0px 70px;
+    background-color: #1F2239;
+    align-items: center;
+    height: 16vh;
+    width: 100wh;
+
+}
+
+footer #ondeEstamos {
+    display: flex;
+    width: 320px;
+    padding-left: 78px;
+}
+
+footer #ondeEstamos img{
+    height: 25px;
+    padding-right: 15px ;
+}
+
+footer .footerTitulo {
+    text-align: left;
+    font-family: bakbak one;
+    font-size: 12px;
+    color: #EDE3F5;
+    
+    
+}
+
+footer .footerTexto {
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    color: #EDE3F5;
+    line-height: 20px;
+}
+
+footer #faleConosco {
+    
+    display: flex;
+    width: 250px;
+    padding-left: 100px;
+    
+}
+
+footer #faleConosco img{
+
+    height: 25px;
+    padding-right: 15px;
+    
+}
+footer .instagram {
+
+    margin-left: 280px;
+}
+
+footer .facebook {
+
+    margin-left: 50px;
+}
+
+footer .instagram img {
+    width: 25px;
+    
+}
+
+footer .facebook img {
+    width: 25px;
+
+}
+
+
+
+#conteudo {
+    width: auto;
+    color: #EDE3F5;
+    background-color: #16172C;
+    height: auto;
+    padding: 10px 100px 10px 100px;
+}
+
+
+#conteudo #persona {
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+#conteudo .foto img{
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    
+}
+#conteudo #perfil {
+    height: 30vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+#conteudo #persona .nome {
+    font-size: 35px;
+    font-family: bakbak one;
+    height: 150px;
+    width: 550px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#conteudo #persona .nome p, .barcode  {
+    font-size: 35px;
+    font-family: bakbak one;
+    height: 40px;
+    width: 220px;
+    padding: 20px;
+}
+#conteudo  .add h2 {
+    font-family: bakbak one;
+    font-size: 20px;
+    padding: 20px;
+    
+}
+
+.iconPlus img{
+    width: 30px;
+    padding: 5px;
+}
+.nome .add {
+    color: #EDE3F5;;
+    font: Arial;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+/*Linha de cabeçalho com os rotulos*/
+#tabela .tabela01 {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33305B;
+    padding: 1px;
+    width: 100vw;
+    height: 50px;
+    
+}
+#tabela .tabela01 .m {
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100px;
+    padding: 10px;
+    color: #988FB6;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px;
+
+}
+
+/*primeira linha de ingressos*/
+#tabela2 .tabela02 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+    background-color: #16172C;
+    padding: 1px;
+    width: 100vw;
+    height: auto;
+
+}
+ .m {
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100px;
+    padding: 10px;
+    color: #988FB6;
+    font-size: 15px;
+    text-align: center;
+    line-height: normal;
+}
+.m .p1 {
+    color: #988FB6;
+    font-size: 15px;
+    line-height: normal;
+}
+.m .p2 {
+    color: #EDE3F5;
+    font-size: 10px;
+    text-align: center;
+    line-height: normal;
+}
+
+/*seguda linha de ingressos*/
+
+#tabela3 .tabela03 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #1C1C36;
+    width: 100vw;
+    height: auto;
+
+}
+
+.y {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    justify-content: space-between;
+    color:#988FB6;
+    padding: 10px;
+}
+.arrowCart {
+    width: 20px;
+    padding: 0px 10px;
+
+}
+
+#tabela4 .tabela04 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #16172C;
+    width: 100vw;
+    height: 200px;
+
+
+}
+ /* paragrafo onde está o resumo da compra*/
+#tabela4 .tabela04 .m {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    justify-content: space-between;
+    align-content: flex-start;
+
+
+}
+ /* paragrafo onde está o texto do resumo da compra*/
+
+#tabela4 .tabela04 .m .mm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+  
+}
+ /* paragrafo onde está o texto do resumo da compra - Customização das linhas. dividi em duas divs para poder trabalhar com cores diferentes*/
+
+#tabela4 .tabela04 .m .p1 {
+    font-size: 15px;
+    color: #EDE3F5;
+    text-align: left;
+    line-height: 25px;
+
+}
+#tabela4 .tabela04 .m p {
+    font-size: 15px;
+    font-weight:bolder;
+    color: #988FB6;
+    text-align: left;
+    line-height: 25px;
+
+}
+
+#tabela4 .tabela04 .m .mmm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ /* paragrafo onde está o texto do resumo da compra
+ Campo do total*/
+
+#tabela4 .tabela04 .m .mmm .valortotal {
+    color: #988FB6;
+    font-size: 20px;
+    line-height: 30px;
+
+
+}
+
+#tabela4 .tabela04 .m .mmm .total {
+    color: #EDE3F5;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+
+ /* imagens dos shows comprados pelo cliente*/
+
+#tabela4 .tabela04 .m1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 250px;
+    color: #EDE3F5;
+    text-align: center;
+    justify-content: space-around;
+    align-content: flex-start;
+}
+
+.z {
+    width: 50px;
+}
+ /*aqui estão sugestões de outros show para o cliente*/
+
+#tabela4 .tabela04 .m3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+    padding: 40px;
+    color: #EDE3F5;
+    text-align: center;
+    justify-content: center;
+}
+#tabela4 .tabela04 .m3 .maisshows {
+    font-family: bakbak one;
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #33305B;
+    background: #EDE3F5;
+    cursor: pointer;
+    font-size: 15px;
+}
+#tabela4 .tabela04 .m3 .maisshows:hover {
+    color:  #EDE3F5;
+    background: #33305B;
+
+}
+
+#tabela4 .tabela04 .img {
+    width: 100px;
+    padding: 10px 5px;
+}
+
+#tabela4 .tabela04 .arrow {
+    width: 30px;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#botao {
+    width: 100vw;
+    background-color:#EDE3F5;
+    height: 20px;
+}
+
+.comprar {
+    width: 300px;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    color: #33305B;
+    background: #EDE3F5;
+    cursor: pointer;
+    font-family: bakbak one;
+    font-size: 15px;
+    position: relative;
+    top: 7px;
+}
+
+.comprar:hover {
+    color:  #EDE3F5;
+    background: #33305B;
+}
+
+.z {
+    width: 20px;
+}

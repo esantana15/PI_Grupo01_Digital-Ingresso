@@ -1,0 +1,463 @@
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px; margin: 0;
+    background-color: #1F2239;
+    
+}
+h5{
+    font-weight: bold;
+    color: #988FB6;
+    padding-right: 3px;
+    padding-left: 3px;
+}
+
+li{
+    flex-direction: row;
+    display: flex;
+    line-height: 12px;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 17vh;
+    
+    
+    
+}
+
+#logo .logoHeader {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    padding: 30px 0px 0px 98px;  
+
+
+
+}
+
+#localizacaoHeader .localizacao {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 17px;
+    height:3vh;
+    margin-left: -150px;
+    
+}
+
+#localizacaoHeader p {
+        
+    color: #EDE3F5;
+    margin-left: -120px;
+    margin-top: 20px;
+    font-family: bakbak one;
+    font-size: 11px;
+        
+}
+
+#buscarBotao {
+    height: 2px;
+    margin-top: 45px;
+    margin-left: 455px;
+    
+}
+
+#buscar {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #3E3863;
+    width: 615px;
+    height: 30px;
+    margin-top: -145px;
+    margin-bottom: 46px;
+    margin-left: 360px; 
+    justify-content: space-between;
+
+}
+
+#buscar p {
+    font-size: 11px;
+    font-family: bakbak one;
+    opacity: 55%;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #EDE3F5;
+}
+header #iconeLogin .loginAcesso {
+    position: absolute;
+    margin-left: 132px;
+    margin-top: -155px;
+    height: 21px;
+}
+
+header #iconeLogin .loginTexto {
+    color: #554E80;
+    position: absolute;
+    font-size: 10px;
+    font-family: bakbak one;
+    margin-left: 130px;
+    margin-top: -128px;
+}
+
+header #iconeCarrinho .carrinhoAcesso {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -155px;
+    height: 21px;
+}
+header #iconeCarrinho .carrinhoTexto {
+    color: #554E80;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -128px;
+    font-size: 10px;
+    font-family: bakbak one;
+}
+
+/* Background Conteudo */
+
+#conteudo {
+    width: 100wh;
+    color: #EDE3F5;
+    background-color: #16172C;
+    height: 344px;
+    padding: 30px;   
+    
+}
+
+/* Dados Usuario */
+#imagem{
+    
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    
+}
+#imagem #editarDados p{
+    font-family: bakbak one;
+    font-size: 09px;
+    color: #EDE3F5;
+    padding-right: 10px;
+    margin-top: -06px;
+}
+#editarDados img{
+    height: 19px;
+    padding-right: 08px;
+    
+ 
+ }
+
+#editar{
+    padding-left: 15px;
+    height: 10px;
+}
+
+#usuario{
+    display:inline-flex;
+    align-items: flex-start;
+    padding-left: 80px;
+  
+}
+
+#usuario .perfilImagem {
+  
+    display: flex;
+    width: 125px;
+    padding-left: 200px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    
+
+}
+
+#editarDados{
+    display:inline-flex;
+    align-items: flex-start;
+    padding-left: 09px;
+ 
+}
+
+#usuarioTexto{
+    padding-left: 10px;
+    padding-top: 07px;
+}
+
+#usuario p{
+    
+    padding-top: 05px;
+    font-family: bakbak one;
+    font-size: 24px; 
+
+}
+
+#usuarioNome{
+    padding-left: 10px;
+  
+  
+    
+}
+
+#usuarioSobrenome{
+    font-family: bakbak one;
+    font-size: 23px;
+    padding-left: 65px;
+   
+   
+}
+
+#codigoBarra{
+    height: 12px;
+    padding-left: 10px;
+   
+}
+
+#dados{
+    
+    padding-left: 10px;
+    padding-top: 20px;
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-size: 10.1px;
+    color: #EDE3F5;
+    
+    
+    
+}
+
+/* Dados Historico Ultimo Ingresso Comprado */
+#usuarioIngressos{
+
+    padding-left: 120px;
+}
+#dadosIngressos{
+    padding-top: 07px;
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-size: 10.1px;
+    color: #EDE3F5;
+    display:flex;
+}
+
+#usuario .perfilImagemIngresso {
+  
+    display: flex;
+    width: 150px;
+    padding-top: 10px;
+    
+}
+
+#dadosCompra{
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+#showNome{
+    font-family: bakbak one;
+    font-size: 15px;
+    font-style: normal;
+    color: #988FB6;
+    
+}
+
+#showNomePessoa{
+    padding-top: 05px;
+    font-family: bakbak one;
+    font-style: normal;
+    font-size: 10px;
+    color: #EDE3F5;
+    padding-bottom: 10px;
+    
+}
+
+#botao{
+    margin-top: 12px;
+    background-color: #423C6C;
+    text-align: center;
+    font-family: bakbak one;
+    font-size: 09px;
+    color: #EDE3F5;
+    border: none;
+    border-radius:6px;
+    width: 160px;
+    height: 16px;
+    padding-top: 02px;
+    
+
+}
+
+/* Formulario Cadastro Dados Usuario */
+#formulario{
+
+    display:inline-flex;
+    align-items: flex-start;
+    padding-left: 260px;
+    padding-top: 5px;
+    
+    
+}
+#cadastro{
+    align-items: flex-start;
+    color: #EDE3F5;
+}
+input{
+  
+    width: 260px;
+    height: 20px;
+    background-color: #3E3863;
+    font-size: 10px;
+    font-family: bakbak one;
+    margin-top: 6px;
+    margin-left: 10px;
+    border:none;
+    margin: 6px;
+    padding-left: 10px;
+    color: #EDE3F5;
+    
+    
+
+}
+/* Banner Ingressos Historico */
+#ingressosHistorico{
+   
+    display:flex;
+    align-items: flex-start;
+    
+}
+#botoes{
+    
+    padding-top: 60px;
+    display:inline-flex;
+    padding-left: 90px;
+    flex-direction:row;
+
+}
+#botaoDireito{
+
+
+    width: 20px;
+    height: 20px;
+
+
+
+
+}
+#botaoEsquerdo{
+   
+    width: 20px;
+    height: 20px;
+    
+
+
+}
+#showsImagem{
+    margin-top: -30px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 90px;
+    
+}
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 70px 0px 70px;
+    background-color: #1F2239;
+    height: 16vh;
+    width: 100wh;
+}
+
+footer #ondeEstamos {
+    display: flex;
+    width: 320px;
+    padding-left: 78px;
+}
+
+footer #ondeEstamos img{
+    height: 25px;
+    padding-right: 15px ;
+}
+
+footer .footerTitulo {
+    text-align: left;
+    font-family: bakbak one;
+    font-size: 12px;
+    color: #EDE3F5;
+    
+    
+}
+
+footer .footerTexto {
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    color: #EDE3F5;
+    line-height: 20px;
+}
+
+footer #faleConosco {
+    
+    display: flex;
+    width: 250px;
+    padding-left: 100px;
+    
+}
+
+footer #faleConosco img{
+
+    height: 25px;
+    padding-right: 15px;
+    
+}
+footer .instagram {
+
+    margin-left: 280px;
+}
+
+footer .facebook {
+
+    margin-left: 50px;
+}
+
+footer .instagram img {
+    width: 25px;
+    
+}
+
+footer .facebook img {
+    width: 25px;
+
+}
+
+/* Responsividade - Em andamento:
+
+@media screen and (min-width: 768px){
+
+    header {
+     
+        max-width: 100vw;
+        max-height: 17vh;
+         
+    }
+
+ 
+    
+
+}*/
