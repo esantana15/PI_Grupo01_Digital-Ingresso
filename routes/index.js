@@ -2,6 +2,7 @@ var express = require('express');
 const carrinhoController = require('../controllers/carrinhoController');
 const perfilController = require('../controllers/perfilController');
 const loginController = require('../controllers/loginController');
+const showsController = require('../controllers/showsController');
 var router = express.Router();
 
 /* GET home page. */
@@ -17,3 +18,7 @@ module.exports = router;
 
 router.get("/perfil", perfilController.index)
 module.exports = router;
+
+router.get("/shows", showsController.index)
+module.exports = router;
+

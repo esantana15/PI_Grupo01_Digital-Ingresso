@@ -1,0 +1,75 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 70px 0px 70px;
+    background-color: #1F2239;
+    align-items: center;
+    height: 16vh;
+    width: 100wh;
+
+}
+
+footer #ondeEstamos {
+    display: flex;
+    width: 320px;
+    padding-left: 78px;
+}
+
+footer #ondeEstamos img{
+    height: 25px;
+    padding-right: 15px ;
+}
+
+footer .footerTitulo {
+    text-align: left;
+    font-family: bakbak one;
+    font-size: 12px;
+    color: #EDE3F5;
+    
+    
+}
+
+footer .footerTexto {
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    color: #EDE3F5;
+    line-height: 20px;
+}
+
+footer #faleConosco {
+    
+    display: flex;
+    width: 250px;
+    padding-left: 100px;
+    
+}
+
+footer #faleConosco img{
+
+    height: 25px;
+    padding-right: 15px;
+    
+}
+footer .instagram {
+
+    margin-left: 280px;
+}
+
+footer .facebook {
+
+    margin-left: 50px;
+}
+
+footer .instagram img {
+    width: 25px;
+    
+}
+
+footer .facebook img {
+    width: 25px;
+
+}

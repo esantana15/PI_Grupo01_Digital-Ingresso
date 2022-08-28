@@ -1,0 +1,312 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px; margin: 0;
+    background-color: #1F2239;
+}
+
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 17vh;
+    
+    
+}
+
+#logo .logoHeader {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    padding: 30px 0px 0px 98px;
+   
+
+
+}
+
+#localizacaoHeader .localizacao {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 17px;
+    height:3vh;
+    margin-left: -150px;
+    
+}
+
+#localizacaoHeader p {
+        
+    color: #EDE3F5;
+    margin-left: -120px;
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: 11px;
+        
+}
+
+#buscarBotao {
+    height: 2px;
+    margin-top: 45px;
+    margin-left: 455px;
+
+}
+
+#buscar {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #3E3863;
+    width: 615px;
+    height: 30px;
+    margin-top: -145px;
+    margin-bottom: 46px;
+    margin-left: 360px; 
+    justify-content: space-between;
+
+}
+
+#buscar p {
+    font-size: 11px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    opacity: 55%;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #EDE3F5;
+}
+header #iconeLogin .loginAcesso {
+    position: absolute;
+    margin-left: 132px;
+    margin-top: -155px;
+    height: 21px;
+}
+
+header #iconeLogin .loginTexto {
+    color: #554E80;
+    position: absolute;
+    font-size: 10px;
+    font-family: bakbak one;
+    margin-left: 130px;
+    margin-top: -128px;
+}
+
+header #iconeCarrinho .carrinhoAcesso {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -155px;
+    height: 21px;
+}
+header #iconeCarrinho .carrinhoTexto {
+    color: #554E80;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -128px;
+    font-size: 10px;
+    font-family: bakbak one;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 70px 0px 70px;
+    background-color: #1F2239;
+    align-items: center;
+    height: 16vh;
+    width: 100wh;
+
+}
+
+footer #ondeEstamos {
+    display: flex;
+    width: 320px;
+    padding-left: 78px;
+}
+
+footer #ondeEstamos img{
+    height: 25px;
+    padding-right: 15px ;
+}
+
+footer .footerTitulo {
+    text-align: left;
+    font-family: bakbak one;
+    font-size: 12px;
+    color: #EDE3F5;
+    
+    
+}
+
+footer .footerTexto {
+    font-family: "Cabin Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 11px;
+    color: #EDE3F5;
+    line-height: 20px;
+}
+
+footer #faleConosco {
+    
+    display: flex;
+    width: 250px;
+    padding-left: 100px;
+    
+}
+
+footer #faleConosco img{
+
+    height: 25px;
+    padding-right: 15px;
+    
+}
+footer .instagram {
+
+    margin-left: 280px;
+}
+
+footer .facebook {
+
+    margin-left: 50px;
+}
+
+footer .instagram img {
+    width: 25px;
+    
+}
+
+footer .facebook img {
+    width: 25px;
+
+}
+
+
+
+#conteudo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #EDE3F5;
+    background-color: #16172C;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    bottom: 30px;
+
+
+}
+
+#conteudo .show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 17vw;
+    height: auto;
+    justify-content: center;
+    background-color:#1F2239;
+    margin: 3%;
+    border-radius: 5%;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 2%;
+
+}
+
+#conteudo .show img {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+#conteudo .show .text {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#conteudo .show .text h1,h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#conteudo .show .text h3 {
+    color:#554E80;
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#conteudo .show .comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: auto;
+    line-height: 20%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    color: #33305B;
+    background: #EDE3F5;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#conteudo .show .comprar:hover {
+    color:  #EDE3F5;
+    background: #33305B;
+    position: fixed absolute;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#enunciado h1 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: center;
+    line-height: 25px;
+    height: 10vh;
+    width: 100vw;
+    margin-top: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#enunciado2 h1 {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    color: #554E80;
+    justify-content: center;
+    line-height: 25px;
+    height: 10vh;
+    width: 100vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 25px;
+}
+
+

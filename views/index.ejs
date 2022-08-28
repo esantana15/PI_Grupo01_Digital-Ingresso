@@ -1,153 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('./partials/header') %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Cabin+Condensed:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/stylesheets/reset.css">
-  <link rel="stylesheet" href="/stylesheets/home.css">
-  <title>Home</title>
-</head>
-<body>
-    <header>
-        <section id="logo" >
-            <img class="logoHeader" src="/images/imagensEmComum/logo.png" alt="">
-        </section>
-        <section id="localizacaoHeader">
-            <img class="localizacao" src="/images/icons/localizacao.png" alt="">
-            <p> Londrina - PR</p>
-        </section>
-        <section id="buscarBotao">
-            <img class="buscar" src="./images/icons/pesquisa.png" alt="">
-        </section>
-        <section id="buscar">
-            <p>Buscar</p>
-        </section>
-        <section id="iconeLogin">
-            <img class="loginAcesso" src="/images/icons/perfil.png" alt="perfil">
-            <p class="loginTexto">Login</p>
-        </section>
-        <section id="iconeCarrinho">
-            <img class="carrinhoAcesso" src="/images/icons/carrinho.png" alt="">
-            <p class="carrinhoTexto">Carrinho</p>
-        </section>
-    </header>
+ <!-- CONTENT -->
+ <main class="content">
+  <section class='content__hero-banner'>
+    <img src="/images/home/bannerColdplay.png" alt="">
+  </section>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <section class='content__hero-banner'>
-      <img src="/images/home/bannerColdplay.png" alt="">
-    </section>
+  <section class='content__presentation'>
+    <img id="company-logo" src="/images/imagensEmComum/logo.png" alt="Digital Ingresso logo">
+    <div class='content__presentation__text'>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi utt."</p>
+    </div>
+  </section>
 
-    <section class='content__presentation'>
-      <img id="company-logo" src="/images/imagensEmComum/logo.png" alt="Digital Ingresso logo">
-      <div class='content__presentation__text'>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi utt."</p>
+  <section class='shows'>
+    <header class="shows__header">
+      <div class='shows__header__title'>
+        <img src='/images/perfil/codigoBarra.png' />
+        <p>shows</p>
+        <img src='/images/perfil/codigoBarra.png' />
       </div>
-    </section>
 
-    <section class='shows'>
-      <header class="shows__header">
-        <div class='shows__header__title'>
-          <img src='/images/perfil/codigoBarra.png' />
-          <p>shows</p>
-          <img src='/images/perfil/codigoBarra.png' />
-        </div>
+      <div class='shows__header__icons'>
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="19.5" cy="19.5" r="19.5" fill="#423C6C" />
+          <path d="M5.96637 19.6617L25.9195 7.64335L26.3511 30.9324L5.96637 19.6617Z" fill="#EDE3F5"
+            fill-opacity="0.9" />
+          <path d="M5.96637 19.6617L25.9195 7.64335L26.3511 30.9324L5.96637 19.6617Z" fill="#EDE3F5"
+            fill-opacity="0.9" />
+        </svg>
 
-        <div class='shows__header__icons'>
+        <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="20" cy="19" rx="20" ry="19" fill="#352D6B" />
+            <rect x="13.3334" y="11.6923" width="4.10256" height="14.6154" fill="#EDE3F5" fill-opacity="0.94" />
+            <rect x="22.5641" y="11.6923" width="4.10256" height="14.6154" fill="#EDE3F5" fill-opacity="0.94" />
+          </svg>
           <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="19.5" cy="19.5" r="19.5" fill="#423C6C" />
-            <path d="M5.96637 19.6617L25.9195 7.64335L26.3511 30.9324L5.96637 19.6617Z" fill="#EDE3F5"
-              fill-opacity="0.9" />
-            <path d="M5.96637 19.6617L25.9195 7.64335L26.3511 30.9324L5.96637 19.6617Z" fill="#EDE3F5"
+            <path d="M32.8606 19.4594L12.6476 31.0354L12.729 7.74247L32.8606 19.4594Z" fill="#EDE3F5"
               fill-opacity="0.9" />
           </svg>
-
-          <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="20" cy="19" rx="20" ry="19" fill="#352D6B" />
-              <rect x="13.3334" y="11.6923" width="4.10256" height="14.6154" fill="#EDE3F5" fill-opacity="0.94" />
-              <rect x="22.5641" y="11.6923" width="4.10256" height="14.6154" fill="#EDE3F5" fill-opacity="0.94" />
-            </svg>
-            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="19.5" cy="19.5" r="19.5" fill="#423C6C" />
-              <path d="M32.8606 19.4594L12.6476 31.0354L12.729 7.74247L32.8606 19.4594Z" fill="#EDE3F5"
-                fill-opacity="0.9" />
-            </svg>
-        </div>
-      </header>
-      
-
-      <div class='shows__carousel'>
-        <ul class="shows__carousel__list">
-          <li class="shows__carousel__list__item">
-            <img src="/images/home/image-7.png" alt="">
-            <p>Dua Lipa</p>
-          </li>
-          <li class="shows__carousel__list__item">
-            <img src="/images/home/image-5.png" alt="">
-            <p>Sandy</p>
-          </li>
-          <li class="shows__carousel__list__item active">
-            <img src="images/home/image-2.png" alt="">
-            <p>COLDPLAY</p>
-          </li>
-          <li class="shows__carousel__list__item">
-            <img src="/images/home/image-3.png" alt="">
-            <p>Artic Monkeys</p>
-          </li>
-          <li class="shows__carousel__list__item">
-            <img src="/images/home/image-4.png" alt="">
-            <p>Avril Lavigne</p>
-          </li>
-        </ul>
       </div>
+    </header>
+    
 
-      <div class='shows__description'>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat." </p>
-        <button>Comprar</button>
-      </div>
-    </section>
-  </main>
+    <div class='shows__carousel'>
+      <ul class="shows__carousel__list">
+        <li class="shows__carousel__list__item">
+          <img src="/images/home/image-7.png" alt="">
+          <p>Dua Lipa</p>
+        </li>
+        <li class="shows__carousel__list__item">
+          <img src="/images/home/image-5.png" alt="">
+          <p>Sandy</p>
+        </li>
+        <li class="shows__carousel__list__item active">
+          <img src="images/home/image-2.png" alt="">
+          <p>COLDPLAY</p>
+        </li>
+        <li class="shows__carousel__list__item">
+          <img src="/images/home/image-3.png" alt="">
+          <p>Artic Monkeys</p>
+        </li>
+        <li class="shows__carousel__list__item">
+          <img src="/images/home/image-4.png" alt="">
+          <p>Avril Lavigne</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class='shows__description'>
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat." </p>
+      <button>Comprar</button>
+    </div>
+  </section>
+</main>
 
   <!-- FOOTER -->
 
-  <footer>
-    <section id="ondeEstamos">
-            <img src="/images/icons/localizacaoFooter.png" alt="">
-            <div class="textoFooter">
-                <p class="footerTitulo">Onde Estamos?</p>
-                <p class="footerTexto">Av Saul Elkind, S/N, Conjunto Semiramis,<br>Londrina - PR</p>
-            </div>
-    </section>
-    <section id="faleConosco">
-            <img src="./images/icons/balao.png" alt="">
-            <div class="textoFooter">
-                <p class="footerTitulo">Fale conosco:</p>
-                <p class="footerTexto">e-mail: emailtickets@tickets.com.br<br>Central de Atendimento: 1111 1111 1111</p>
-            </div>
-    </section>
-        <div class="instagram">
-            <a href="https://www.instagram.com/essantana/" target="_blank">
-            <img src="/images/icons/instagram.png" alt="">
-            </a>
-        </div>
-        <div class="facebook">
-            <a href="https://www.facebook.com.br/elvis.s.santana" target="_blank">
-            <img src="/images/icons/facebook.png">
-            </a>
-        </div>
-    </section>
-</footer>
-</body>
-</html>
+  <%- include('./partials/footer') %>
