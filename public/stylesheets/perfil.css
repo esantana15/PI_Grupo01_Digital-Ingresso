@@ -21,179 +21,137 @@ li{
     line-height: 12px;
 }
 
-
-/* Header */
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:flex-start;
-    align-items: flex-start;
-    width: 100vw;
-    height: 17vh;
-    
-    
-    
-}
-
-#logo .logoHeader {
-    
-    display: flex;
-    flex-wrap: wrap;
-    height: 160px;
-    padding: 30px 0px 0px 98px;  
-
-
-
-}
-
-#localizacaoHeader .localizacao {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    margin-top: 17px;
-    height:3vh;
-    margin-left: -150px;
-    
-}
-
-#localizacaoHeader p {
-        
-    color: #EDE3F5;
-    margin-left: -120px;
-    margin-top: 20px;
-    font-family: bakbak one;
-    font-size: 11px;
-        
-}
-
-#buscarBotao {
-    height: 2px;
-    margin-top: 45px;
-    margin-left: 455px;
-    
-}
-
-#buscar {
-    display: flex;
-    flex-wrap:wrap;
-    background-color: #3E3863;
-    width: 615px;
-    height: 30px;
-    margin-top: -145px;
-    margin-bottom: 46px;
-    margin-left: 360px; 
-    justify-content: space-between;
-
-}
-
-#buscar p {
-    font-size: 11px;
-    font-family: bakbak one;
-    opacity: 55%;
-    margin-top: 6px;
-    margin-left: 10px;
-    color: #EDE3F5;
-}
-header #iconeLogin .loginAcesso {
-    position: absolute;
-    margin-left: 132px;
-    margin-top: -155px;
-    height: 21px;
-}
-
-header #iconeLogin .loginTexto {
-    color: #554E80;
-    position: absolute;
-    font-size: 10px;
-    font-family: bakbak one;
-    margin-left: 130px;
-    margin-top: -128px;
-}
-
-header #iconeCarrinho .carrinhoAcesso {
-    position: absolute;
-    margin-left: 200px;
-    margin-top: -155px;
-    height: 21px;
-}
-header #iconeCarrinho .carrinhoTexto {
-    color: #554E80;
-    position: absolute;
-    margin-left: 190px;
-    margin-top: -128px;
-    font-size: 10px;
-    font-family: bakbak one;
-}
-
 /* Background Conteudo */
 
 #conteudo {
-    width: 100wh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
     color: #EDE3F5;
     background-color: #16172C;
-    height: 344px;
-    padding: 30px;   
-    
+    height: auto;
 }
 
 /* Dados Usuario */
-#imagem{
+#persona{
     
     display:flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-end;
-    
-    
-}
-#imagem #editarDados p{
-    font-family: bakbak one;
-    font-size: 09px;
-    color: #EDE3F5;
-    padding-right: 10px;
-    margin-top: -06px;
-}
-#editarDados img{
-    height: 19px;
-    padding-right: 08px;
-    
- 
- }
-
-#editar{
-    padding-left: 15px;
-    height: 10px;
-}
-
-#usuario{
-    display:inline-flex;
-    align-items: flex-start;
-    padding-left: 80px;
-  
-}
-
-#usuario .perfilImagem {
-  
-    display: flex;
-    width: 125px;
-    padding-left: 200px;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    
-
+    align-items: center;
 }
 
 #editarDados{
-    display:inline-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+
+ }
+
+ #editarDados .p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: safe;
+    align-items: center;
+    width: 10vw;
+    height: auto;
+
+}
+
+#editarDados .p p{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    color: #EDE3F5;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+}
+
+#editarDados .p img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#usuario{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 45vw;
+    height: auto;
+    padding: 5%;
+    margin-top: 5%;
+    background-color: #1F2239;
+}
+
+#usuario2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 45vw;
+    height: auto;
+    padding: 5%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    background-color: #1F2239;
+}
+
+/* Formulario Cadastro Dados Usuario */
+#formulario{
+
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+#cadastro{
     align-items: flex-start;
-    padding-left: 09px;
- 
+    color: #EDE3F5;
+}
+
+
+
+
+#usuario img {
+    max-width: 100%;
+    max-height: 100%;
+
 }
 
 #usuarioTexto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-left: 10px;
     padding-top: 07px;
+    width: 15vw;
+}
+
+#usuarioTexto2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 10px;
+    padding-top: 07px;
+    width: 30vw;
 }
 
 #usuario p{
@@ -233,86 +191,11 @@ header #iconeCarrinho .carrinhoTexto {
     font-style: normal;
     font-size: 10.1px;
     color: #EDE3F5;
-    
-    
-    
-}
-
-/* Dados Historico Ultimo Ingresso Comprado */
-#usuarioIngressos{
-
-    padding-left: 120px;
-}
-#dadosIngressos{
-    padding-top: 07px;
-    font-family: "Cabin Condensed";
-    font-style: normal;
-    font-size: 10.1px;
-    color: #EDE3F5;
-    display:flex;
-}
-
-#usuario .perfilImagemIngresso {
-  
-    display: flex;
-    width: 150px;
-    padding-top: 10px;
-    
-}
-
-#dadosCompra{
-    padding-top: 20px;
-    padding-left: 15px;
-}
-
-#showNome{
-    font-family: bakbak one;
-    font-size: 15px;
-    font-style: normal;
-    color: #988FB6;
-    
-}
-
-#showNomePessoa{
-    padding-top: 05px;
-    font-family: bakbak one;
-    font-style: normal;
-    font-size: 10px;
-    color: #EDE3F5;
-    padding-bottom: 10px;
-    
-}
-
-#botao{
-    margin-top: 12px;
-    background-color: #423C6C;
-    text-align: center;
-    font-family: bakbak one;
-    font-size: 09px;
-    color: #EDE3F5;
-    border: none;
-    border-radius:6px;
-    width: 160px;
-    height: 16px;
-    padding-top: 02px;
-    
 
 }
 
-/* Formulario Cadastro Dados Usuario */
-#formulario{
 
-    display:inline-flex;
-    align-items: flex-start;
-    padding-left: 260px;
-    padding-top: 5px;
-    
-    
-}
-#cadastro{
-    align-items: flex-start;
-    color: #EDE3F5;
-}
+
 input{
   
     width: 260px;
@@ -330,44 +213,61 @@ input{
     
 
 }
-/* Banner Ingressos Historico */
-#ingressosHistorico{
-   
+
+/* Dados Historico Ultimo Ingresso Comprado */
+
+#dadosIngressos{
     display:flex;
-    align-items: flex-start;
-    
-}
-#botoes{
-    
-    padding-top: 60px;
-    display:inline-flex;
-    padding-left: 90px;
-    flex-direction:row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 10px;
+    color: #EDE3F5;
+    padding: 4%;
+    width: 100vw;
 
 }
-#botaoDireito{
 
-
-    width: 20px;
-    height: 20px;
-
-
-
-
-}
-#botaoEsquerdo{
-   
-    width: 20px;
-    height: 20px;
-    
-
-
-}
-#showsImagem{
-    margin-top: -30px;
+.meuShow {
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 90px;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 100%;
+
+
 }
+.meuShow img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#dadosCompra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:  #EDE3F5;
+    width: 20vw;
+    margin-left: 5%;
+    align-items: center;
+
+
+}
+.botao {
+    width: 10vw;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    color: #33305B;
+    background: #EDE3F5;
+    cursor: pointer;
+    font-family: bakbak one;
+    font-size: 15px;
+    position: relative;
+    top: 7px;
+    }
+    .botao:hover {
+        color:  #EDE3F5;
+        background: #33305B;
+    }

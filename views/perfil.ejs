@@ -1,70 +1,87 @@
 <%- include('./partials/header') %>
 
+<div id="conteudo">
+
 
 <section id="usuario">
-    <div id="imagem">
-        <img class="perfilImagem" src="/images/perfil/persona.png" alt="">
-        <div id="editarDados">
-            <img  src="/imagens/icons/editarDados.png"  alt="" ><p>Editar</p>
-            <img  src="/imagens/icons/mais.png"  alt="" ><p>Adicionar</p>
-        </div>
-    </div>
+    <div id="persona">
+        <img src="/images/perfil/persona.png" alt="">
+
     <div id="usuarioTexto">
-        <p id = "usuarioNome">Ana<img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" ></p>
+        <p id = "usuarioNome">Ana
+            <img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" >
+        </p>
         <p id = "usuarioSobrenome">Souza</p> 
         <ul id="dados">
-           <li><h5>Email: </h5> ana.r.sou@email.com <img id="editar" src="/images/icons/editar.png"  alt="" ></li>
+           <li><h5>Email: </h5> ana.r.sou@email.com </li>
            <li><h5>Usuario: </h5> AnaSou</li>
            <li><h5>Local: </h5> Londrina - PR</li>
         </ul>
     </div>
+</div>
+
+    <section id="formulario">
+        <div id="editarDados">
+            <div class="p">
+                <img  src="/images/icons/editarDados.png"  alt="" >
+            <p>Editar</p>
+            </div>
+            <div class="p">
+                <img  src="/images/icons/mais.png"  alt="" >
+                <p>Adicionar</p>
+            </div>
+
+        </div>
+        <!-- Formulario Cadastro Dados Usuario -->
+        <div id="cadastro">
+           <ul><form action="" method="post">
+                <li><label for="Nome"></label>
+                <input type="text" name="Nome" id="Nome" placeholder="Nome"/></li>
+    
+            <li><label for="CPF"></label>
+                <input type="text" name="CPF" id="CPF" placeholder="CPF"/></li>
+    
+            <li><label for="Email"></label>
+                <input type="text" name="Email" id="Email" placeholder="Email"/></li>
+    
+            <li><label for="Celular"></label>
+                <input type="text" name="Celular" id="Celular" placeholder="Celular"/></li>
+            </form></ul>
+            <form>
+                <input class="botao" type="button" value="Enviar">
+                <imput
+            </form>
+        </div>     
+    </section>
+    </section>
     <!-- Dados Historico Ultimo Ingresso Comprado -->
-    <div id="usuarioIngressos">
-        <div id="usuarioTexto">
-            <p id = "ingressos">Ingressos Ana<img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" ></p>
+    <div id="usuario2">
+        <div id="usuarioTexto2">
+            <p>Meus Ingressos
+                <img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" >
+            </p>
             <div  id="dadosIngressos">
-            <img class="perfilImagemIngresso" src="/images/perfil/coldplay.png" alt="">
-            <ul id="dadosCompra">
-                <li><h4 id = "showNome">Coldplay<h4></li>
-                <li><h4 id = "showNomePessoa">Ana Souza<h4></li>
-                <li><h5>Unidade: </h5> 1 Inteira </li>
-                <li><h5>End:  </h5> Av Saul Elkind, S/N, SP </li>
-                <li><h5>Data Show: </h5>  20/06/2022 <h5> Hora: </h5> 19:30</li>
-                <li><h5>Data Compra: </h5> 18/04/2022 <h5> Hora: </h5> 07:45</li>
-                <li><h5>Área:  </h5> Pista <h5> Valor: </h5> R$690,00</li>
-                <li><bottom id="botao"> Ingressos </bottom></li>
-            </ul> 
+                <div class="meuShow">
+                    <img src="/images/perfil/coldplay.png" alt="">
+                </div>
+            <div id="dadosCompra">
+                <ul>
+                    <li><h4 id = "showNome">Coldplay<h4></li>
+                    <li>Unidade: 1 Inteira </li>
+                    <li>End: Av Saul Elkind, S/N, SP </li>
+                    <li>Data Show: 20/06/2022 Hora: 19:30</li>
+                    <li>Data Compra: 18/04/2022  Hora:  07:45</li>
+                    <li>Área: Pista  Valor:  R$690,00</li>
+                </ul> 
+            </div>
             </div>
         </div>
+
     </div>
-</section>
-<section id="formulario">
-    <!-- Formulario Cadastro Dados Usuario -->
-    <div id="cadastro">
-       <ul><form action="" method="post">
-            <li><label for="Nome"></label>
-            <input type="text" name="Nome" id="Nome" placeholder="Nome"/></li>
 
-        <li><label for="CPF"></label>
-            <input type="text" name="CPF" id="CPF" placeholder="CPF"/></li>
+</div>
 
-        <li><label for="Email"></label>
-            <input type="text" name="Email" id="Email" placeholder="Email"/></li>
-
-        <li><label for="Celular"></label>
-            <input type="text" name="Celular" id="Celular" placeholder="Celular"/></li>
-        </form></ul>
-    </div> 
-    <!-- Banner Ingressos Historico -->
-    <div id="IngressosHistorico">
-        <div id="botoes">
-        <img id="botaoEsquerdo"  src="/images/icons/setaEsquerda.png"  alt="" >
-        <img id="showsImagem"  src="/images/perfil/shows.png"  alt="" >
-        <img id="botaoDireito"  src="/images/icons/setaDireita.png"  alt="" >
-        </div>
-    </div>
     
-</section>
 
 <%- include('./partials/footer') %>
   

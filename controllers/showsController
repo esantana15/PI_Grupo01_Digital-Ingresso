@@ -1,53 +1,68 @@
 const showsController = {
     index: (req, res) => {
-        let show1 = {
-            artista: "Adele",
-            casaDeShow: "Arena Castelão",
-            cidade: "Fortaleza, CE",
-            rua: "Av. Alberto Craveiro, 2901",
-            bairro: "Castelão",
-            pais: "Brasil"
-        }
-                
-        let show2 = 
-            {
-            artista: "Artic Monkeys",
-            casaDeShow: "Estadio Beira Rio",
-            cidade: "Porto Alegre, RS",
-            Rua: "Endereço: Av. Padre Cacique, 891",
-            bairro: "Praia de Belas",
-            pais: "Brasil"
-        }
+        // let shows = [{
+        //     id: 1,
+        //     artista: "Adele",
+        //     casaDeShow: "Arena Castelão",
+        //     cidade: "Fortaleza, CE",
+        //     rua: "Av. Alberto Craveiro, 2901",
+        //     bairro: "Castelão",
+        //     pais: "Brasil",
+        //     img: ""
 
-        let show3 = {
-            artista: "Coldplay",
-            casaDeShow: "Parque Olimpico da Barra",
-            cidade: "Rio de Janeiro, RJ ",
-            Rua: "Av. Embaixador Abelardo Bueno, 340",
-            bairro: "Barra da Tijuca",
-            pais: "Brasil"
-        }
+        // },
+        // {
+        //     id: 2,
+        //     artista: "Artic Monkeys",
+        //     casaDeShow: "Estadio Beira Rio",
+        //     cidade: "Porto Alegre, RS",
+        //     Rua: "Endereço: Av. Padre Cacique, 891",
+        //     bairro: "Praia de Belas",
+        //     pais: "Brasil",
+        //     img: ""
+        // }
 
-        let show4 = {
-            artista: "Dua Lipa",
-            casaDeShow: "Pedreira Paulo Leminsk",
-            cidade: "Curitiba, PR",
-            Rua: "Endereço: R. João Gava, 970",
-            bairro: "Abranches",
-            pais: "Brasil"
-        }
+        // ]
 
-        let show5 = {
-            artista: "Sandy",
-            casaDeShow: "Allianz Parque",
-            Cidade: "São Paulo, SP",
-            Rua: "Rua Palestra Itália, 200",
-            bairro: "Água Branca",
-            pais: "Brasil"
-        }
+        // // let show2 = 
+        //     {
+        //     artista: "Artic Monkeys",
+        //     casaDeShow: "Estadio Beira Rio",
+        //     cidade: "Porto Alegre, RS",
+        //     Rua: "Endereço: Av. Padre Cacique, 891",
+        //     bairro: "Praia de Belas",
+        //     pais: "Brasil"
+        // }
+
+        // let show3 = {
+        //     artista: "Coldplay",
+        //     casaDeShow: "Parque Olimpico da Barra",
+        //     cidade: "Rio de Janeiro, RJ ",
+        //     Rua: "Av. Embaixador Abelardo Bueno, 340",
+        //     bairro: "Barra da Tijuca",
+        //     pais: "Brasil"
+        // }
+
+        // let show4 = {
+        //     artista: "Dua Lipa",
+        //     casaDeShow: "Pedreira Paulo Leminsk",
+        //     cidade: "Curitiba, PR",
+        //     Rua: "Endereço: R. João Gava, 970",
+        //     bairro: "Abranches",
+        //     pais: "Brasil"
+        // }
+
+        // let show5 = {
+        //     artista: "Sandy",
+        //     casaDeShow: "Allianz Parque",
+        //     Cidade: "São Paulo, SP",
+        //     Rua: "Rua Palestra Itália, 200",
+        //     bairro: "Água Branca",
+        //     pais: "Brasil"
+        // }
 
 
-        return res.render('shows', show1)     
+        return res.render('shows')
     }
 }
 

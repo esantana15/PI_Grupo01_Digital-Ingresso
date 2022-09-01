@@ -1,41 +1,45 @@
+html {
+    box-sizing: border-box;
+}
 
+body {
+    padding: 0px; margin: 0;
+    background-color: #1F2239;
+}
 
-#conteudo {
+#cont {
     width: auto;
-    height: auto;
     color: #EDE3F5;
+    background-color: #16172C;
     height: auto;
     padding: 10px 100px 10px 100px;
 }
 
 
-#conteudo #persona {
+#cont #persona {
     width: 80vw;
-    height: 10vh;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 
-
 }
-#conteudo .foto img{
+#cont .foto img{
     width: 150px;
-    height: auto;
+    height: 150px;
     margin-left: 100px;
-
     
 }
-#conteudo #perfil {
-    height: 20vh;
+#cont #perfil {
+    height: 30vh;
     width: 50vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     
 }
-#conteudo #persona .nome {
+#cont #persona .nome {
     font-size: 35px;
     font-family: bakbak one;
     height: 150px;
@@ -45,14 +49,14 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
-#conteudo #persona .nome p, .barcode  {
+#cont #persona .nome p, .barcode  {
     font-size: 35px;
     font-family: bakbak one;
     height: 40px;
     width: 220px;
     padding: 20px;
 }
-#conteudo  .add h2 {
+#cont  .add h2 {
     font-family: bakbak one;
     font-size: 20px;
     padding: 20px;
