@@ -3,6 +3,7 @@ const carrinhoController = require('../controllers/carrinhoController');
 const perfilController = require('../controllers/perfilController');
 const loginController = require('../controllers/loginController');
 const showsController = require('../controllers/showsController');
+const clienteController = require('../controllers/clienteController')
 var router = express.Router();
 
 /* GET home page. */
@@ -11,14 +12,20 @@ router.get('/', function(req, res, next) {
 });
 
 router.get("/carrinho", carrinhoController.index)
-module.exports = router;
+
 
 router.get("/login", loginController.index)
-module.exports = router;
+
 
 router.get("/perfil", perfilController.index)
-module.exports = router;
 
-router.get("/shows", showsController.index)
+
+ router.get("/shows", showsController.index)
+
+// rota de cadastros de clientes
+router.get('/cadastro', clienteController.cadastro)
+router.post('/cadastro', clienteController.create_cliente)
+
+
 module.exports = router;
 

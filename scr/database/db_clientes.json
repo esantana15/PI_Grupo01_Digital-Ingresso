@@ -1,0 +1,57 @@
+{
+    "clientes": [
+        {
+            "id": "a724f4a0-cf79-41f7-bbb3-5d0c5b872eee"
+        },
+        {
+            "id": "04de6b5a-73ee-44ea-8f61-10e469146a31"
+        },
+        {
+            "id": "ad2ff63c-8f8a-491b-97d5-2f7e24c84299"
+        },
+        {
+            "id": "75868de2-cad7-4b2c-be7b-f3cab1b4d1cb",
+            "name": "lucas pertile",
+            "cpf": "02689853167",
+            "date_nasc": "1989-11-30",
+            "sexo": "masculino",
+            "tel": "21999855985",
+            "email": [
+                "lucas.pertile@bilheteriadigital.com",
+                "lucas.pertile@bilheteriadigital.com"
+            ],
+            "senha": [
+                "12345678",
+                "12345678"
+            ],
+            "cep": "04704-040",
+            "rua": "Rua das Margaridas",
+            "bairro": "Jardim das Acácias",
+            "complemento": "111",
+            "cidade": "São Paulo",
+            "uf": "SP"
+        },
+        {
+            "id": "6de9af3d-8452-46bb-adcd-f821f094a7ae",
+            "name": "lucas",
+            "cpf": "026898531",
+            "date_nasc": "1989-11-30",
+            "sexo": "masculino",
+            "tel": "21999855985",
+            "email": [
+                "lucas.pertile@bilheteriadigital.com",
+                "lucas.pertile@bilheteriadigital.com"
+            ],
+            "senha": [
+                "12345678",
+                "12345678"
+            ],
+            "cep": "04704040",
+            "rua": "Rua das Margaridas",
+            "bairro": "Jardim das Acácias",
+            "complemento": "11",
+            "cidade": "São Paulo",
+            "uf": "Solteiro"
+        }
+    ]
+}
