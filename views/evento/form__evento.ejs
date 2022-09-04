@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cadastro de Eventos</title>
 </head>
 <body>
   
@@ -12,7 +12,17 @@
     <div class="cadastro__evento">
 
       <h2 class="text-grey">Por favor, preencha todos os campos abaixo:</h2>
-        <form action="/novo" method="post">
+        <form
+         action="/evento"
+         method="post"
+         enctype="multipart/form-data">
+         
+
+
+
+          <div>Avatar</div>
+          <input type="file" name="avatar" id="avatar" required><br>
+
           <label for="nome__evento">
             Nome do evento:
           </label>

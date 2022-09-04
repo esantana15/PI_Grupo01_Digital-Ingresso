@@ -8,7 +8,15 @@ const eventoController = {
 
     novo: (req,res) => {
         res.render('evento/form__evento')
-    }
+    },
+
+    create: (req, res) => {
+        const evento = req.body;
+        const avatar = req.file.filename;
+
+        Evento.create(evento, avatar);
+        res.redirect('evento/painel')
+    },
 
 }
 

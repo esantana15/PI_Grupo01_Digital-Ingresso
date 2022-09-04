@@ -1,7 +1,7 @@
 const multer = require('multer');
 const { v4 } = require('uuid');
 
-const uploadPath = 'public/uploads';
+const uploadPath = 'public/upload'
 
 module.exports = {
   uploadPath,

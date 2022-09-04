@@ -30,7 +30,7 @@ saveUninitialized:true
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/', eventosRouter);
+app.use('/evento', eventosRouter);
 
 
 // catch 404 and forward to error handler
