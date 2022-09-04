@@ -17,7 +17,7 @@
         <% if (eventos && eventos.length > 0) { %>
             <% eventos.map(evento => { %>
                 <div class="column justify-center flex-1">
-                    <img class="avatar"width="49px" height="49px" src="uploads/<%=evento.avatar%>"/>
+                    <img class="avatar"width="49px" height="49px" src="/upload/<%= evento.avatar %>"/>
                     <div class="label">Evento</div>
                     <div class="data"><%= evento.nome__evento %></div>
                     <div style="height: 18px"></div>
@@ -26,7 +26,7 @@
                   </div>
                 <div class="botao">
                     <div style="height: 8px"></div>
-                    <a class="button bg-secondary" href="/users/edit/<%= evento.id %>">
+                    <a class="button bg-secondary" href="/evento/edit/<%= evento.id %>">
                       <i class="fas fa-pen"></i>
                     </a>
                     <div style="height: 8px"></div>

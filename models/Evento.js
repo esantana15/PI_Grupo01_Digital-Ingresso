@@ -12,10 +12,17 @@ const writeToDB = () => {
 const Evento = {
     findAll: () => db_eventos.eventos,
 
+    findById: (id) => {
+        const evento = db_eventos.eventos.find(evento => evento.id === id);
+        return evento;
+    },
+
     create: (evento, avatar) => {
         db_eventos.eventos.push({ id: v4(), ...evento, avatar});
         writeToDB();
-    }
+    },
+
+    
 
 }
 

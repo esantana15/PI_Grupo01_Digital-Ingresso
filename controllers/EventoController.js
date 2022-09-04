@@ -19,6 +19,14 @@ const eventoController = {
         res.redirect('evento/painel')
     },
 
+    editForm: (req,res) => {
+        const { id } = req.params
+        const evento = Evento.findById(id)
+        res.render('evento/form__evento', { evento })
+    },
+
+
+
 }
 
 
