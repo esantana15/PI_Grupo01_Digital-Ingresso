@@ -16,8 +16,13 @@ router.get('/painel', eventoController.index)
 router.get('/criar', eventoController.novo)
 router.post('/', upload.single('avatar'), eventoController.create)
 
-//rota para editar um evento.
+//rota para mostrar o form de edição do usuario
 router.get('/edit/:id', eventoController.editForm)
+
+//rota para de fato atualizar o usuario
+router.put('/:id', upload.single('avatar'), eventoController.update)
+
+
 
 
 

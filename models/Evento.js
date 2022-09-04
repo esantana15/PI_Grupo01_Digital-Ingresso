@@ -1,6 +1,8 @@
 const fs = require('fs');
 const { v4 } = require('uuid');
 
+const { uploadPath } = require('../src/config/upload')
+
 
 let db_eventos = require('../src/database/db_eventos.json');
 
@@ -21,6 +23,22 @@ const Evento = {
         db_eventos.eventos.push({ id: v4(), ...evento, avatar});
         writeToDB();
     },
+
+    removeAvatar: (id) => {
+        const evento = db_eventos.eventos.find(evento => evento.id === id);
+        fs.unlinkSync(
+            `${uploadPath}/${evento.avatar}`
+        )
+
+    },
+
+    update: (id, evento, avatar) => {
+        const eventoIndex = db_eventos.eventos.findIndex(evento => evento.id === id);
+        db_eventos.eventos[eventoIndex] = { id, ...evento, avatar };
+        writeToDB();
+
+
+    }
 
     
 

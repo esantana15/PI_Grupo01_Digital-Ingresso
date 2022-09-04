@@ -25,6 +25,20 @@ const eventoController = {
         res.render('evento/form__evento', { evento })
     },
 
+    update: (req, res) => {
+        const { id } = req.params;
+        const evento = req.body;
+        const avatar = req.file.filename;
+
+        Evento.removeAvatar(id);
+
+        Evento.update (id, evento, avatar)
+
+        res.redirect('painel')
+
+
+    },
+
 
 
 }
