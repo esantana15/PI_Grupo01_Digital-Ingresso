@@ -1,4 +1,5 @@
 
+/* GLOBAL */
 html {
     box-sizing: border-box;
 }
@@ -10,42 +11,256 @@ body {
 
 
 
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: 17vh;
+    
+    
+}
+
+#logo .logoHeader {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    padding: 30px 0px 0px 98px;
+   
+
+
+}
+
+#localizacaoHeader .localizacao {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 17px;
+    height:3vh;
+    margin-left: -150px;
+    
+}
+
+#localizacaoHeader p {
+        
+    color: #EDE3F5;
+    margin-left: -120px;
+    margin-top: 20px;
+    font-family: bakbak one;
+    font-size: 11px;
+        
+}
+
+#buscarBotao {
+    height: 2px;
+    margin-top: 45px;
+    margin-left: 455px;
+
+}
+
+#buscar {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: #3E3863;
+    width: 615px;
+    height: 30px;
+    margin-top: -145px;
+    margin-bottom: 46px;
+    margin-left: 360px; 
+    justify-content: space-between;
+
+}
+
+#buscar p {
+    font-size: 11px;
+    font-family: bakbak one;
+    opacity: 55%;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #EDE3F5;
+}
+header #iconeLogin .loginAcesso {
+    position: absolute;
+    margin-left: 132px;
+    margin-top: -155px;
+    height: 21px;
+}
+
+header #iconeLogin .loginTexto {
+    color: #554E80;
+    position: absolute;
+    font-size: 10px;
+    font-family: bakbak one;
+    margin-left: 130px;
+    margin-top: -128px;
+}
+
+header #iconeCarrinho .carrinhoAcesso {
+    position: absolute;
+    margin-left: 200px;
+    margin-top: -155px;
+    height: 21px;
+}
+header #iconeCarrinho .carrinhoTexto {
+    color: #554E80;
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -128px;
+    font-size: 10px;
+    font-family: bakbak one;
+}
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px; margin: 0;
+    background-color: #1F2239;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* GENERAL */
+
+#company-logo {
+    width: 200px;
+}
+
+/* HEADER */
+
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 40px 80px;
+    width: auto;
+    height: auto;
+}
+
+.header__search {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    max-width: 696px;
+}
+
+.header__search__localization {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header__search__localization  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: rgba(237, 227, 245, 0.95);
+}
+
+.header__search__localization img {
+    margin-right: 12px;
+}
+
+.header__search__bar {
+   width: 100%;
+    background: #3E3863;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__search__bar input {
+    width: 100%;
+    height: 100%;
+}
+
+.header__search__bar button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    
+    width: 78px;
+    height: 43px;
+}
+
+.header__search__bar__search-icon {
+    width: 78px;
+    height: 43px;
+}
+
+.header__buttons-group {
+    display: flex;
+}
+
+.header__buttons-group div {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__buttons-group div:first-of-type {
+    margin-right: 30px;
+}
+
+.header__buttons-group div img {
+    width: 32px;
+    height: 32px;
+}
+
+.header__buttons-group div p {
+    font-weight: 400;
+    font-size: 15px;
+    color: #554E80;
+}
+
 /* SECTION - CONTENT */
 
-
-#contentHome {
+.content {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: yellow solid 1px;
-    width: 100vw;
-    height: auto;
+    flex-direction: column;
+    width: auto;
+    color: #ede3f5;
+  }
+  
+.content__hero-banner {
+    height: 500px;
+    width: 100%;
 
-}
-.quemSomos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: blue solid 1px;
-    width: 100vw;
+    background-image: url(../../assets/images/home/bannerColdplay.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+.content__hero-banner img {
+    width: 100%;
+    height: 100%;
+}
 
-.quemSomos p {
+.content__presentation {
+    padding: 58px 220px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.content__presentation img {
+    margin-bottom: 15px ;
+}
+
+.content__presentation__text p {
+    font-weight: 400;
     font-size: 25px;
     line-height: 30px;
     text-align: center;
-    color: #ffffff;
-    border: red solid 1px;
-    width: 80vw;
-    height: 20vh;
-
-
 }
 
 /* SECTION - SHOWS */
@@ -55,16 +270,108 @@ body {
     background-color: #16172c;
 }
 
-.enunciado001{
-    display: flex;
-    flex-direction: row;
+.shows__header {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 47px;
-    color: white;
-    border: solid 1px pink;
+}
 
+.shows__header__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.shows__header__title img {
+    width: 100px;
+    height: 20px;
+    margin: 0 30px;
+}
+
+.shows__header__title p {
+    font-family: 'Bakbak One', cursive;
+    font-size: 36px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.shows__header__icons {
+    display: flex;
+    justify-content: center;
+}
+
+.shows__header__icons svg:nth-child(2) {
+    margin: 0 33px;
+}
+
+.shows__header__icons svg:hover {
+    cursor: pointer;
+}
+
+
+
+.shows__carousel__list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.shows__carousel__list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shows__carousel__list__item img {
+    margin-bottom: 15px;
+}
+
+.shows__carousel__list__item p {
+    font-size: 30px;
+    line-height: 25px;
+    color: #423C6C;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.shows__carousel__list__item.active img {
+    margin-bottom: 25px;
+}
+
+
+.shows__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shows__description p {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 0 3rem;
+}
+
+.shows__description button {
+    background: #423C6C;
+    border-radius: 12px;
+    border: none;
+    width: 200px;
+    height: 53px;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.shows__description button:hover {
+    cursor: pointer;
 }
