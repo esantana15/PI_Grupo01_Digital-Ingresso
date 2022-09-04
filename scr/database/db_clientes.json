@@ -52,6 +52,28 @@
             "complemento": "11",
             "cidade": "São Paulo",
             "uf": "Solteiro"
+        },
+        {
+            "id": "931367e9-d216-4462-92e4-70df40e4bf5c",
+            "name": "lucas pertile",
+            "cpf": "02689853167",
+            "date_nasc": "1989-11-30",
+            "sexo": "masculino",
+            "tel": "21999855985",
+            "email": [
+                "lucas.pertile@bilheteriadigital.com",
+                "lucas.pertile@bilheteriadigital.com"
+            ],
+            "senha": [
+                "12345678",
+                "12345678"
+            ],
+            "cep": "04704-040",
+            "rua": "Rua das Margaridas",
+            "bairro": "Jardim das Acácias",
+            "complemento": "111",
+            "cidade": "São Paulo",
+            "uf": "SP"
         }
     ]
 }

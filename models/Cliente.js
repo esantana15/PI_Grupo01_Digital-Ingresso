@@ -5,7 +5,7 @@ let db_clientes = require('../scr/database/db_clientes.json');
 
 const writeToDB = () => {
     const json = JSON.stringify(db_clientes);
-    fs.writeFileSync('src/database/db_clientes.json', json);
+    fs.writeFileSync('scr/database/db_clientes.json', json);
 }
 
 const Cliente = {
