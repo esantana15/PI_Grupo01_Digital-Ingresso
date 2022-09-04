@@ -7,13 +7,48 @@
     <link rel="icon" type="image/png" href="/images/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/solid.min.css">
+    <link rel="stylesheet" href="/stylesheets/painel.css">
+
     <title>Painel</title>
 </head>
 <body>
-    <div>
+    <div class="lista_eventos">
+
+        <% if (eventos && eventos.length > 0) { %>
+            <% eventos.map(evento => { %>
+                <div class="column justify-center flex-1">
+                    <img class="avatar"width="49px" height="49px" src="uploads/<%=evento.avatar%>"/>
+                    <div class="label">Evento</div>
+                    <div class="data"><%= evento.nome__evento %></div>
+                    <div style="height: 18px"></div>
+                    <div class="label">Data</div>
+                    <div class="data"><%= evento.data__evento %></div>
+                  </div>
+                <div class="botao">
+                    <div style="height: 8px"></div>
+                    <a class="button bg-secondary" href="/users/edit/<%= evento.id %>">
+                      <i class="fas fa-pen"></i>
+                    </a>
+                    <div style="height: 8px"></div>
+                    <form method="POST" action="/users/<%=evento.id%>?_method=DELETE">
+                        <button class="button bg-danger">
+                        <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </div>    
+            <% }) %>
+
+        <% } else { %>
+            <h4>Nenhum evento cadatrado</h4>
+        <% } %>
+
+        
+
         <a class="fixed-button bg-success" href="/evento/criar">
             <i class="fas fa-plus"></i>
         </a>
         </div>
+
+    </div>
 </body>
 </html>

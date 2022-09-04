@@ -3,7 +3,8 @@ const Evento = require('../models/Evento');
 const eventoController = {
     index: (req, res) => {
     //    res.send('rota do painel')
-        res.render('evento/painel')
+        const eventos = Evento.findAll();
+        res.render('evento/painel', { eventos })
     },
 
     novo: (req,res) => {
