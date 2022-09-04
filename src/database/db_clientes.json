@@ -74,6 +74,28 @@
             "complemento": "111",
             "cidade": "São Paulo",
             "uf": "SP"
+        },
+        {
+            "id": "fe5fd0f1-2d37-47cd-ac93-74a30431237d",
+            "name": "teste final",
+            "cpf": "026898531367",
+            "date_nasc": "1989-11-30",
+            "sexo": "masculino",
+            "tel": "21999855985",
+            "email": [
+                "teste@teste.com.br",
+                "teste@teste.com.br"
+            ],
+            "senha": [
+                "123456789",
+                "12345678"
+            ],
+            "cep": "04704-040",
+            "rua": "Rua das Margaridas",
+            "bairro": "Jardim das Acácias",
+            "complemento": "111",
+            "cidade": "São Paulo",
+            "uf": "SP"
         }
     ]
 }
