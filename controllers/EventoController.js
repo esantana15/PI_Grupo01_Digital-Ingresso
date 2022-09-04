@@ -39,6 +39,19 @@ const eventoController = {
 
     },
 
+    delete: (req, res) => {
+        const { id } = req.params;
+
+        Evento.removeAvatar(id);
+        Evento.delete(id);
+
+        res.redirect('painel')
+
+
+
+
+    }
+
 
 
 }

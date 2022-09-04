@@ -23,7 +23,8 @@ router.get('/edit/:id', eventoController.editForm)
 router.put('/:id', upload.single('avatar'), eventoController.update)
 
 
-
+//deletar evento
+router.delete('/:id', eventoController.delete)
 
 
 module.exports = router

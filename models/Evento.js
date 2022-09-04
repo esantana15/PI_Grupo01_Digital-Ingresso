@@ -38,6 +38,12 @@ const Evento = {
         writeToDB();
 
 
+    },
+
+    delete: (id) => {
+        const eventoIndex = db_eventos.eventos.findIndex(evento => evento.id === id);
+        db_eventos.eventos.splice(eventoIndex, 1);
+        writeToDB();
     }
 
     
