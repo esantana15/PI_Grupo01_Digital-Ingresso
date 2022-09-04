@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Eventos</title>
+</head>
+<body>
+  
+
+    <div class="cadastro__evento">
+
+      <h2 class="text-grey">Por favor, preencha todos os campos abaixo:</h2>
+        <form
+         action="<%= evento ? `/evento/${evento.id}?_method=PUT` : '/evento/' %>"
+         method="POST"
+         enctype="multipart/form-data">
+         
+
+
+
+         <% if(evento) { %>
+          <div class="row">
+            <img class="avatar" width="49px" height="49px" src="/upload/<%= evento.avatar %>"/>
+            <div style="width: 16px"></div>
+            <div class="column">
+              <div class="label">Avatar</div>
+              <input type="file" name="avatar" required>
+            </div>
+          </div>
+        <% } else { %>
+          <div class="label">Avatar</div>
+          <input type="file" name="avatar" required>
+        <% } %>
+            <br>
+
+          <label for="nome__evento">
+            Nome do evento:
+          </label>
+          <input type="text" name="nome__evento" id="nome__evento" placeholder="Nome do evento" required value="<%= evento ? evento.nome__evento :  '' %>"><br>
+
+          <label for="data__evento">
+            Data:
+          </label>
+          <input type="date" name="data__evento" id="data__evento" required value="<%= evento ? evento.data__evento :  '' %>"><br>
+
+          <label for="hora__evento">
+            Hora
+          </label>
+          <input type="time" name="hora__evento" id="hora__evento" required value="<%= evento ? evento.hora__evento :  '' %>"><br>
+
+          <label for="local__evento">
+            Local:
+          </label>
+          <input type="text" name="local__evento" id="local__evento" required value="<%= evento ? evento.local__evento :  '' %>"><br>
+
+          <label for="ingressos__evento">
+            Ingressos / Valor
+          </label>
+          <input type="text" name="ingressos__evento" id="ingressos__evento" value="<%= evento ? evento.ingressos__evento :  '' %>"> /
+          R$ <input type="number" name="ingressos__valor" id="ingressos__valor" value="<%= evento ? evento.ingressos__valor :  '' %>"><br>
+
+          
+
+          <label for="descricao__evento">
+            Descrição:
+          </label>
+          <textarea name="descricao__evento" id="descricao__evento" cols="30" rows="10" value="<%= evento ? evento.descricao__evento:  '' %>"></textarea><br>
+
+          <button type="submit" class="btn btn-success conteiner-cadastro">Adicionar / Salvar</button>
+
+
+
+
+          
+
+
+
+
+          
+
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>

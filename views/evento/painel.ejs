@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/favicon.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/solid.min.css">
+    <link rel="stylesheet" href="/stylesheets/painel.css">
+
+    <title>Painel</title>
+</head>
+<body>
+    <div class="lista_eventos">
+
+        <% if (eventos && eventos.length > 0) { %>
+            <% eventos.map(evento => { %>
+                <div class="column justify-center flex-1">
+                    <img class="avatar"width="49px" height="49px" src="/upload/<%= evento.avatar %>"/>
+                    <div class="label">Evento</div>
+                    <div class="data"><%= evento.nome__evento %></div>
+                    <div style="height: 18px"></div>
+                    <div class="label">Data</div>
+                    <div class="data"><%= evento.data__evento %></div>
+                  </div>
+                <div class="botao">
+                    <div style="height: 8px"></div>
+                    <a class="button bg-secondary" href="/evento/edit/<%= evento.id %>">
+                      <i class="fas fa-pen"></i>
+                    </a>
+                    <div style="height: 8px"></div>
+                    <form method="POST" action="/evento/<%=evento.id%>?_method=DELETE">
+                        <button class="button bg-danger">
+                        <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </div>    
+            <% }) %>
+
+        <% } else { %>
+            <h4>Nenhum evento cadatrado</h4>
+        <% } %>
+
+        
+
+        <a class="fixed-button bg-success" href="/evento/criar">
+            <i class="fas fa-plus"></i>
+        </a>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -17,7 +17,7 @@ const clienteController = {
         // req.session.teste = cliente
     //  console.log(req.session)
     Cliente.create(cliente);
-    res.redirect('/')
+    res.redirect('/shows')
     }
 
 
