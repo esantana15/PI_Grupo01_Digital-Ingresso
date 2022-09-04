@@ -16,7 +16,7 @@ const eventoController = {
         const avatar = req.file.filename;
 
         Evento.create(evento, avatar);
-        res.redirect('evento/painel')
+        res.redirect('evento/painel', { evento: null })
     },
 
     editForm: (req,res) => {
