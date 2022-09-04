@@ -270,14 +270,15 @@ body {
     justify-content: center;
 }
 #tabela4 .tabela04 .m3 .maisshows {
-    font-family: bakbak one;
     width: 300px;
+    height: auto;
     padding: 5px;
     border-radius: 10px;
     color: #33305B;
     background: #EDE3F5;
     cursor: pointer;
     font-size: 15px;
+    position: relative;
 }
 #tabela4 .tabela04 .m3 .maisshows:hover {
     color:  #EDE3F5;
@@ -310,7 +311,6 @@ body {
     color: #33305B;
     background: #EDE3F5;
     cursor: pointer;
-    font-family: bakbak one;
     font-size: 15px;
     position: relative;
     top: 7px;

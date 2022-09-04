@@ -5,40 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/index.css">
     <link rel="stylesheet" href="/stylesheets/carrinho.css">
     <link rel="stylesheet" href="/stylesheets/perfil.css">
     <link rel="stylesheet" href="/stylesheets/login_cadastro.css">
     <link rel="stylesheet" href="/stylesheets/cadastro.css">
+    <link rel="stylesheet" href="/stylesheets/shows.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cabin+Condensed" />
     <script class="buscaCEPJS" src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
     <script src="/js/buscaCep.js" defer></script>
-    <title>Shows</title>
+    <title>Digital Ingressos</title>
 </head>
 <body>
     <header>
-        <section id="logo" >
-            <img class="logoHeader" src="/images/imagensEmComum/logo.png" alt="">
-        </section>
-        <section id="localizacaoHeader">
-            <img class="localizacao" src="/images/icons/localizacao.png" alt="">
-            <p> Londrina - PR</p>
-        </section>
-        <section id="buscarBotao">
-            <img class="buscar" src="./images/icons/pesquisa.png" alt="">
-        </section>
-        <section id="buscar">
-            <p>Buscar</p>
-        </section>
-        <section id="iconeLogin">
-            <img class="loginAcesso" src="/images/icons/perfil.png" alt="perfil">
-            <p class="loginTexto">Login</p>
-        </section>
-        <section id="iconeCarrinho">
-            <img class="carrinhoAcesso" src="/images/icons/carrinho.png" alt="">
-            <p class="carrinhoTexto">Carrinho</p>
-        </section>
+        <div id="principal" >
+            <div class="caixa01">
+                <div class="logo">
+                    <img src="/images/imagensEmComum/logo1.png" alt="">
+                </div>
+    
+            </div>
+            <section class="caixa02">
+                <div id="localizacao">
+                    <div class="icone">
+                        <img src="/images/icons/localizacao.png" alt="">
+                    </div> 
+                    <div class="cidade">
+                        <p>Londrina - PR</p>
+                    </div> 
+                </div>
+            <section id="campoBusca">
+                <div id="divBusca">
+                    <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                    <button id="btnBusca">Buscar</button>
+                  </div>
+            </section>
+    
+                
+    
+            </section>
+            <div id="areaLogada">
+                <div class="caixa3">
+                    <div class="iconePerfil">
+                        <img src="/images/icons/perfil.png" alt="">
+                        Logar/Cadastrar
+                    </div>
+                    <div class="iconeCarrinho">
+                        <img src="/images/icons/carrinho.png" alt="">
+                        Meu Carrinho
+                    </div>
+                </div>
+            </div>
+                
     </header>
-
-
+    <body>
+        
+    </body>
+    </html>
