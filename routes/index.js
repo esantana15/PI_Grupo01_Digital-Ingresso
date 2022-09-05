@@ -29,7 +29,7 @@ router.get("/perfil", perfilController.index)
 // rota de cadastros de clientes
 router.get('/cadastro', clienteController.cadastro)
 router.post('/cadastro' , clienteController.create_cliente)
-router.get('/perfil/:id', clienteController.show);
+router.get('/perfil/:id', clienteController.show)
 
 module.exports = router;
 

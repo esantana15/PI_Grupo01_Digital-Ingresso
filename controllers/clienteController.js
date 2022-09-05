@@ -1,5 +1,4 @@
 
-
 const Cliente = require('../models/Cliente')
 
 
@@ -13,7 +12,7 @@ const clienteController = {
     show: (req, res) => {
         const { id }= req.params;
         const cliente = Cliente.findById(id);
-        res.render ('/perfil', { cliente })
+        res.render ('perfil', { cliente })
     },
     create_cliente: (req, res) => {
     const cliente = req.body;
@@ -25,4 +24,4 @@ const clienteController = {
 
 }
 
-module.exports = clienteController
+module.exports = clienteController;

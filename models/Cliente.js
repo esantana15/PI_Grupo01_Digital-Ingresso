@@ -13,7 +13,7 @@ const Cliente = {
         return db_clientes
     },
     findById: (id) => {
-        const cliente = db.clientes.find(cliente => cliente.id === id);
+        const cliente = db_clientes.clientes.find(cliente => cliente.id === id);
         return cliente;
     },
 
@@ -24,4 +24,4 @@ const Cliente = {
 
 }
 
-module.exports = Cliente
+module.exports = Cliente;
