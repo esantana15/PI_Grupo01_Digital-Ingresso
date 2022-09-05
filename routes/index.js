@@ -3,13 +3,19 @@ const carrinhoController = require('../controllers/carrinhoController');
 const perfilController = require('../controllers/perfilController');
 const loginController = require('../controllers/loginController');
 const showsController = require('../controllers/showsController');
-const clienteController = require('../controllers/clienteController')
+const clienteController = require('../controllers/clienteController');
+const eventoController = require('../controllers/EventoController');
+const homeController = require('../controllers/homeController')
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
+
+router.get('/', homeController.index)
+
+
 
 router.get("/carrinho", carrinhoController.index)
 
