@@ -4,9 +4,27 @@
 
     <div id="conteudoShows">
 
+        <% if (eventos && eventos.length > 0) { %>
+            <% eventos.map(evento => { %>
+                <div class="column justify-center flex-1">
+                    <img class="avatar"width="49px" height="49px" src="/upload/<%= evento.avatar %>"/>
+                    <div class="label">Evento</div>
+                    <div class="data"><%= evento.nome__evento %></div>
+                    <div style="height: 18px"></div>
+                    <div class="label">Data</div>
+                    <div class="data"><%= evento.data__evento %></div>
+                  </div>
+                
+            <% }) %>
+
+        <% } else { %>
+            <h4>Nenhum evento cadatrado</h4>
+        <% } %>
+
+
 
     <div class="show">
-        <div></div>
+        
         <div class="show1">
             <img src="/images/imagensEmComum/Adelle.png" alt="">
         </div>
