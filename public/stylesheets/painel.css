@@ -1,0 +1,32 @@
+.lista_eventos {
+    
+    
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-left: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.label {
+    font-size: 12px;
+}
+
+.column {
+    font-size: 12px;
+    margin: 30px;
+
+}
+
+.botao {
+    display: block;
+    justify-content: space-between;
+    
+}

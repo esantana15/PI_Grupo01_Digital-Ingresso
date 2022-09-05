@@ -19,7 +19,7 @@ const clienteController = {
     const cliente = req.body;
     // const avatar = req.file.filename;
     Cliente.create(cliente);
-    res.redirect('/')
+    res.redirect('/shows')
     }
 
 
