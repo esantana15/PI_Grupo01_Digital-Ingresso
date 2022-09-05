@@ -308,17 +308,20 @@ body {
     height: auto;
     padding: 5px;
     border-radius: 10px;
-    color: #33305B;
-    background: #EDE3F5;
+    border-color: transparent;
+    /* color: #33305B; */
+    background: transparent;
+    background-repeat:no-repeat;
     cursor: pointer;
-    font-size: 15px;
+    /* font-size: 25px; */
     position: relative;
     top: 7px;
 }
 
 .comprar:hover {
     color:  #EDE3F5;
-    background: #33305B;
+   
+    opacity: 0.8;
 }
 
 .z {

@@ -268,7 +268,50 @@ header.header {
 .shows {
     padding: 62px 100px;
     background-color: #16172c;
+    
+
 }
+
+.lista_eventos {
+    
+    display: flex;
+    align-items:center;
+    grid-template-columns: repeat(5, 1fr);
+    /* gap: 20px; */
+    margin: 30px;
+    
+    justify-content: center;
+
+
+
+}
+
+.evento__img {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+
+}
+
+.evento__res {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.lista_evento2 {
+    align-items: center;
+    justify-content: center;
+    display: block;
+    text-align: center;
+    margin: 5px;
+    color: white;
+    
+   
+}
+
+
+
+
 
 .shows__header {
     width: 100%;
