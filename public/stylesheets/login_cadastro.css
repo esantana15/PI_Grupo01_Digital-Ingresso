@@ -204,6 +204,7 @@ header #iconeCarrinho .carrinhoTexto {
     color: #EDE3F5;
     background:#3E3863;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .card-login {

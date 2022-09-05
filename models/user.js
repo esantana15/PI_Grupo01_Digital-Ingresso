@@ -1,7 +1,7 @@
 const fs = require ('fs');
 const {v4} = require ('uuid');
 
-let db = require ('../scr/database/db.json')
+let db = require ('../src/database/db.json')
 
 const writeToDB = () => {
     const json = JSON.stringify(db);

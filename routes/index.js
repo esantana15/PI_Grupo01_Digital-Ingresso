@@ -5,6 +5,10 @@ const loginController = require('../controllers/loginController');
 const showsController = require('../controllers/showsController');
 const clienteController = require('../controllers/clienteController')
 var router = express.Router();
+const multer = require ('multer');
+
+const { storage } = require('../src/config/uploads');
+const upload = multer({ storage })
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -24,8 +28,8 @@ router.get("/perfil", perfilController.index)
 
 // rota de cadastros de clientes
 router.get('/cadastro', clienteController.cadastro)
-router.post('/cadastro', clienteController.create_cliente)
-
+router.post('/cadastro' , clienteController.create_cliente)
+router.get('/perfil/:id', clienteController.show);
 
 module.exports = router;
 

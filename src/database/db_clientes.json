@@ -96,6 +96,74 @@
             "complemento": "111",
             "cidade": "São Paulo",
             "uf": "SP"
+        },
+        {
+            "id": "a9657432-a8ec-44c3-8171-4e601813c8f9",
+            "name": "Ivone Maria Ferreira de Oliveira",
+            "cpf": "124.391.214-60",
+            "date_nasc": "2003-03-13",
+            "sexo": "feminino",
+            "tel": "83986233728",
+            "email": [
+                "ivoneferreiraoliv@hotmail.com",
+                "ivoneferreiraoliv@hotmail.com"
+            ],
+            "senha": [
+                "12345678",
+                "12345678"
+            ],
+            "cep": "58431070",
+            "rua": "Rua Compositor Rosil Cavalcante",
+            "bairro": "Novo Bodocongó",
+            "complemento": "Apto E003",
+            "cidade": "Campina Grande",
+            "uf": "PB",
+            "avatar": "annie.jpg"
+        },
+        {
+            "id": "c873c547-ade8-4f82-90da-ff90ed09264c",
+            "name": "Ivone Maria Ferreira de Oliveira",
+            "cpf": "124.391.214-60",
+            "date_nasc": "2003-03-13",
+            "sexo": "feminino",
+            "tel": "83986233728",
+            "email": [
+                "ivoneferreiraoliv@hotmail.com",
+                "ivoneferreiraoliv@hotmail.com"
+            ],
+            "senha": [
+                "12345678",
+                "12345678"
+            ],
+            "cep": "58431070",
+            "rua": "Rua Compositor Rosil Cavalcante",
+            "bairro": "Novo Bodocongó",
+            "complemento": "Apto E003",
+            "cidade": "Campina Grande",
+            "uf": "PB",
+            "avatar": "annie.jpg"
+        },
+        {
+            "id": "9959d25d-6e99-477c-bffd-614c1915ee45",
+            "name": "Ivone Maria Ferreira de Oliveira",
+            "cpf": "124.391.214-60",
+            "date_nasc": "2003-03-13",
+            "sexo": "feminino",
+            "tel": "83986233728",
+            "email": [
+                "ivoneferreiraoliv@hotmail.com",
+                "ivoneferreiraoliv@hotmail.com"
+            ],
+            "senha": [
+                "12345678",
+                "12345678"
+            ],
+            "cep": "58431070",
+            "rua": "Rua Compositor Rosil Cavalcante",
+            "bairro": "Novo Bodocongó",
+            "complemento": "Apto E003",
+            "cidade": "Campina Grande",
+            "uf": "PB"
         }
     ]
 }
