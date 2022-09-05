@@ -12,6 +12,10 @@ const Cliente = {
     findAll: () => {
         return db_clientes
     },
+    findById: (id) => {
+        const cliente = db.clientes.find(cliente => cliente.id === id);
+        return cliente;
+    },
 
     create: (clientes) => {
         db_clientes.clientes.push({ id: v4(), ...clientes });

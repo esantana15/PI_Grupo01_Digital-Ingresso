@@ -35,21 +35,21 @@
         <!-- Formulario Cadastro Dados Usuario -->
         <div id="cadastro">
            <ul><form action="" method="post">
-                <li><label for="Nome"></label>
-                <input type="text" name="Nome" id="Nome" placeholder="Nome"/></li>
+            <% %>     
+            <li><label for="Nome"></label>
+                <input type="text" name="Nome" id="Nome" placeholder="Nome" readonly value="<%= cliente.name  %> "/></li>
     
             <li><label for="CPF"></label>
-                <input type="text" name="CPF" id="CPF" placeholder="CPF"/></li>
+                <input type="text" name="CPF" id="CPF" placeholder="CPF"readonly/></li>
     
             <li><label for="Email"></label>
-                <input type="text" name="Email" id="Email" placeholder="Email"/></li>
+                <input type="text" name="Email" id="Email" placeholder="Email"readonly/></li>
     
             <li><label for="Celular"></label>
-                <input type="text" name="Celular" id="Celular" placeholder="Celular"/></li>
+                <input type="text" name="Celular" id="Celular" placeholder="Celular"readonly/></li>
             </form></ul>
             <form>
                 <input class="botao" type="button" value="Enviar">
-                <imput
             </form>
         </div>     
     </section>
