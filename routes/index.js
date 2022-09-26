@@ -30,7 +30,7 @@ router.get("/login", loginController.index)
 router.get("/perfil", perfilController.index)
 
 
-//  router.get("/shows", showsController.index)
+ router.get("/shows", showsController.index)
 
 // rota de cadastros de clientes
 router.get('/cadastro', clienteController.cadastro)
