@@ -74,7 +74,7 @@ body {
     max-height: 100%;
 }
 
-#conteudoShows .show .comprar {
+#conteudoShows .show .buy {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +85,8 @@ body {
     padding: 5px;
     border-radius: 7px;
     color: #33305B;
+    font-size: 15px;
+    font-family: roboto;
     background: #EDE3F5;
     cursor: pointer;
     position: relative;
@@ -94,7 +96,7 @@ body {
     max-height: 100%;
 }
 
-#conteudoShows .show .comprar:hover {
+#conteudoShows .show .buy:hover {
     color:  #EDE3F5;
     background: #33305B;
     position: fixed absolute;

@@ -1,29 +1,12 @@
-<link rel="stylesheet" href="/stylesheets/shows.css">">
 
+<header>
+    <%- include('./partials/header') %>
+</header>
 
 
 <main>
 
     <div id="conteudoShows">
-
-        <% if (eventos && eventos.length > 0) { %>
-            <% eventos.map(evento => { %>
-                <div class="column justify-center flex-1">
-                    <img class="avatar"width="49px" height="49px" src="/upload/<%= evento.avatar %>"/>
-                    <div class="label">Evento</div>
-                    <div class="data"><%= evento.nome__evento %></div>
-                    <div style="height: 18px"></div>
-                    <div class="label">Data</div>
-                    <div class="data"><%= evento.data__evento %></div>
-                  </div>
-                
-            <% }) %>
-
-        <% } else { %>
-            <h4>Nenhum evento cadatrado</h4>
-        <% } %>
-
-
 
     <div class="show">
         
@@ -36,8 +19,8 @@
             <h3> Rio de Janeiro - RJ </h3>
             <h3> Av. Padre Cacique, 891 <br> Praia de Belas, Porto Alegre, RS <br> Brasil </h3>
         </div>
-        <form class="comprar">
-            <input class="comprar" type="button" value="comprar">
+        <form class="buy">
+            <input class="buy" type="button" value="comprar">
         </form>
     </div>
 
@@ -51,8 +34,8 @@
             <h3> Rio de Janeiro - RJ </h3>
             <h3> Av. Padre Cacique, 891 <br> Praia de Belas, Porto Alegre, RS <br> Brasil </h3>
         </div>
-        <form class="comprar">
-            <input class="comprar" type="button" value="comprar">
+        <form class="buy">
+            <input class="buy" type="button" value="comprar">
         </form>
     </div>
 
@@ -66,8 +49,8 @@
             <h3> Rio de Janeiro - RJ </h3>
             <h3> Av. Embaixador Abelardo Bueno, 340 <br> Barra da Tijuca, Rio de Janeiro - RJ <br> Brasil </h3>
         </div>
-        <form class="comprar">
-            <input class="comprar" type="button" value="comprar">
+        <form class="buy">
+            <input class="buy" type="button" value="comprar">
         </form>
     </div>
 
@@ -81,8 +64,8 @@
             <h3> Curitiba - PR </h3>
             <h3> Endereço: R. João Gava, 970 <br> Abranches, Curitiba - PR <br> Brasil </h3>
         </div>
-        <form class="comprar">
-            <input class="comprar" type="button" value="comprar">
+        <form class="buy">
+            <input class="buy" type="button" value="comprar">
         </form>
     </div>
 
@@ -96,8 +79,8 @@
         <h3> São Paulo - SP </h3>
         <h3>Endereço: Rua Palestra Itália, 200 <br> Água Branca São Paulo - SP, <br> Brasil</h3>
     </div>
-    <form class="comprar">
-        <input class="comprar" type="button" value="comprar">
+    <form class="buy">
+        <input class="buy" type="button" value="comprar">
     </form>
     </div>
 
@@ -111,5 +94,7 @@
 </main>
 
 
-
+<footer>
+    <%- include('./partials/footer') %>
+</footer>
 

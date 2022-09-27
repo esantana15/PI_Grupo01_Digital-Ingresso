@@ -1,0 +1,15 @@
+
+
+body div {
+    display: flex;
+    justify-content: center;
+}
+#containerCartao {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 40%;
+    color: whitesmoke;
+    border: solid red 1px;
+    line-height: 25px;
+}
