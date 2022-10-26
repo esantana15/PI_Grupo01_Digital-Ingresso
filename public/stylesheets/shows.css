@@ -129,4 +129,12 @@ body {
     margin-bottom: 25px;
 }
 
+#footerShows {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+
+}
 

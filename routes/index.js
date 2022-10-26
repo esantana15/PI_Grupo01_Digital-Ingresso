@@ -6,7 +6,8 @@ const showsController = require('../controllers/showsController');
 const clienteController = require('../controllers/clienteController');
 const eventoController = require('../controllers/EventoController');
 const homeController = require('../controllers/homeController');
-const checkoutController = require('../controllers/checkoutController')
+const checkoutController = require('../controllers/checkoutController');
+const concertoController= require('../controllers/concertoController');
 var router = express.Router();
 const multer = require ('multer');
 
@@ -23,24 +24,18 @@ router.get('/', homeController.index)
 
 
 router.get("/carrinho", carrinhoController.index)
-
-
 router.get("/login", loginController.index)
-
-
 router.get("/perfil", perfilController.index)
-
-
- router.get("/shows", showsController.index)
-
- router.get("/checkout", checkoutController.index)
-
-
+router.get("/shows", showsController.index)
+router.get("/checkout", checkoutController.index)
 
 // rota de cadastros de clientes
 router.get('/cadastro', clienteController.cadastro)
 router.post('/cadastro' , clienteController.create_cliente)
 router.get('/perfil/:id', clienteController.show)
+router.get('/concerto', concertoController.create)
+router.post('/concerto', concertoController.register)
+
 
 module.exports = router;
 

@@ -8,6 +8,7 @@ var session = require('express-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const eventosRouter = require('./routes/eventos');
+var concertoRouter = require('./routes/concerto');
 const methodOverride = require('method-override');
 
 var app = express();
@@ -32,6 +33,7 @@ saveUninitialized:true
 
 
 app.use('/', indexRouter);
+app.use('/concerto', concertoRouter);
 app.use('/users', usersRouter);
 app.use('/evento', eventosRouter);
 

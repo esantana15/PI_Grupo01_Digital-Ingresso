@@ -31,7 +31,7 @@ module.exports = function(sequelize, DataTypes) {
         timestamps: false
     }
 
-    let Client = sequelize.define(alias, cols, config)
+    let Address = sequelize.define(alias, cols, config)
 
     Address.associate = function(models) {
         Address.belongs(models.Client, {

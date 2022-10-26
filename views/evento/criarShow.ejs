@@ -1,0 +1,69 @@
+
+<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/create.css">
+  <script type="text/javascript" src="/javascripts/scripts.js" ></script>
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+    <main>
+    <h1>
+      Cadastramento de Evento
+    </h1>
+
+        <form method="post" action="/concerto/register" enctype="multipart/form-data" >
+            <div class="form-group">
+                <label for="event">Evento</label>
+                <input type="text" class="form-control" id="name" placeholder="Evento">
+            </div>
+            <div class="form-group">
+                <label for="location">Local/Arena</label>
+                <input type="text" class="form-control" id="name" placeholder="Local/Arena">
+            </div>
+            <div class="form-group">
+                <label for="address">Rua/Numero</label>
+                <input type="text" class="form-control" id="name" placeholder="Rua/Número">
+            </div>
+            <div class="form-group">
+                <label for="neighborhood">Bairro</label>
+                <input type="text" class="form-control" id="neme" placeholder="Bairro">
+              </div>
+              <div class="form-group">
+                <label for="city">Cidade</label>
+                <input type="text" class="form-control" id="name" placeholder="Cidade">
+              </div>
+              <div class="form-group">
+                <label for="date2">Data</label>
+                <input type="date" class="form-control" id="name" placeholder="Data">
+              </div>
+              <div class="form-group">
+                <label for="hour">Horário</label>
+                <input type="datetime" class="form-control" id="hour2" placeholder="Hora">
+              </div>
+                <div class="form-group">
+                  <label for="picture">Foto do Evento</label>
+                  <input type="file" class="form-control-file" id="picture">
+                </div>
+                <br>
+                <br>
+                <div class="submitBTN">
+                  <button type="submit" class="submitbtn">Criar Evento</button>
+                </div>
+
+          </form>
+        </main>
+        
+      <footer>
+          <%- include('../partials/footer') %>
+      </footer>
+
+</body>
+</html>
