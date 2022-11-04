@@ -1,5 +1,5 @@
 
-const Cliente = require('../models/Cliente')
+const Cliente = require('../models/Client')
 
 
 

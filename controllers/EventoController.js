@@ -1,4 +1,4 @@
-const Evento = require('../models/Evento');
+const Evento = require('../models/Events');
 
 const eventoController = {
     index: (req, res) => {

@@ -1,5 +1,6 @@
 var express = require('express');
 const carrinhoController = require('../controllers/carrinhoController');
+const cartController = require('../controllers/cartController')
 const perfilController = require('../controllers/perfilController');
 const loginController = require('../controllers/loginController');
 const showsController = require('../controllers/showsController');
@@ -24,6 +25,7 @@ router.get('/', homeController.index)
 
 
 router.get("/carrinho", carrinhoController.index)
+router.get("/cart", cartController.index)
 router.get("/login", loginController.index)
 router.get("/perfil", perfilController.index)
 router.get("/shows", showsController.index)
