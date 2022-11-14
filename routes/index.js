@@ -35,8 +35,7 @@ router.get("/checkout", checkoutController.index)
 router.get('/cadastro', clienteController.cadastro)
 router.post('/cadastro' , clienteController.create_cliente)
 router.get('/perfil/:id', clienteController.show)
-router.get('/concerto', concertoController.create)
-router.post('/concerto', concertoController.register)
+
 
 
 module.exports = router;

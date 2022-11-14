@@ -1,0 +1,74 @@
+
+
+#main-errorPage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+    background-color:#16172C;
+    color: white; 
+    height: 65vh; 
+    width: 100vw;
+}
+.redirect-errorPage{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#16172C;
+    color: white; 
+
+
+}
+.redirect-errorPage_section{
+    text-align: center;
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    color: #33305B;
+    background: #EDE3F5;
+    cursor: pointer;
+    font-size: 15px;
+    position: relative;
+    text-decoration: none;
+}
+.redirect-errorPage_section:hover{
+    background: #33305B;
+    text-decoration: none;
+}
+
+.text-errorPage {
+    height: 25vh;
+}
+
+.text-errorPage .h2-errorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    height: auto;
+
+}
+.text-errorPage .h3-errorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    height: 10vh;
+
+
+}
+
+.forms-errorPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: red;
+    height: auto;
+
+}

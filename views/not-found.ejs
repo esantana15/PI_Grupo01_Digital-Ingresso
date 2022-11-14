@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/not-found.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<header>
+    <%- include('./partials/header') %>
+</header>
+
+<body>
+
+    <div id="main-errorPage">
+        <div class="text-errorPage">
+            <h2 class="h2-errorPage"> Erro 404 </h2>
+            <h3 class="h3-errorPage">Página não encontrada</h3>
+            </div>
+        <div class="forms-errorPage">
+            <form class="redirect-errorPage">
+                <a href="/"><input class="redirect-errorPage_section" type="button" value="Página Inicial"></a> 
+            </form>
+            <form class="redirect-errorPage">
+                <a href="/shows"><input class="redirect-errorPage_section" type="button" value="Página de Eventos"></a> 
+            </form>
+        </div>
+
+    </div>
+
+
+
+  </body>
+</html>
+
+<%- include('./partials/footer') %>
+
+

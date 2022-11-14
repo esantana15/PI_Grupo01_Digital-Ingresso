@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/create.css">
   <script type="text/javascript" src="/javascripts/scripts.js" ></script>
-  <title>Document</title>
+  <title>Editar Concertos</title>
 </head>
 
 <body>
@@ -21,28 +21,31 @@
 
 
     <main>
+      <% if (eventos && eventos.length > 0) { %>
+        <% eventos.map(evento => { %>
+        <% }) %>
+
+      <% } else { >%
+      <% } %>
     <h1>
       Cadastramento de Eventos
     </h1>
 
-        <form method="post" 
-              action="/concerto/register" 
-              enctype="multipart/form-data" >
-              
+        <form method="post" action="/concerto/update-concert/<%= evento.EventoId %>" enctype="multipart/form-data" >
             <div class="form-group">
                 <label for="event">Evento</label>
                 <input type="text"
                 name="event" 
-                required
+                value="<%= evento.evento %> "
                 class="form-control" 
                 placeholder="Evento">
             </div>
-
+<!-- 
             <div class="form-group">
                 <label for="location">Local/Arena</label>
                 <input type="text" 
                 name="location" 
-                required
+                value="<%= enderecos.cidadeEvento %> "
                 class="form-control" 
                 placeholder="Local/Arena">
 
@@ -51,7 +54,7 @@
                 <label for="address">Rua/Numero</label>
                 <input type="text" 
                 name="address" 
-                required
+                value="<%= enderecos.bairroEvento %> "
                 class="form-control" 
                 placeholder="Rua/Número">
             </div>
@@ -60,7 +63,7 @@
                 <label for="neighborhood">Bairro</label>
                 <input type="text" 
                 name="neighborhood" 
-                required
+                value="<%= enderecos.ruaEvento %> "
                 class="form-control" 
                 placeholder="Bairro">
               </div>
@@ -69,7 +72,7 @@
                 <label for="city">Cidade</label>
                 <input type="text" 
                 name="city" 
-                required
+                value="<%= enderecos.cidadeEvento %> "
                 class="form-control" 
                 placeholder="Cidade">
               </div>
@@ -78,7 +81,7 @@
                 <label for="date">Data</label>
                 <input type="date" 
                 name="date" 
-                required
+                value="<%= enderecos.dataEvento %> "
                 class="form-control" 
                 placeholder="Data">
               </div>
@@ -87,23 +90,23 @@
                 <label for="hour">Horário</label>
                 <input type="datetime" 
                 name="hour" 
-                required
+                value="<%= enderecos.horaEvento %> "
                 class="form-control" 
                 placeholder="Hora">
-              </div>
+              </div> -->
 
                 <div class="form-group">
                   <label for="picture">Foto do Evento</label>
                   <input type="file" 
                   name="picture" 
-                  required
+                  value="<%= Evento.fotoEvento %> "
                   class="form-control-file" 
                   >
                 </div>
                 <br>
                 <br>
                 <div class="submitBTN">
-                  <button type="submit" class="submitbtn">Criar Evento</button>
+                  <button type="submit" class="submitbtn">Salvar Alterações</button>
                 </div>
 
           </form>

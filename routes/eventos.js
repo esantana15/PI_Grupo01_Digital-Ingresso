@@ -3,7 +3,7 @@ const router = express.Router();
 const eventoController = require('../controllers/EventoController');
 const multer = require('multer');
 
-const{ storage } = require ('../src/config/upload')
+const{ storage } = require ('../src/config/photoConcert')
 
 //inicialização do multer as configurações de storage
 

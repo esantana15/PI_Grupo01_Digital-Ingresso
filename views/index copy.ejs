@@ -62,6 +62,33 @@
         </div>
 
 
+        <div>
+          <div class="lista_eventos">
+            <% if (eventos && eventos.length > 0) { %>
+            <% eventos.map(evento => { %>
+              <button type="submit" class="comprar">
+                  <div class="lista_evento2">
+                    <img class="evento__img" src="/upload/<%= evento.avatar %>"/>
+                    
+                    <div class="show text"><%= evento.nome__evento %></div>
+                    <!-- <div style="height: 18px"></div> -->
+                    <div class="show text evento__res"><%= evento.local__evento %></div>
+                    <div class="show text"><%= evento.data__evento %> <%= evento.hora__evento %></div>
+                    teste
+                  
+                    
+                    
+                    
+                  </div>  
+                </button>
+            <% }) %>
+          </div>
+      
+        <% } else { %>
+            <h4>Nenhum evento cadatrado</h4>
+        <% } %>
+      
+        </div>
 
       </div>
     </main>

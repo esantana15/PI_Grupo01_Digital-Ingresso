@@ -1,4 +1,7 @@
 const EventAddress = require("./EventAddress");
+const eventos = {
+    findAll: () => db.Events
+}
 
 module.exports = function(sequelize, DataTypes) {
     let alias = "Events";

@@ -36,6 +36,9 @@ app.use('/', indexRouter);
 app.use('/concerto', concertoRouter);
 app.use('/users', usersRouter);
 app.use('/evento', eventosRouter);
+app.use((req, res) =>{
+  return res.status(404).render('not-found');
+})
 
 
 // catch 404 and forward to error handler
