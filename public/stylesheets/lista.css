@@ -1,0 +1,87 @@
+
+
+#main-listPage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+    background-color:#16172C;
+    color: white; 
+    height: auto; 
+    width: 100vw;
+}
+
+.firstDiv-listPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: auto;
+
+}
+.ul-listPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: auto;
+}
+.li-listPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: auto;
+    padding: 30px 0px 30px 0px
+}
+
+.text-errorPage {
+    height: 25vh;
+}
+
+.text-listPage .h2-listPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    height: auto;
+
+}
+.text-listPage .h3-listPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 45px;
+    text-align: center;
+    height: 10vh;
+
+
+}
+.form-listPage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 60vw;
+}
+
+.imput-listPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.btn-btn-listPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30%;
+}

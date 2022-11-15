@@ -33,12 +33,14 @@ module.exports = function(sequelize, DataTypes) {
 
     let EventAddress = sequelize.define(alias, cols, config);
 
-    EventAddress.associate = models =>{
-        EventAddress.belongsToMany(models.Events, { 
-            through: 'EventsAddresses', 
-            as: 'events' 
-        });
-
+    EventAddress.associate = function(models) {
+        EventAddress.belongsToMany(models.Events, {
+            as: "Eventos",
+            through: "Event_Address",
+            foreignKey: "address_Id",
+            otherKey: "events_Id",
+            timestamps: false
+        })
     }
 
 

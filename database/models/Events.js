@@ -1,8 +1,3 @@
-const EventAddress = require("./EventAddress");
-const eventos = {
-    findAll: () => db.Events
-}
-
 module.exports = function(sequelize, DataTypes) {
     let alias = "Events";
     let cols = {
@@ -11,11 +6,30 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-
+        fotoEvento: {
+            type: DataTypes.STRING
+        },
         evento:{
             type: DataTypes.STRING
         },
-        picture: DataTypes.STRING
+        cidadeEvento: {
+            type: DataTypes.STRING
+        },
+        ruaEvento: {
+            type: DataTypes.STRING
+        },
+        bairroEvento: {
+            type: DataTypes.STRING
+        },
+        localEvento: {
+            type: DataTypes.STRING
+        },
+        horaEvento: {
+            type: DataTypes.STRING
+        },
+        dataEvento: {
+            type: DataTypes.STRING
+        },
         }
     let config = {
         tableName: "Events",
@@ -25,13 +39,19 @@ module.exports = function(sequelize, DataTypes) {
     let Events = sequelize.define(alias, cols, config);
 
 
-    Events.associate = models =>{
-        Events.belongsToMany(models.EventAddress, { 
-            through: 'EventsAddresses', 
-            as: 'addressess'
-        });
-       }
+    // Events.associate = models =>{
+    //     Events.belongsToMany(models.EventAddress, { 
+    //         through: 'EventsAddresses', 
+    //         as: 'addressess'
+    //     });
+    //    }
 
+    Events.associate = function(models) {
+        Events.hasMany(models.EventAddress, {
+            as: "Eventos",
+            foreignKey: "events_Id"
+        })
+    }
 
     Events.sync({ alter: true }) // Essa clausula atualiza ou cria a tabela caso nao exista.
     return Events;

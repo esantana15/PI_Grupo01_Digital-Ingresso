@@ -21,11 +21,14 @@ router.post('/register',upload.single('picture'), //(req, res, next) => {
 concertoController.register);
 
 // UPDATE
-router.get('/update-concert/:id', concertoController.updateConcert);
+router.get('/update-concert/', concertoController.updateConcert);
 router.post('/process-update/:id', concertoController.processUpdate);
 
 
+
+
 router.get('/list-concerts', concertoController.getConcerts);
+router.post('/delete/:id', concertoController.deleteConcert);
 
 // router.get('update', concertoController.updateEvents);
 // router.post('process-update', concertoController.processUpdate);

@@ -1,6 +1,6 @@
 const { where } = require('sequelize');
-const db = require('../models');
-const Event = require('../models/Events')
+const db = require('../database/models');
+ 
 
 const concertoController = {
     create: (req, res) => {
@@ -11,7 +11,14 @@ const concertoController = {
         console.log(req.body),
         db.Events.create({
             evento: req.body.event,
-            fotoEvento: req.body.picture
+            fotoEvento: req.file.filename,
+            cidadeEvento: req.body.city,
+            bairroEvento: req.body.neighborhood,
+            ruaEvento: req.body.address,
+            localEvento: req.body.location,
+            horaEvento: req.body.hour,
+            dataEvento: req.body.date,
+        
             
         }),
         db.EventAddress.create({
@@ -35,33 +42,29 @@ const concertoController = {
         return res.send('Arquivo enviado com sucesso');
     },
   
-
-    getConcerts: function(req, res){
+//Lista de Shows
+    getConcerts: function(req, res) {
         db.Events.findAll()
-        .then(function(eventsReturned) {
-            return res.render('lista', {Event: eventsReturned})
+        .then(function(listaConcertos) {
+            return res.render('lista', {lista: listaConcertos})
         })
-        .catch((error) = res.render('not-found'))
+        .catch((error) => res.render('not-found'))
     },
+
+
+
     updateConcert:(req, res) =>{
-        let concertId = req.params.eventoId;
-        let showsReturned;
-        let eventAddressesReturned;
+        let concertId = req.params.id;
+        let = concertsReturned;
 
-
-        db.EventAddress.findAll()
-        .then((enderecos) => {
-            eventAddressesReturned = enderecos;
-            return eventAddressesReturned;
+        concertReturned = db.Events.findByPk(concertId)
+        .then((concertsReturned) => {
+            console.log(JSON.stringify(concertsReturned))
+            res.render('editarShow', {concerto: concertsReturned})
         })
-        .then((eventAddressesReturned) => {
-        showsReturned = db.Events.findAll(concertId)
-        .then((showsReturned) =>{
-            res.render('editarShow', {eventos: showsReturned})
-        })
-    })
 
     },
+
 
     processUpdate: (req, res) =>{
         db.Events.update(
@@ -91,14 +94,24 @@ const concertoController = {
                 .catch((error) => console.log.apply(error))
             },
 
+            deleteConcert: function(req, res) {
+                db.Events.destroy(
+            {
+                where: {
+                   id: req.params.idEvento
+                }
+            }
+        )
+            .then(() => res.redirect('/list-concerts'))
+            .catch((error) => console.log.apply(error))
+    }
+
     // editConcert:(req, res) =>{
     //     res.send("Você editou o produto " + event )
     // }
+
+    
 }
-
-
-
-
 
 module.exports = concertoController;
 

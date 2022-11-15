@@ -1,4 +1,4 @@
-const Cliente = require ('../models/Client')
+const Cliente = require ('../database/models/Client')
 const perfilController = {
     index: (req, res) => {
         return res.render('perfil');

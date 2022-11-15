@@ -1,21 +1,30 @@
 // const Evento = require('../models/Events');
 
+const db = require("../database/models");
+
 // const showsController = {
-//     index: (req, res) => {
-//         const eventos = Evento.findAll();
-           
-
-
-//         return res.render('shows', {eventos})
+//         index: (req, res) => {
+//             res.render('shows')
+//         }
 //     }
-// }
 
 // module.exports = showsController;
 
 const showsController = {
     index: (req, res) => {
-        return res.render('shows');
+        db.Events.findAll() 
+        .then(function(listaConcertos){
+            console.log(JSON.stringify(listaConcertos))
+            return res.render('shows', {concertos: listaConcertos})
+        }),
+        db.EventAddress.findAll()
+        .then(function(listaEnderecos){
+            console.log(JSON.stringify(listaEnderecos))
+            return res.render('shows', {endereco: listaEnderecos})
+        })
+        .catch((error) => res.render('not-found', console.log(error)))
     }
 }
+
 
 module.exports = showsController;
