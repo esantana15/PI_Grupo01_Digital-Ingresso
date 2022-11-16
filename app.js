@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const eventosRouter = require('./routes/eventos');
 var concertoRouter = require('./routes/concerto');
+const userRegisterRouter = require('./routes/users');
 const methodOverride = require('method-override');
 
 var app = express();
@@ -36,6 +37,7 @@ app.use('/', indexRouter);
 app.use('/concerto', concertoRouter);
 app.use('/users', usersRouter);
 app.use('/evento', eventosRouter);
+app.use('/cadastro', userRegisterRouter)
 app.use((req, res) =>{
   return res.status(404).render('not-found');
 })

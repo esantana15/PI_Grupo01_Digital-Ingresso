@@ -66,16 +66,18 @@ updateEvents: function(req, res) {
     
 
     processUpdate: function(req, res) {
+        console.log(JSON.stringify(req))
+        console.log(req.params.id)
         db.Events.update(
             {
-                evento: req.body.evento,
-                // fotoEvento: req.file.filename.fotoEvento,
-                cidadeEvento: req.body.cidadeEvento,
-                bairroEvento: req.body.bairroEvento,
-                ruaEvento: req.body.ruaEvento,
-                localEvento: req.body.localEvento,
-                horaEvento: req.body.horaEvento,
-                dataEvento: req.body.dataEvento,
+                evento: req.body.event,
+                fotoEvento: req.file.filename,
+                cidadeEvento: req.body.city,
+                bairroEvento: req.body.neighborhood,
+                ruaEvento: req.body.address,
+                localEvento: req.body.location,
+                horaEvento: req.body.hour,
+                dataEvento: req.body.date,
         },{
                 where: {
                 idEvento: req.params.id

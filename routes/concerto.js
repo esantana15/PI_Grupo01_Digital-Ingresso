@@ -23,13 +23,15 @@ concertoController.register);
 // UPDATE
 router.get('/update-concert/:id', concertoController.updateEvents);
 router.get('/update-concert', concertoController.getConcerts);
-router.post('/process-update/:id', concertoController.processUpdate);
 
+//
+router.post('/process-update/:id', concertoController.processUpdate); //delete
 
 
 
 
 router.post('/delete/:id', concertoController.deleteConcert);
+
 
 // router.get('update', concertoController.updateEvents);
 // router.post('process-update', concertoController.processUpdate);
