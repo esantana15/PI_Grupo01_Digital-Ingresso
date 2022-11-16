@@ -53,57 +53,50 @@ const concertoController = {
 
 
 
-    updateConcert:(req, res) =>{
-        let concertId = req.params.id;
-        let = concertsReturned;
+updateEvents: function(req, res) {
+    let concertId = req.params.id;
+    let concertsReturned;
 
-        concertReturned = db.Events.findByPk(concertId)
-        .then((concertsReturned) => {
-            console.log(JSON.stringify(concertsReturned))
-            res.render('editarShow', {concerto: concertsReturned})
-        })
+    concertsReturned = db.Events.findByPk(concertId)
+    .then((concertsReturned) => {
+        res.render('editarShow', {concert: concertsReturned})
+    })
+    .catch((error) => console.log(error))
+}, 
+    
 
-    },
-
-
-    processUpdate: (req, res) =>{
+    processUpdate: function(req, res) {
         db.Events.update(
             {
-                evento: req.body.event,
-                fotoEvento: req.body.picture
-            },{
+                evento: req.body.evento,
+                // fotoEvento: req.file.filename.fotoEvento,
+                cidadeEvento: req.body.cidadeEvento,
+                bairroEvento: req.body.bairroEvento,
+                ruaEvento: req.body.ruaEvento,
+                localEvento: req.body.localEvento,
+                horaEvento: req.body.horaEvento,
+                dataEvento: req.body.dataEvento,
+        },{
                 where: {
-                id: req.params.id
+                idEvento: req.params.id
                 }
-            }),
-        db.EventAddress.update(
-                {
-                    cidadeEvento: req.body.city,
-                    bairroEvento: req.body.neighborhood,
-                    ruaEvento: req.body.address,
-                    localEvento: req.body.location,
-                    horaEvento: req.body.hour,
-                    dataEvento: req.body.date,
-
-                },{
-                    where: {
-                    id: req.params.id
-                    }
-                })
-                .then(() => res.redirect('/shows/' + req.params.id))
-                .catch((error) => console.log.apply(error))
-            },
+            }
+        )
+        .then(() => res.redirect('/concerto/update-concert/' + req.params.id))
+        .catch((error) => console.log(error))
+    },
 
             deleteConcert: function(req, res) {
                 db.Events.destroy(
             {
                 where: {
-                   id: req.params.idEvento
+                    idEvento: req.params.id
+
                 }
             }
         )
-            .then(() => res.redirect('/list-concerts'))
-            .catch((error) => console.log.apply(error))
+            .then(() => res.redirect('/concerto/update-concert/'))
+            .catch((error) => console.log(error))
     }
 
     // editConcert:(req, res) =>{

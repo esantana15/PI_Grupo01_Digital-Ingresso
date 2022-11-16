@@ -23,15 +23,25 @@
     <main>
 
     <h1>
-      Cadastramento de Eventos
+      Editar Evento
     </h1>
 
-        <form method="post" action="/concerto/process-update/id" enctype="multipart/form-data" >
+
+<div>
+    <div>
+            <div>
+                <h2><% concert.fotoEvento %></h2>
+                <img src='./upload/concertos/<%= concert.fotoEvento %>'>
+            </div>
+    </div>
+</div>
+
+        <form method="post" action="/concerto/process-update/<%= concert.idEvento %>" //enctype="multipart/form-data" >
             <div class="form-group">
                 <label for="event">Evento</label>
                 <input type="text"
                 name="event" 
-                value=""
+                value="<%= concert.evento%>"
                 class="form-control" 
                 placeholder="Evento">
             </div>
@@ -40,7 +50,7 @@
                 <label for="location">Local/Arena</label>
                 <input type="text" 
                 name="location" 
-                value=""
+                value="<%= concert.localEvento %>"
                 class="form-control" 
                 placeholder="Local/Arena">
 
@@ -49,7 +59,7 @@
                 <label for="address">Rua/Numero</label>
                 <input type="text" 
                 name="address" 
-                value=" "
+                value="<%= concert.ruaEvento %>"
                 class="form-control" 
                 placeholder="Rua/Número">
             </div>
@@ -58,7 +68,7 @@
                 <label for="neighborhood">Bairro</label>
                 <input type="text" 
                 name="neighborhood" 
-                value=""
+                value="<%= concert.bairroEvento %>"
                 class="form-control" 
                 placeholder="Bairro">
               </div>
@@ -67,7 +77,7 @@
                 <label for="city">Cidade</label>
                 <input type="text" 
                 name="city" 
-                value=""
+                value="<%= concert.cidadeEvento %>"
                 class="form-control" 
                 placeholder="Cidade">
               </div>
@@ -76,7 +86,7 @@
                 <label for="date">Data</label>
                 <input type="date" 
                 name="date" 
-                value=""
+                value="<%= concert.dataEvento %>"
                 class="form-control" 
                 placeholder="Data">
               </div>
@@ -85,17 +95,34 @@
                 <label for="hour">Horário</label>
                 <input type="datetime" 
                 name="hour" 
-                value=""
+                value="<%= concert.horaEvento %>"
                 class="form-control" 
                 placeholder="Hora">
               </div>
 
+              <!-- <div class="form-group">
+                <label for="picture">Foto do Evento</label>
+                <input type="file" 
+                name="picture" 
+                class="form-control-file" 
+                >
+              </div> -->
+
 
                 <br>
                 <br>
+                <form action="/concerto/process-update/<%= concert.idEvento %>" method="post">
                 <div class="submitBTN">
                   <button type="submit" class="submitbtn">Salvar Alterações</button>
                 </div>
+                </form>
+
+                <form action="/concerto/delete/ <%= concert.idEvento %>" method="post">
+                <div class="submitBTN">
+                  <button type="submit" class="submitbtn">Deletar Evento</button>
+                </div>
+                </form>
+
 
           </form>
         </main>

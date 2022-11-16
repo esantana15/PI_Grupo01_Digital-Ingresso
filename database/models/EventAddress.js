@@ -1,4 +1,3 @@
-const Events = require('./Events')
 module.exports = function(sequelize, DataTypes) {
     let alias = "EventAddress";
     let cols = {

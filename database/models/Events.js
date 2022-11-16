@@ -6,9 +6,6 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        fotoEvento: {
-            type: DataTypes.STRING
-        },
         evento:{
             type: DataTypes.STRING
         },
@@ -28,6 +25,9 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         dataEvento: {
+            type: DataTypes.STRING
+        },
+        fotoEvento: {
             type: DataTypes.STRING
         },
         }
