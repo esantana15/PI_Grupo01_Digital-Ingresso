@@ -22,16 +22,15 @@ const registerUserController = {
             if (!file) {
                 return res.send('Envio de foto obrigatório');
             }
-            return res.send('Evento cadastrado com sucesso!');
+            return res.send('Evento cadastrado com sucesso!');  
+        
+
         
         })
         .catch((error) => console.log(error))  
         .then(() => res.render('userRegister2'))
-        .then(() => res.render('userRegister3'))
-
-
-
     },
+    
 }
 
 module.exports = registerUserController;

@@ -36,16 +36,19 @@
                   required
                   class="form-control" 
                   placeholder="Nome Completo">
+                
               </div>
   
               <div class="form-group">
-                  <label for="cpf">CPF</label>
-                  <input type="number" 
-                  name="cpf" 
-                  required
-                  class="form-control" 
-                  placeholder="CPF">
-  
+                <label for="cpf">Data</label>
+                <input type="number"
+                name="cpf" 
+                class="form-control" 
+                placeholder="cpf"
+                maxlength="11"
+                minlength="11"
+                required>
+                
               </div>
 
               <div class="form-group">
@@ -53,12 +56,13 @@
                 <input type="date"
                 name="data" 
                 class="form-control" 
-                placeholder="Data">
+                placeholder="Data"
+                required>
               </div>
   
               <div class="form-group">
                 <label for="sexo">Sexo</label>
-                <select name="sexo">
+                <select name="sexo" required>
                   <option value="Masculino">Masculino</option>
                   <option value="Feminino">Feminino</option>
                   <option value="Não Informado">Não Informado</option>
@@ -69,7 +73,7 @@
                 <label for="picture">Foto de Perfil</label>
                 <input type="file" 
                 name="picture" 
-                required
+                
                 class="form-control-file">
             </div>
   
@@ -77,11 +81,12 @@
                   <br>
             <div class="submitBTN">            
 
-            <form action="/cadastro/user-register>" method="post">
+            <form>
               <div class="submitBTN">
                 <button type="submit" class="submitbtn">Enviar meus dados</button>
               </div>
               </form>
+            </div>
             </form>
           </main>
           

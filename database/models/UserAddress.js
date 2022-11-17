@@ -1,53 +1,42 @@
-
-module.exports = function (connection, DataTypes) {
-    const model = connection.define('Address', {
-        idEnderecoPrincipal: {
+module.exports = function(sequelize, DataTypes) {
+    let alias = "UserAddres";
+    let cols = {
+        id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoincrement: true
+            autoIncrement: true
         },
-        rua: {
+        rua:{
             type: DataTypes.STRING
         },
-        numero: {
+        numero:{
+            type: DataTypes.INTEGER
+        },
+        complemento:{
             type: DataTypes.STRING
         },
         bairro: {
             type: DataTypes.STRING
         },
-        cidade: {
+        estado: {
+            type: DataTypes.STRING
+        },
+        pais: {
             type: DataTypes.STRING
         },
         cep: {
-            type: DataTypes.STRING
-        }
-    }, {
-        timestamps: false,
-        tableName: 'Address'
-      })
+            type: DataTypes.INTEGER
+        },
 
-    // model.associate = function(models) {
-    //     model.belongs(models.Address, {
-    //         as: "Endereço_Principal",
-    //         foreignKey: "endereço_idEnderecoPrincipal"
-    //     });
-        
-    //     model.belongsToMany(models.Events, {
-    //         as: "Eventos_Cliente",
-    //         through: "TBClientes_has_events",
-    //         foregnKey: "TBClientes_idClient",
-    //         otherKey: "events_idEvento",
-    //         timestamps: false
-    // });
-    //         Client.belongs(models.Login, {
-    //             as: "Login_Cliente",
-    //             foreignKey: "idLogin"
-    //         }),
-    //         Client.belongs(models.Contacts, {
-    //             as: "Contatos_Cliente",
-    //             foreignKey: "contatos_id"
-    //         })
-    // }
-    model.sync({ alter: true }) // Essa clausula atualiza ou cria a tabela caso nao exista.
-    return model
+        }
+    let config = {
+        tableName: "UserAddres",
+        timestamps: false
+    }
+
+    let UserAddres = sequelize.define(alias, cols, config);
+
+
+    UserAddres.sync({ alter: true }) // Essa clausula atualiza ou cria a tabela caso nao exista.
+    return UserAddres;
 }

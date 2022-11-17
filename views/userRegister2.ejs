@@ -25,36 +25,45 @@
         Cadastro de Endereço de Usuários
       </h1>
   
-            <form method="post" 
-            action="/cadastro/user-register" 
-            enctype="multipart/form-data" >
+      <form method="post" 
+      action="/cadastro/address-register" 
+      enctype="multipart/form-data" >
                 
               <div class="form-group">
-                  <label for="nome">Rua</label>
+                  <label for="rua">Rua</label>
                   <input type="text"
-                  name="nome" 
+                  name="rua" 
                   required
                   class="form-control" 
-                  placeholder="Nome Completo">
+                  placeholder="rua">
               </div>
   
               <div class="form-group">
-                  <label for="cpf">Número</label>
+                  <label for="numero">Número</label>
+                  <input type="number" 
+                  name="numero" 
+                  required
+                  class="form-control" 
+                  placeholder="Número">
+  
+              </div>
+              <div class="form-group">
+                  <label for="complemento">Complemento</label>
                   <input type="text" 
-                  name="cpf" 
+                  name="complemento" 
                   required
                   class="form-control" 
-                  placeholder="CPF">
-  
+                  placeholder="Complemento">
               </div>
+
               <div class="form-group">
-                  <label for="dataNascimento">Complemento</label>
-                  <input type="datetime" 
-                  name="dataNascimento" 
-                  required
-                  class="form-control" 
-                  placeholder="Data de Nascimento">
-              </div>
+                <label for="bairro">Bairro</label>
+                <input type="text" 
+                name="bairro" 
+                required
+                class="form-control" 
+                placeholder="Bairro">
+            </div>
   
               <div class="form-group">
                 <label for="cidade">Cidade</label>
@@ -356,7 +365,7 @@
             </div>
               <div class="form-group">
                 <label for="cep">CEP</label>
-                <input type="text" 
+                <input type="number" 
                 name="cep" 
                 required
                 class="form-control" 
@@ -366,11 +375,14 @@
           
                   <br>
                   <br>
-            <div class="submitBTN">
-                <button 
-                type="submit" 
-                class="submitbtn">Enviar meus dados</button>
-            </div>
+                  <div class="submitBTN">            
+
+                    <form>
+                      <div class="submitBTN">
+                        <button type="submit" class="submitbtn">Enviar meus dados</button>
+                      </div>
+                      </form>
+                    </div>
   
             </form>
           </main>
