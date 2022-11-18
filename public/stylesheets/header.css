@@ -125,7 +125,7 @@
 
 
 }
-#divBusca input{
+#divBusca .input-header{
     background-color: #3E3863;
     width: auto;
     width: 100%;

@@ -54,6 +54,7 @@ const concertoController = {
 
 
 updateEvents: function(req, res) {
+
     let concertId = req.params.id;
     let concertsReturned;
 
@@ -66,8 +67,8 @@ updateEvents: function(req, res) {
     
 
     processUpdate: function(req, res) {
-        console.log(JSON.stringify(req))
-        console.log(req.params.id)
+        console.log('aqui')
+        console.log(req.body)
         db.Events.update(
             {
                 evento: req.body.event,

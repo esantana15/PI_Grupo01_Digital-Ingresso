@@ -1,0 +1,83 @@
+
+#main-perfilPage{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: solid 1px red;
+    align-items: center;
+    padding: 10vh;
+    background-color: #33305B;
+    justify-content: center;
+}
+
+#divPrincipal-perfilPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid 1px blue;
+    width: 30vw;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 10vh;
+    background-color: #1F2239;
+    margin: 10px;
+
+
+
+
+}
+
+.fotoPerfil-perfilPage img{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: solid 1px pink;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#divPrincipal-perfilPage .text-perfilPage-H1{
+    color: white;
+    font-size: 45px;
+    line-height: 50px;
+    border: solid 1px blue;
+
+
+}
+
+#divPrincipal-perfilPage .text-perfilPage-H2{
+    padding: 5px;
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+
+
+}
+
+#divPrincipal-perfilPage .text-perfilPage-P{
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    line-height: auto;
+    border: solid 1px white;
+    margin: 10px;
+    background-color: #33305B;
+    border-radius: 10px;
+    width: 100px;
+
+
+
+}
+
+.acessoActions-perfilPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+
+}
+
+.acessoActions-perfilPage{
+
+}

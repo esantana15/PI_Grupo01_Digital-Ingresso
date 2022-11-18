@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         emailConfirm:{
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         password:{
             type: DataTypes.STRING

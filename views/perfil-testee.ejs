@@ -1,0 +1,71 @@
+<%- include('./partials/header') %>
+
+<link rel="stylesheet" href="/stylesheets/perfil.css">
+
+
+
+<div id="conteudo">
+
+
+<section id="usuario">
+    <div id="persona">
+        <img src="/images/perfil/persona.png" alt="">
+
+    <div id="usuarioTexto">
+        <p id = "usuarioNome">Ana
+            <img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" >
+        </p>
+        <p id = "usuarioSobrenome">Souza</p> 
+        <ul id="dados">
+           <li><h5>Email: </h5> ana.r.sou@email.com </li>
+           <li><h5>Usuario: </h5> AnaSou</li>
+           <li><h5>Local: </h5> Londrina - PR</li>
+        </ul>
+    </div>
+</div>
+
+    <section id="formulario">
+        <div id="editarDados">
+            <div class="p">
+                <img  src="/images/icons/editarDados.png"  alt="" >
+            <p>Editar</p>
+            </div>
+            <div class="p">
+                <img  src="/images/icons/mais.png"  alt="" >
+                <p>Adicionar</p>
+            </div>
+
+        </div> 
+        <!-- Formulario Cadastro Dados Usuario -->
+        <div id="cadastro">
+            <% if (clientes && clientes.length > 0) { %>
+                <% clientes.map(cliente => { %>           
+            <ul>
+               
+            <li> <%= cliente?.nomeCompleto %> </li>
+            <li> <%= cliente?.cpf %> </li>
+            <li> <%= cliente?.dataNascimento %> </li>
+            <li> <%= cliente?.sexo %> </li>
+            <li> <%= cliente?.nomeCompleto %> </li>
+            
+        </ul>
+
+            <form>
+                <input class="botao" type="button" value="Enviar">
+            </form>
+        </div>
+        <% }%>
+
+        <% } else { %>
+            <h4>Nenhum cliente cadatrado</h4>
+        <% } %>
+    </section>
+    </section>
+
+
+</div>
+
+    
+
+  
+

@@ -1,94 +1,58 @@
-<%- include('./partials/header') %>
 
-<link rel="stylesheet" href="/stylesheets/perfil.css">
+        <%- include('./partials/header') %>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/perfilPage.css">
+    <title>Document</title>
+</head>
+<header>
+</header>
+<body>
 
+    <main id="main-perfilPage">
 
-<div id="conteudo">
-
-
-<section id="usuario">
-    <div id="persona">
-        <img src="/images/perfil/persona.png" alt="">
-
-    <div id="usuarioTexto">
-        <p id = "usuarioNome">Ana
-            <img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" >
-        </p>
-        <p id = "usuarioSobrenome">Souza</p> 
-        <ul id="dados">
-           <li><h5>Email: </h5> ana.r.sou@email.com </li>
-           <li><h5>Usuario: </h5> AnaSou</li>
-           <li><h5>Local: </h5> Londrina - PR</li>
-        </ul>
-    </div>
-</div>
-
-    <section id="formulario">
-        <div id="editarDados">
-            <div class="p">
-                <img  src="/images/icons/editarDados.png"  alt="" >
-            <p>Editar</p>
+        <div id="divPrincipal-perfilPage">     
+            <div class="fotoPerfil-perfilPage">
+                <% console.log("nome da foto ", profilles.fotoPerfil) %>
+                <img src='./upload/users/<%= profilles.fotoPerfil %>' alt=""/>
             </div>
-            <div class="p">
-                <img  src="/images/icons/mais.png"  alt="" >
-                <p>Adicionar</p>
+            <div class="dadosPessoais-perfilPage">
+                <h1 class="text-perfilPage-H1"> Olá <%= profilles?.nomeCompleto %>!!! </h1>
+                <h2 class="text-perfilPage-H2"> Seja Bem vindo à sua área de usuário :) </h2>
             </div>
-
-        </div>
-        <!-- Formulario Cadastro Dados Usuario -->
-        <div id="cadastro">
-            <% if (cliente) {%>  
-           <ul><form action="" method="post">
-               
-            <li><label for="Nome"></label>
-                <input type="text" name="Nome" id="Nome" placeholder="Nome" readonly value="<%= cliente.name  %> "/></li>
-    
-            <li><label for="CPF"></label>
-                <input type="text" name="CPF" id="CPF" placeholder="CPF"readonly value="<%= cliente.cpf  %>"/></li>
-    
-            <li><label for="Email"></label>
-                <input type="text" name="Email" id="Email" placeholder="Email"readonly value="<%= cliente.email  %>"/></li>
-    
-            <li><label for="Celular"></label>
-                <input type="text" name="Celular" id="Celular" placeholder="Celular"readonly value="<%= cliente.tel  %>"/></li>
-            </form></ul>
-            <form>
-                <input class="botao" type="button" value="Enviar">
-            </form>
-        </div>
-        <% }%>
-    </section>
-    </section>
-    <!-- Dados Historico Ultimo Ingresso Comprado -->
-    <div id="usuario2">
-        <div id="usuarioTexto2">
-            <p>Meus Ingressos
-                <img id="codigoBarra" src="/images/perfil/codigoBarra.png"  alt="" >
-            </p>
-            <div  id="dadosIngressos">
-                <div class="meuShow">
-                    <img src="/images/perfil/coldplay.png" alt="">
+        <div class="acessoActions-perfilPage">
+            <div class="acessoActions-perfilPage-P">
+                <div>
+                    <p class="text-perfilPage-P">Editar Dados</p>  
                 </div>
-            <div id="dadosCompra">
-                <ul>
-                    <li><h4 id = "showNome">Coldplay<h4></li>
-                    <li>Unidade: 1 Inteira </li>
-                    <li>End: Av Saul Elkind, S/N, SP </li>
-                    <li>Data Show: 20/06/2022 Hora: 19:30</li>
-                    <li>Data Compra: 18/04/2022  Hora:  07:45</li>
-                    <li>Área: Pista  Valor:  R$690,00</li>
-                </ul> 
             </div>
+                
+            <div class="acessoActions-perfilPage-P">
+                <div>
+                    <p class="text-perfilPage-P">Meus Pedidos</p>
+                </div>
             </div>
+
+            <div class="acessoActions-perfilPage-P">
+                <div>
+                    <p class="text-perfilPage-P">Sair da Conta</p>  
+                </div>
+            </div>
+
+            </div>
+           
+            </div>
+
         </div>
 
-    </div>
-
-</div>
-
     
-
-<%- include('./partials/footer') %>
-  
-
+    
+    </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         cpf:{
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         dataNascimento:{
             type: DataTypes.STRING

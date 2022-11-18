@@ -17,17 +17,22 @@ const upload = multer({ storage })
 
 
 //Rota da Home
-router.get('/', homeController.index)
+router.get('/', homeController.index);
 
 
 //Rota para o carrinho
-router.get("/carrinho", carrinhoController.index)
-router.get("/cart", cartController.index)
+router.get("/carrinho", carrinhoController.index);
+router.get("/cart", cartController.index);
 
 //Rota de Login
-router.get("/login", loginController.index)
-router.get("/perfil", perfilController.index)
+router.get("/login", loginController.index);
+//rota para acesso ao perfil
+router.get("/perfil", perfilController.index); //listar todos
+router.get('/perfil/:id', perfilController.createProfile); //perfil unico
+
+//rota para o catalogo de shows
 router.get("/shows", showsController.index)
+//rota para pagamento
 router.get("/checkout", checkoutController.index)
 
 

@@ -9,7 +9,7 @@ const registerAddressController = {
 
     registerAddress:  (req, res) => {
         console.log(req.body),
-        db.UserAddress.createAddress({
+        db.UserAddres.create({
             rua: req.body.rua,
             numero: req.body.numero,
             complemento: req.body.complemento,

@@ -9,11 +9,11 @@ const accessController = {
 
     registerAccess:  (req, res) => {
         console.log(req.body),
-        db.UserAccess.createAccess({
-            email: req.body.event,
-            emailConfirm: req.file.filename,
-            password: req.body.city,
-            passwordConfirm: req.body.neighborhood,    
+        db.UserAccess.create({
+            email: req.body.email,
+            emailConfirm: req.body.emailConfirm,
+            password: req.body.password,
+            passwordConfirm: req.body.passwordConfirm,    
             
         })
 

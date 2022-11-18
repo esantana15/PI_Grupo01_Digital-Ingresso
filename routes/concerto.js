@@ -25,7 +25,7 @@ router.get('/update-concert/:id', concertoController.updateEvents);
 router.get('/update-concert', concertoController.getConcerts);
 
 //
-router.post('/process-update/:id', concertoController.processUpdate); //delete
+router.post('/process-update/:id', upload.single('picture'), concertoController.processUpdate); //delete
 
 
 
