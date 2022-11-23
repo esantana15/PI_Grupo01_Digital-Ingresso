@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="/stylesheets/userCreate.css">
     <script type="text/javascript" src="/javascripts/scripts.js" ></script>
     <title>Document</title>
@@ -21,77 +22,118 @@
   
   
       <main>
-      <h1>
-        Cadastro de Usuários
-      </h1>
-  
-            <form method="post" 
-            action="/cadastro/user-register" 
-            enctype="multipart/form-data" >
-                
-              <div class="form-group">
-                  <label for="nome">Nome Completo</label>
-                  <input type="text"
-                  name="nome" 
+        <div id="form_userRegistrer">
+
+
+      
+                <form id="form-mainForm" method="post" 
+                action="/cadastro/user-register" 
+                enctype="multipart/form-data" >
+
+                <h1 id="form_userRegisterH1">
+                  Dados Pessoais
+                </h1>
+                    
+                  <div class="form-group">
+                      <label for="nome">Nome Completo</label>
+                      <input type="text"
+                      name="nome" 
+                      required
+                      class="form-control" 
+                      placeholder="Nome Completo">
+                    
+                  </div>
+      
+                  <div class="form-group">
+                    <label for="cpf">Data</label>
+                    <input type="text"
+                    name="cpf" 
+                    class="form-control" 
+                    placeholder="cpf"
+                    required>
+                    
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="data">Data</label>
+                    <input type="date"
+                    name="data" 
+                    class="form-control" 
+                    placeholder="Data"
+                    required>
+                  </div>
+      
+                  <div class="form-group">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" required>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Feminino">Feminino</option>
+                      <option value="Não Informado">Não Informado</option>
+                    </select>
+                </div>
+    
+                <!-- <div class="form-group">
+                  <label for="password">Cadastre uma senha</label>
+                  <input type="password"
+                  name="password" 
                   required
                   class="form-control" 
-                  placeholder="Nome Completo">
-                
+                  placeholder="Insira uma nova senha">
               </div>
-  
+    
               <div class="form-group">
-                <label for="cpf">Data</label>
-                <input type="text"
-                name="cpf" 
+                  <label for="passwordConfirm">Confirme sua senha</label>
+                  <input type="password" 
+                  name="passwordConfirm" 
+                  required
+                  class="form-control" 
+                  placeholder="Confirme sua nova senha">
+    
+              </div>
+              <div class="form-group">
+                  <label for="email">Digite seu e-mail</label>
+                  <input type="email" 
+                  name="email" 
+                  required
+                  class="form-control" 
+                  placeholder="Digite seu email">
+              </div>
+    
+              <div class="form-group">
+                <label for="emailConfirm">Confirme seu e-mail</label>
+                <input type="email" 
+                name="emailConfirm" 
+                required
                 class="form-control" 
-                placeholder="cpf"
-                required>
+                placeholder="Confirme seu e-mail">
+            </div> -->
                 
-              </div>
+                <div class="form-group">
+                    <label for="picture">Foto de Perfil</label>
+                    <input type="file" 
+                    name="picture" 
+                    
+                    class="form-control-file">
+                </div>
+      
+                      <br>
+                      <br>
+    
+                  <div class="submitBTN">
+                    <button type="submit" class="submitbtn">Enviar meus dados</button>
+                  </div>
+                </form>
 
-              <div class="form-group">
-                <label for="data">Data</label>
-                <input type="date"
-                name="data" 
-                class="form-control" 
-                placeholder="Data"
-                required>
-              </div>
-  
-              <div class="form-group">
-                <label for="sexo">Sexo</label>
-                <select name="sexo" required>
-                  <option value="Masculino">Masculino</option>
-                  <option value="Feminino">Feminino</option>
-                  <option value="Não Informado">Não Informado</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="picture">Foto de Perfil</label>
-                <input type="file" 
-                name="picture" 
-                
-                class="form-control-file">
-            </div>
-  
-                  <br>
-                  <br>
-            <div class="submitBTN">            
-
-            <form>
-              <div class="submitBTN">
-                <button type="submit" class="submitbtn">Enviar meus dados</button>
-              </div>
-              </form>
-            </div>
-            </form>
-          </main>
+        </div>
+      
+      </main>
           
-  
+      <footer>
+        <%- include('./partials/footerCopy') %>
+      </footer>
   </body>
 
-  <footer>
-    <%- include('./partials/footerCopy') %>
-</footer>
+
+</html>
+
   

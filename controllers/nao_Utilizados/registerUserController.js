@@ -1,5 +1,5 @@
 const { where } = require('sequelize');
-const db = require('../database/models');
+const db = require('../../database/models');
  
 
 const registerUserController = {
@@ -15,6 +15,10 @@ const registerUserController = {
             dataNascimento: req.body.data,
             sexo: req.body.sexo,
             fotoPerfil: req.file.filename,
+            email: req.body.email,
+            emailConfirm: req.body.emailConfirm,
+            password: req.body.password,
+            passwordConfirm: req.body.passwordConfirm, 
                    
         })        
         .then((req, res, next) => {

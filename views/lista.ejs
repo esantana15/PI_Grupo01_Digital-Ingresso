@@ -19,11 +19,19 @@
 
                 <ul class="ul-listPage">
                 <% for (item of lista) { %>  
-                                   
+
+
+                  
                 <li class="li-listPage">
                         <%= item.evento%>
-                    <form method="post" action="/concerto/process-update/id" enctype="multipart/form-data" >
+                        <li class="li-listPagePic">
+
+                            <% item.fotoEvento %>
+                            </li>
+                                                    
+                    <form method="post" action="/concerto/process-update/<%= item.idEvento %>" enctype="multipart/form-data" >
                         <div class="form-listPage">
+                            <img src='/upload/concertos/<%= item.fotoEvento %>'>
                             <label for="event">Evento</label>
                             <input class="imput-listPage" 
                             type="text"
@@ -95,7 +103,10 @@
                                     </form>
                                 </div>
                                 <div class="btn-listPage">
-                                    <form action="/concerto/delete/<%item.id%>" method="post">
+                                    <form action="/concerto/delete/<%= item.idEvento %>" method="post">
+
+
+                                        
                                         <button type="submit" class="submitbtn">Excluir Evento</button>
                                     </form>
                                 </div>

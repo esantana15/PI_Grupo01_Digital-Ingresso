@@ -1,23 +1,24 @@
 
-const db = require("../database/models");
-const perfilController = {
-    index: (req, res) => {
-        db.UserRegister.findAll() 
-        .then(function(listaClientes){
-            console.log(JSON.stringify(listaClientes))
-            return res.render('perfil', {clientes: listaClientes})
-        })
-        .catch((error) => res.render('not-found', console.log(error)))
-    },
+const Sequelize = require('sequelize');
 
-    createProfile: function(req, res) {
+const {UserRegister, UserAddress} = require("../database/models");
+
+const perfilController = {
+        index: (req, res) => {
+            let usuarios = UserRegister.findAll();
+            res.render('perfil', {usuarios: usuarios})
+        }
+    ,
+
+     createProfile: function(req, res) {
 
         let profileId = req.params.id;
-        let profillesReturned;
+        let usersReturned;
     
-        profilesReturned = db.UserRegister.findByPk(profileId)
-        .then((profillesReturned) => {
-            res.render('perfil', {profilles: profillesReturned})
+        usersReturned = UserRegister.findByPk(profileId)
+        console.log(usersReturned)
+        .then((usersReturned) => {
+            res.render('perfil', {users: usersReturned})
         })
         .catch((error) => console.log(error))
     }

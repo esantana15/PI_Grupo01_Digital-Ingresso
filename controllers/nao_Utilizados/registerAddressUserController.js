@@ -7,9 +7,13 @@ const registerAddressController = {
         return res.render('userRegister2')
     },
 
-    registerAddress:  (req, res) => {
-        console.log(req.body),
-        db.UserAddres.create({
+    registerAddress:  async (req, res) => {
+        // const usuario_id = await UserRegister.findOne(
+        //     {
+        //         where: { cpf: req.body.cpf }
+        //     })
+        
+        db.UserAddress.create({
             rua: req.body.rua,
             numero: req.body.numero,
             complemento: req.body.complemento,
@@ -18,11 +22,9 @@ const registerAddressController = {
             estado: req.body.estado,
             pais: req.body.pais,
             cep: req.body.cep,
-                  
         })        
         .catch((error) => console.log(error))  
         .then(() => res.redirect('/cadastro/create-access'))
-        
     },
     
 }

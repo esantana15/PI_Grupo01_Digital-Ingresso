@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="eventos">
+        
+
+    </div>
+
+
+    <script>
+    const eventos = [
+        {
+            id: 0,
+            evento: 'Coldplay',
+            local: 'Allianz Parque',
+            quantidade: 0,
+            nome: 'Elvis Santana',
+            meia: 'sim',
+            Valor: 'R$450,00'                
+        },
+        {
+            id: 1,
+            evento: 'Dualipa',
+            local: 'Pedreira Paulo Leminsk',
+            quantidade: 0,
+            nome: 'Erika Santana',
+            meia: 'não',
+            Valor: 'R$450,00'
+        },
+        {
+            id: 2,
+            evento: 'Adele',
+            local: 'Arena Castelão',
+            quantidade: 0,
+            nome: 'Neri Santana',
+            meia: 'não',
+            Valor: 'R$450,00'
+        },
+    ]
+
+    inicializarLoja = () =>{
+        let containerShows = document.getElementById('eventos');
+        eventos.map((val) =>{
+            containerShows.innerHTML+=`
+
+                <div class="produto-single">
+                    <p>`+val.nome+`</p>
+                    <a href="`+val.id+`">Adicionar ao Carrinho</a>
+            
+            
+            `;
+            
+            
+        })
+    }
+
+    inicializarLoja();
+
+
+</script>
+</body>
+</html>
+

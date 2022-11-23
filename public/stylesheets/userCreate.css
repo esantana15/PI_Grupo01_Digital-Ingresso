@@ -1,75 +1,70 @@
-body {
+html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #16172C;
-    width: 100vw;
-    height: auto;
-    font-family: roboto;
 
 }
-h1 {
-    color: #EDE3F5;
-    font-size: 30px;
-    text-align: center;
-    line-height: 33px;
-}
+
+
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    width: 50%;
-    height: 60vh;
-    background-color: #16172C;
+    width: 60vw;
+    border: blue solid;
     justify-content: center;
     align-items: center;
-
-
-
 }
-form {
-    width: 80%;
+
+form_userRegistrer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    max-width: 90%;
+}
+
+
+
+
+#form-mainForm {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
     padding: 10px;
 }
 
 .form-group {
     color: #EDE3F5;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: center;   
+    width: 100vw;
+    height: auto;
     line-height: 30px;
+    max-width: 90%;
 
 
 }
 
-.form-group input, select {
+.form-group input, select, label {
     width: 60%;
+    font-size: 15px;
 }
-select{
-    margin-right: 5px;
-}
+
+
 
 footer{
     width: 100vw;
 
 }
-.submitBTN {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    color: #33305B;
-    background: #EDE3F5;
-    cursor: pointer;
 
-
-}
 .submitbtn{
     display: flex;
     flex-direction: row;
@@ -89,12 +84,20 @@ footer{
 .submitbtn:hover{
     color:  #EDE3F5;
     background: #33305B;
+
+}
+
+#form_userRegisterH1 {
+    color: #EDE3F5;
+    font-size: 25px;
+    text-align: center;
+    width: 40vw;
+    max-width: 100%;
 }
 
 
-.submitBTN:hover{
-    color:  #EDE3F5;
-    background: #33305B;
-}
+
+
+
 
 

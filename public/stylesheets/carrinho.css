@@ -327,3 +327,50 @@ body {
 .z {
     width: 20px;
 }
+
+
+
+.eventos-singleCart{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    border: solid red 1px;
+    align-items: center;
+
+}
+
+.evento-singleCart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.evento-singleCart .tittle1-singleCart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 18px;
+    border: solid green 1px;
+    width: 13vw;
+    justify-content: center;
+
+
+}
+
+.evento-singleCart .tittle2-singleCart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 14px;
+
+    border: solid green 1px;
+    width: 13vw auto;
+    justify-content: center;
+    background: #33305B;
+
+
+}

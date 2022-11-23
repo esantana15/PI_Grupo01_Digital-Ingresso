@@ -21,23 +21,27 @@
     </section>
 </div>
 
+<div id="events-cart">
+
+</div>
+
 
 <div id="tabela">
     <div class="tabela01">
         <div class="z"></div>
-        <div class="m">Produto</div>
-        <div class="m">Área</div>
+        <div class="m">Evento</div>
+        <div class="m">Local</div>
         <div class="m">Quantidade</div>
         <div class="m">Nome</div>
-        <div class="m">Meia</div>
-        <div class="m">Total</div>
-        <div class="m">Status</div>
+        <div class="m">Valor</div>
         <div class="z"></div>
     </div>
 </div>
 
 <div id="tabela2">
         <div class="tabela02">
+
+
             <div class="z"></div>
             <div class="m">
                 <p class="p1">ColdPlay</p><br>
@@ -49,32 +53,12 @@
                 <h2>02</h2>
                 <img class="arrowCart" src="/images/icons/arrow - right.png" alt=""></div>
             <div class="m">Ana Souza <br>Rodrigo Souza</div>
-            <div class="m">Não <br>Sim</div>
-            <div class="m">R$450,00 <br>R$225,00</div>
-            <div class="m">Ativo</div>
+            <div class="m">R$450,00 
             <div class="z"></div>
-        </div>
-</div>
 
-<div id="tabela3">
-        <div class="tabela03">
-            <div class="z"></div>
-            <div class="m">
-                <p class="p1">Artic Monkeys</p><br>
-                <p class="p2"> End: Av Saul Elkind, S/N, <br> Londrina - PR <br>Data Show:  20/06/2022<br>Hora: 19:30</p>
-                </div>
-            <div class="m">Pista</div>
-            <div class="y">
-                <img class="arrowCart" src="/images/icons/arrow - left.png" alt="">
-                <h2>02</h2>
-                <img class="arrowCart" src="/images/icons/arrow - right.png" alt=""></div>
-            <div class="m">Luiza Souza <br>Pedro Souza</div>
-            <div class="m">R$450,00 <br>R$450,00</div>
-            <div class="m">R$450,00 <br>R$225,00</div>
-            <div class="m">Ativo</div>
-            <div class="z"></div>
-        </div>
-</div>
+            </div>
+
+
 
 <div id="tabela4">
         <div class="tabela04">
@@ -98,11 +82,8 @@
                     <form>
                         <input class="comprar" type="button" value="Pagar">
                     </form>  
-            </div>  
-            <div class="m1">
-                <img src="/images/imagensEmComum/coldplay.png" alt="">
-                <img src="/images/imagensEmComum/ArticMonkeys.png" alt="">            
-            </div>
+            </div> 
+
             <div class="m3" >
                 <img class="arrow" src="/images/icons/arrow - left.png" alt="">
                 <img class="img" src="/images/imagensEmComum/DuaLipa.png" alt="">
@@ -117,7 +98,62 @@
 
         </div>
 
+<div>
+
+</div>
+
     </div>
+
+    <script>
+       
+    
+        inicializarLoja = () =>{
+            let containerShows = document.getElementById('events-cart');
+            eventos.map((val) =>{
+                containerShows.innerHTML+=`
+    
+                <div class="eventos-singleCart">
+                    <div class="evento-singleCart">
+                        <div>
+                        <p class="tittle1-singleCart">Evento</p>
+                        <p class="tittle2-singleCart">`+val.evento+`</p>
+                        </div>
+                        <div>
+                        <p class="tittle1-singleCart">Local</p>
+                        <p class="tittle2-singleCart">`+val.local+`</p>
+                    </div>
+                        <div>
+                        <p class="tittle1-singleCart">Quantidade</p>
+                        <p class="tittle2-singleCart">`+val.quantidade+`</p>
+                    </div>
+                        <div>
+                        <p class="tittle1-singleCart">Titular do Ingresso</p>
+                        <p class="tittle2-singleCart">`+val.nome+`</p>
+                    </div>
+                        <div>
+                        <p class="tittle1-singleCart">Meia Entrada</p>
+                        <p class="tittle2-singleCart">`+val.meia+`</p>
+                    </div>
+
+
+
+
+                    </div>
+                    <div class="tittle2-singleCart">
+
+                        <a href="`+val.id+`">Adicionar ao Carrinho</a>
+                    </div>
+                
+                `;
+                
+                
+            })
+        }
+    
+        inicializarLoja();
+    
+    
+    </script>
 
 
 </div>

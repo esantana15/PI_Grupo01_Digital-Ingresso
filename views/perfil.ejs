@@ -19,11 +19,11 @@
 
         <div id="divPrincipal-perfilPage">     
             <div class="fotoPerfil-perfilPage">
-                <% console.log("nome da foto ", profilles.fotoPerfil) %>
-                <img src='./upload/users/<%= profilles.fotoPerfil %>' alt=""/>
+                <% console.log("nome da foto ", usuarios.fotoPerfil) %>
+                <img src='/upload/users/<%= usuarios.fotoPerfil %>' alt=""/>
             </div>
             <div class="dadosPessoais-perfilPage">
-                <h1 class="text-perfilPage-H1"> Olá <%= profilles?.nomeCompleto %>!!! </h1>
+                <h1 class="text-perfilPage-H1"> Olá <%= usuarios?.nomeCompleto %> </h1>
                 <h2 class="text-perfilPage-H2"> Seja Bem vindo à sua área de usuário :) </h2>
             </div>
         <div class="acessoActions-perfilPage">
@@ -45,14 +45,12 @@
                 </div>
             </div>
 
-            </div>
-           
+
+            </div>           
             </div>
 
-        </div>
 
     
     
-    </div>
 </body>
 </html>

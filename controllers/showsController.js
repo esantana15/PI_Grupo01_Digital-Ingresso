@@ -23,6 +23,12 @@ const showsController = {
             return res.render('shows', {endereco: listaEnderecos})
         })
         .catch((error) => res.render('not-found', console.log(error)))
+    },
+
+    addCart: (req, res) =>{
+        db.Events.findAll() 
+
+
     }
 }
 

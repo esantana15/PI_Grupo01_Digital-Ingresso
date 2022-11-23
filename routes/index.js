@@ -4,7 +4,6 @@ const cartController = require('../controllers/cartController')
 const perfilController = require('../controllers/perfilController');
 const loginController = require('../controllers/loginController');
 const showsController = require('../controllers/showsController');
-const clienteController = require('../controllers/clienteController');
 const eventoController = require('../controllers/EventoController');
 const homeController = require('../controllers/homeController');
 const checkoutController = require('../controllers/checkoutController');
@@ -18,6 +17,8 @@ const upload = multer({ storage })
 
 //Rota da Home
 router.get('/', homeController.index);
+// router.get('/', homeController.shows);
+
 
 
 //Rota para o carrinho
@@ -32,6 +33,10 @@ router.get('/perfil/:id', perfilController.createProfile); //perfil unico
 
 //rota para o catalogo de shows
 router.get("/shows", showsController.index)
+router.post("/add-shows/:id", showsController.addCart)
+
+
+
 //rota para pagamento
 router.get("/checkout", checkoutController.index)
 
