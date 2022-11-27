@@ -23,22 +23,25 @@
 
                   
                 <li class="li-listPage">
-                        <%= item.evento%>
-                        <li class="li-listPagePic">
-
-                            <% item.fotoEvento %>
-                            </li>
-                                                    
                     <form method="post" action="/concerto/process-update/<%= item.idEvento %>" enctype="multipart/form-data" >
-                        <div class="form-listPage">
+                        <div class="form-listPageImg">
+                            <p class="form-listPageP"><%= item.evento %></p>
                             <img src='/upload/concertos/<%= item.fotoEvento %>'>
+                            <label for="picture">Foto do Evento</label>
+                            <input type="file" 
+                            name="picture" 
+                            class="form-control-file" 
+                            >
+                            
+                        </div>
+
+                        <div class="form-listPage">
                             <label for="event">Evento</label>
                             <input class="imput-listPage" 
                             type="text"
                             name="event" 
                             class="form-control"
                             placeholder="<%=item.evento%>">
-
                         </div>
             
                         <div class="form-listPage">
@@ -48,8 +51,8 @@
                             name="location" 
                             class="form-control" 
                             placeholder="<%=item.localEvento%>">
-            
                         </div>
+                        
                         <div class="form-listPage">
                             <label for="address">Rua/Numero</label>
                             <input class="imput-listPage"
@@ -96,27 +99,27 @@
                             class="form-control" 
                             placeholder="<%=item.horaEvento%>">
                           </div>
-                          <div class="btn-btn-listPage">
+
+                        <div class="btn-btn-listPage">
                             <div class="btn-listPage">
-                                    <form action="">
+                                    <form action="/concerto/process-update/<%= item.idEveto %>" method="post" enctype="multipart/form-data">
                                         <button type="submit" class="submitbtn">Atualizar Evento</button>
                                     </form>
-                                </div>
-                                <div class="btn-listPage">
+                            </div>
+
+                            <div class="btn-listPage">
                                     <form action="/concerto/delete/<%= item.idEvento %>" method="post">
-
-
-                                        
                                         <button type="submit" class="submitbtn">Excluir Evento</button>
                                     </form>
-                                </div>
                             </div>
+                        </div>
                           </form>
+                </li> 
+                
+                <% } %>                                  
             </div>
-        </li>
                     
-    </div>
-                <% } %>
+
     </ul>
 
 

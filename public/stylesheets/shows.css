@@ -21,8 +21,8 @@ body {
     width: 100vw;
     bottom: 30px;
 
-
 }
+
 
 #conteudoShows .show {
     display: flex;
@@ -38,12 +38,15 @@ body {
     max-width: 100%;
     max-height: 100%;
     padding: 2%;
+
 }
 
 #conteudoShows .show img {
     position: relative;
+    width: 10vw;
     max-width: 100%;
     max-height: 100%;
+    padding: 10%;
 }
 #conteudoShows .show .text {
     width: 100%;
@@ -74,34 +77,42 @@ body {
     max-height: 100%;
 }
 
-#conteudoShows .show .buy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: auto;
-    line-height: 20%;
-    text-align: center;
-    padding: 5px;
-    border-radius: 7px;
-    color: #33305B;
-    font-size: 15px;
-    font-family: roboto;
-    background: #EDE3F5;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    position: relative;
-    max-width: 100%;
-    max-height: 100%;
+.showPage-buy1{
+    margin: 7%;
 }
 
-#conteudoShows .show .buy:hover {
-    color:  #EDE3F5;
-    background: #33305B;
-    position: fixed absolute;
+#conteudoShows .show .showPage-buy {
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    background: #EDE3F5;
+    color: #33305B;
+    width: 10vw;
     max-width: 100%;
     max-height: 100%;
+    height: auto;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
+
+}
+
+#conteudoShows .show .showPage-buy:hover {
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+    background: #33305B;
+    color: #EDE3F5;
+    width: 10vw;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+
+    
 }
 
 #enunciado h1 {
@@ -137,4 +148,7 @@ body {
     max-width: 100%;
 
 }
+
+
+
 

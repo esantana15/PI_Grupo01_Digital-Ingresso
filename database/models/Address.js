@@ -1,8 +1,8 @@
 const { sequelize } = require(".")
 
 module.exports = (sequelize, DataTypes) => {
-    const UserAddress = sequelize.define('UserAddress', {
-        idUserAddress:{
+    const Address = sequelize.define('Address', {
+        id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -22,16 +22,17 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
           },
         },{
-            tableName: 'usuario_endereco',
+            tableName: 'address',
             timestamps: false
         })
 
-        // UserAddress.associate = (models) =>{
-        //     UserAddress.belongsTo(models.UserRegister, {
+        // Address.associate = (models) =>{
+        //     Address.belongsTo(models.User, {
         //         foreignKey: 'usuario_id',
         //         as: 'usuario'
         //         })
         //     }
-    UserAddress.sync({ alter: true }) // Essa clausula atualiza ou cria a tabela caso nao exista.
-    return UserAddress;
+
+    // Address.sync({ force: true }) // Essa clausula atualiza ou cria a tabela caso nao exista.
+    return Address;
 }

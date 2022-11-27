@@ -2,26 +2,18 @@
 /* GLOBAL */
 html {
     box-sizing: border-box;
+
 }
 
 body {
     padding: 0px; margin: 0;
     background-color: #1F2239;
-}
-
-
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:flex-start;
-    align-items: flex-start;
     width: 100vw;
-    height: 17vh;
-    
-    
 }
+
+
+
+
 
 #logo .logoHeader {
     

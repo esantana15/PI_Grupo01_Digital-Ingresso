@@ -3,6 +3,15 @@ const db = require('../database/models');
  
 
 const concertoController = {
+
+    shows: (req, res) => {
+        db.Events.findAll() 
+        .then(function(listaConcertos){
+            console.log(JSON.stringify(listaConcertos))
+            return res.render('shows', {concertos: listaConcertos})
+        })
+    },
+
     create: (req, res) => {
         return res.render('criarShow')
     },
@@ -18,6 +27,7 @@ const concertoController = {
             localEvento: req.body.location,
             horaEvento: req.body.hour,
             dataEvento: req.body.date,
+            precoEvento: req.body.price,
         
             
         }),
@@ -38,8 +48,9 @@ const concertoController = {
             return res.send('Evento cadastrado com sucesso!');
         
         })
+        return res.render('Arquivo enviado com sucesso')
         .catch((error) => console.log(error))  
-        return res.send('Arquivo enviado com sucesso');
+
     },
   
 //Lista de Shows
@@ -79,6 +90,7 @@ updateEvents: function(req, res) {
                 localEvento: req.body.location,
                 horaEvento: req.body.hour,
                 dataEvento: req.body.date,
+                precoEvento: req.body.price
         },{
                 where: {
                 idEvento: req.params.id

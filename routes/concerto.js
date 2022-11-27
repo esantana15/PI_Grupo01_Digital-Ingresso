@@ -3,22 +3,14 @@ var router = express.Router();
 const concertoController = require('../controllers/concertoController');
 const multer = require('multer');
 const{ storage } = require ('../src/config/photoConcert')
+const upload = multer({storage})//inicialização do multer as configurações de storage
 
-//inicialização do multer as configurações de storage
 
-const upload = multer({storage})
 
+router.get("/", concertoController.shows)
 //CREATE SHOW
 router.get('/create', concertoController.create);
-router.post('/register',upload.single('picture'), //(req, res, next) => {
-   // const file = req.file
-    //if (!file) {
-      //  return res.send('Sobe a porra da foto!');
-   // }
-  //  return res.send('Deu certo essa caraia');
-
-//}, 
-concertoController.register);
+router.post('/register',upload.single('picture'),concertoController.register);
 
 // UPDATE
 router.get('/update-concert/:id', concertoController.updateEvents);

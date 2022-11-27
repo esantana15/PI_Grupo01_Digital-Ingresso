@@ -24,18 +24,21 @@
                 <% concertos.map(concerto => { %>
                 
         <div class="show">            
-            <div class="show1">
                 <% console.log("nome da foto ", concerto.fotoEvento) %>
-                <img src='./upload/concertos/<%= concerto.fotoEvento %>' alt=""/>
-            </div>
+                <img src='/upload/concertos/<%= concerto.fotoEvento %>' alt=""/>
             <div class="text">
                 <h1> <%= concerto?.evento %></h1>
                 <h2> <%= concerto?.localEvento %></h2>
                 <h3> <%= concerto?.cidadeEvento %> </h3>
-                <h3> <%= concerto?.ruaEvento %> <br> <%= concerto?.bairroEvento %> <br> <%= concerto?.dataEvento + ' - ' + concerto?.horaEvento + ' horas' %> </h3>
+                <h3> <%= concerto?.ruaEvento %> 
+                <h3> <%= concerto?.bairroEvento %></h3> 
+                <h3> <%= concerto?.dataEvento %>  </h3>
+                <h3> <%= concerto?.horaEvento + ' horas' %> </h3>
+                <h1> <%= 'R$ ' + concerto?.precoEvento %> </h3>
+
             </div>
-            <form class="buy">
-                <input class="buy" type="button" value="comprar">
+            <form class="showPage-buy1">
+                <input class="showPage-buy" type="button" value="comprar">
             </form>
             
         </div>

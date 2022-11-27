@@ -1,5 +1,3 @@
-
-
 <header>
   <%- include('./partials/header') %>
 </header>
@@ -7,125 +5,99 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/create.css">
-  <script type="text/javascript" src="/javascripts/scripts.js" ></script>
+  <script type="text/javascript" src="/javascripts/scripts.js"></script>
   <title>Editar Concertos</title>
 </head>
 
 <body>
-  
 
 
-    <main>
 
-    <h1>
-      Editar Evento
-    </h1>
+  <main id="main-editConcert">
 
 
-<div>
-    <div>
-            <div>
-                <h2><% concert.fotoEvento %></h2>
-                <img src='./upload/concertos/<%= concert.fotoEvento %>'>
-            </div>
-    </div>
-</div>
-
-        <form method="post" action="/concerto/process-update/<%= concert.idEvento %>" enctype="multipart/form-data" >
-            <div class="form-group">
-                <label for="event">Evento</label>
-                <input type="text"
-                name="event" 
-                value="<%= concert.evento %>"
-                class="form-control" 
-                placeholder="Evento">
-            </div>
-
-            <div class="form-group">
-                <label for="location">Local/Arena</label>
-                <input type="text" 
-                name="location" 
-                value="<%= concert.localEvento %>"
-                class="form-control" 
-                placeholder="Local/Arena">
-
-            </div>
-            <div class="form-group">
-                <label for="address">Rua/Numero</label>
-                <input type="text" 
-                name="address" 
-                value="<%= concert.ruaEvento %>"
-                class="form-control" 
-                placeholder="Rua/Número">
-            </div>
-
-            <div class="form-group">
-                <label for="neighborhood">Bairro</label>
-                <input type="text" 
-                name="neighborhood" 
-                value="<%= concert.bairroEvento %>"
-                class="form-control" 
-                placeholder="Bairro">
-              </div>
-
-              <div class="form-group">
-                <label for="city">Cidade</label>
-                <input type="text" 
-                name="city" 
-                value="<%= concert.cidadeEvento %>"
-                class="form-control" 
-                placeholder="Cidade">
-              </div>
-
-              <div class="form-group">
-                <label for="date">Data</label>
-                <input type="date" 
-                name="date" 
-                value="<%= concert.dataEvento %>"
-                class="form-control" 
-                placeholder="Data">
-              </div>
-
-              <div class="form-group">
-                <label for="hour">Horário</label>
-                <input type="datetime" 
-                name="hour" 
-                value="<%= concert.horaEvento %>"
-                class="form-control" 
-                placeholder="Hora">
-              </div>
-
-              <div class="form-group">
-                <label for="picture">Foto do Evento</label>
-                <input type="file" 
-                name="picture" 
-                class="form-control-file" 
-                >
-              </div>
-
-
-                <br>
-                <br>
-                <form action="/concerto/process-update/<%= concert.idEvento %>">
-                <div class="submitBTN">
-                  <button type="submit" class="submitbtn">Salvar Alterações</button>
-                </div>
-                </form>
-
-                <form action="/concerto/delete/<%= concert.idEvento %>" method="post">
-                <div class="submitBTN">
-                  <button type="submit" class="submitbtn">Deletar Evento</button>
-                </div>
-                </form>
-
-
-          </form>
-        </main>
+    <div id="editConcert-bodyForm">
+      <div class="editConcert-tittle">
+        <h1 id="editConcert-tittleH1">
+          Editar Evento
+        </h1>
         
+      </div>
+        <div class="editConcert-picture">
+          <% concert.fotoEvento %>
+            <img class="editConcert-pictureImg" src='/upload/concertos/<%= concert.fotoEvento %>'>
+      </div>
+
+      <form method="post" action="/concerto/process-update/<%= concert.idEvento %>" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="picture">Foto do Evento</label>
+          <input type="file" name="picture" class="form-control-file">
+        </div>
+
+        <div class="form-group">
+          <label for="event">Evento</label>
+          <input type="text" name="event" value="<%= concert.evento %>" class="form-control" placeholder="Evento">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Local/Arena</label>
+          <input type="text" name="location" value="<%= concert.localEvento %>" class="form-control"
+            placeholder="Local/Arena">
+
+        </div>
+        <div class="form-group">
+          <label for="address">Rua/Numero</label>
+          <input type="text" name="address" value="<%= concert.ruaEvento %>" class="form-control"
+            placeholder="Rua/Número">
+        </div>
+
+        <div class="form-group">
+          <label for="neighborhood">Bairro</label>
+          <input type="text" name="neighborhood" value="<%= concert.bairroEvento %>" class="form-control"
+            placeholder="Bairro">
+        </div>
+
+        <div class="form-group">
+          <label for="city">Cidade</label>
+          <input type="text" name="city" value="<%= concert.cidadeEvento %>" class="form-control" placeholder="Cidade">
+        </div>
+
+        <div class="form-group">
+          <label for="date">Data</label>
+          <input type="date" name="date" value="<%= concert.dataEvento %>" class="form-control" placeholder="Data">
+        </div>
+
+        <div class="form-group">
+          <label for="hour">Horário</label>
+          <input type="datetime" name="hour" value="<%= concert.horaEvento %>" class="form-control" placeholder="Hora">
+        </div>
+
+        <div class="form-group">
+          <label for="price">Preço</label>
+          <input type="text" name="price" value="<%= concert.precoEvento %>" class="form-control" placeholder="Preço">
+        </div>
+
+        <div id="editConcert-btns">
+            <button type="submit" class="submitbtn">Salvar Alterações</button>
+          </form>
+
+          <form action="/concerto/delete/<%= concert.idEvento %>" method="post">
+            <button type="submit" class="submitbtn">Deletar Evento</button>
+          </form>
+
+        </div>
+
+
+      </form>
+    </div>
+
+  </main>
+
 
 </body>

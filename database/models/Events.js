@@ -27,6 +27,9 @@ module.exports = function(sequelize, DataTypes) {
         dataEvento: {
             type: DataTypes.STRING
         },
+        precoEvento: {
+            type: DataTypes.STRING
+        },
         fotoEvento: {
             type: DataTypes.STRING
         },
@@ -39,19 +42,7 @@ module.exports = function(sequelize, DataTypes) {
     let Events = sequelize.define(alias, cols, config);
 
 
-    // Events.associate = models =>{
-    //     Events.belongsToMany(models.EventAddress, { 
-    //         through: 'EventsAddresses', 
-    //         as: 'addressess'
-    //     });
-    //    }
 
-    Events.associate = function(models) {
-        Events.hasMany(models.EventAddress, {
-            as: "Eventos",
-            foreignKey: "events_Id"
-        })
-    }
 
     Events.sync({ alter: true }) // Essa clausula atualiza ou cria a tabela caso nao exista.
     return Events;

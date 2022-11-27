@@ -1,18 +1,18 @@
-// const Evento = require('../models/Events');
+const { where } = require('sequelize');
+const db = require('../database/models');
 
-// const homeController = {
-//     index: (req, res) => {
-//         const eventos = Evento.findAll();
-//         return res.render('index', {eventos});
-//     },
-// }
-
-// module.exports = homeController;
 
 const homeController = {
     index: (req, res) => {
-        return res.render('index');
+        db.Events.findAll() 
+        .then(function(listaConcertos){
+            console.log('aqui')
+            console.log(JSON.stringify(listaConcertos))
+            return res.render('index', {concertos: listaConcertos})
+        })
     }
+
 }
+
 
 module.exports = homeController;
