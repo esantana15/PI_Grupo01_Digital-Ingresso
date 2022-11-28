@@ -1,5 +1,7 @@
 const { where } = require('sequelize');
 const db = require('../database/models');
+const bcrypt = require('bcrypt')
+const { validationsResults } = require('express-validator');
  
 
 const usuarioController = {
@@ -15,6 +17,15 @@ const usuarioController = {
     
 
     register: async  (req, res) => {
+        let password = req.body.password
+        let senhaC = bcrypt.hashSync(password, 10)
+
+        // const errors = validationsResults(req);
+
+        // if(!errors.isEmpty()) {
+        //     console.log(errors.mapped());
+        //     return res.render('userRegister1', { errors: errors.mapped() });
+        // }
         try {
             const usuarios = await db.User.create({
                 nomeCompleto: req.body.nome,
@@ -24,7 +35,7 @@ const usuarioController = {
                 fotoPerfil: req.file.filename,
                 email: req.body.email,
                 emailConfirm: req.body.emailConfirm,
-                password: req.body.password,
+                password: senhaC,
                 passwordConfirm: req.body.passwordConfirm, 
                        
             })
@@ -41,8 +52,9 @@ const usuarioController = {
                     usuario_id: usuarios.id   
                     
                 })
+            
 
-            res.redirect('/cadastro/create-address')
+            res.redirect('/users/login')
 
         } catch (error) {
            console.log("-------------------------------");

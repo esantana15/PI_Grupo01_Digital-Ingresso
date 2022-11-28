@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 const { User, Address } = require("../database/models");
 
 const perfilController = {
-    createProfile: async function (req, res) {
+    profile: async function(req, res) {
 
         const usersReturned = await User.findOne({
             where: {

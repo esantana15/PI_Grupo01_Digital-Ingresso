@@ -16,7 +16,10 @@ module.exports = (sequelize, DataType) => {
         },
         sexo:DataType.STRING,
         fotoPerfil: DataType.STRING,
-        email:DataType.STRING,
+        email: {
+            type: DataType.STRING,
+            unique: true},
+
         emailConfirm:DataType.STRING,
         password:DataType.STRING,
         passwordConfirm:DataType.STRING,

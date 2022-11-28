@@ -1,9 +1,9 @@
 var express = require('express');
 const carrinhoController = require('../controllers/carrinhoController');
 const cartController = require('../controllers/cartController')
-const loginController = require('../controllers/loginController');
 const homeController = require('../controllers/homeController');
 const checkoutController = require('../controllers/checkoutController');
+const cadastroController = require('../controllers/cadastroController')
 var router = express.Router();
 const multer = require ('multer');
 
@@ -21,11 +21,13 @@ router.get('/', homeController.index);
 router.get("/carrinho", carrinhoController.index);
 router.get("/cart", cartController.index);
 
-//Rota de Login
-router.get("/login", loginController.index);
 
 //rota para pagamento
 router.get("/checkout", checkoutController.index)
+
+//Area de ADM
+router.get('/cadastro', cadastroController.index);
+
 
 
 module.exports = router;

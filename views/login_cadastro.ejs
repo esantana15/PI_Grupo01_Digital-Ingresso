@@ -1,58 +1,68 @@
 <%- include('./partials/header') %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/login_cadastro.css">
-    <title>Document</title>
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/login_cadastro.css">
+        <title>Document</title>
+    </head>
 
 
     <body>
-        
+
         <main id="conteudo">
             <div class="main-login">
                 <div class="left-login">
                     <h1>Faça login ou cadastre-se,<br />vem curtir <span> com a gente!</span></h1>
                     <!-- <img src="/assets/img/animation-cine.svg" class="left-login-img" alt="" /> -->
-                  </div>
-                  <div class="right-login">
+                </div>
+                <div class="right-login">
                     <div class="card-login">
-                <div id="headerCardLogin">
-                    <div class="logo">
-                        <h1><img src="/images/login-cadastro/barcode.png" alt=""></h1>
-                </div>
-                <div class="text-logo">
-                    <h2>Olá!</h2>
-                </div>
-                <div class="logo">
-                    <img src="/images/login-cadastro/barcode.png" alt="">
-                </div>
-                </div>
-                <div class="btn-login-sign">
-                    <button id="btnLoginSignUpSelect">Login</button>
-                    <a class="btnLoginSignUp" href="/cadastro/create">Nova Conta!</a>
-                </div>
-                    <div id="formLogin">
-                      <div class="textfield">
-                        <label for="usuario">Usuário</label>
-                        <input type="text" name="usuario" placeholder="Usuário" />
-                      </div>
-                      <div class="textfield">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="senha" />
+                        <div id="headerCardLogin">
+
+                            <div class="logo">
+                                <h1><img src="/images/login-cadastro/barcode.png" alt=""></h1>
+                            </div>
+
+                            <div class="text-logo">
+                                <h2>Olá!</h2>
+                            </div>
+
+                            <div class="logo">
+                                <img src="/images/login-cadastro/barcode.png" alt="">
+                            </div>
+
+                        </div>
+                        <div class="btn-login-sign">
+                            <button id="btnLoginSignUpSelect">Login</button>
+                            <a class="btnLoginSignUp" href="/users/create">Nova Conta!</a>
+                        </div>
+
+                        <div id="formLogin">
+                            <form class="textfield" action="/users/login" method="POST">
+                                <label for="email">Usuário</label>
+                                <input type="email" name="email" placeholder="e-mail" />
+
+                                <label for="password">Senha</label>
+                                <input type="password" name="password" placeholder="senha" />
+                                <button class="btn-login">Login</button>
+
+                            </form>
+                        </div>
                     </div>
-                        <button class="btn-login">Login</button>
-        </main>            
-    
-    
-        </div>   
+                </div>
 
-</body>
+        </main>
 
-<%- include('./partials/footer') %>
 
-</html>
+        </div>
+
+    </body>
+
+    <%- include('./partials/footer') %>
+
+    </html>

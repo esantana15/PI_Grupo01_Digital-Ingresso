@@ -1,56 +1,114 @@
+<%- include('./partials/header') %>
 
-        <%- include('./partials/header') %>
+    <!DOCTYPE html>
+    <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/reset.css">
-    <link rel="stylesheet" href="/stylesheets/perfilPage.css">
-    <title>Document</title>
-</head>
-<header>
-</header>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/perfilPage2.css">
+        <title>
+            <%= userLogged?.nomeCompleto %>
+        </title>
+    </head>
 
-    <main id="main-perfilPage">
+    <body>
 
-        <div id="divPrincipal-perfilPage">     
+        <div id="divPrincipal-perfilPage">
             <div class="fotoPerfil-perfilPage">
-                <h2><% users.fotoEvento %></h2>
-                <img src='./upload/concertos/<%= users.fotoEvento %>'>
+                <h2>
+                    <% userLogged?.fotoEvento %>
+                </h2>
+                <img src='/upload/users/<%= userLogged?.fotoPerfil %>'>
             </div>
             <div class="dadosPessoais-perfilPage">
-                <h1 class="text-perfilPage-H1"> Olá <%= users?.nomeCompleto %> </h1>
+                <h1 class="text-perfilPage-H1"> Olá <%= userLogged?.nomeCompleto %>
+                </h1>
                 <h2 class="text-perfilPage-H2"> Seja Bem vindo à sua área de usuário :) </h2>
             </div>
-        <div class="acessoActions-perfilPage">
-            <div class="acessoActions-perfilPage-P">
-                <div>
-                    <p class="text-perfilPage-P">Editar Dados</p>  
+            <div class="acessoActions-perfilPage">
+                <div class="acessoActions-perfilPage-P">
+                    <p class="text-perfilPage-P">
+                        Editar Dados
+                    </p>
+
+                    <form action="">
+                        <div class="form-group">
+                            <label for="nome">
+                                <%= userLogged?.email %>
+                            </label>
+                            <input type="text" name="email" class="form-control" placeholder="digiter seu e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nome">
+                                <%= userLogged?.nomeCompleto %>
+                            </label>
+                            <input type="text" 
+                            name="emailConfirm" 
+                            class="form-control"
+                            placeholder="confirme seu e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <!-- <label for="nome">
+                                Digite sua Nova Senha
+                            </label> -->
+                            <input type="text" 
+                            name="password" 
+                            class="form-control" 
+                            placeholder="nova senha">
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <!-- <label for="nome">
+                                Confirme sua Nova Senha
+                            </label> -->
+                            <input type="text" name="passwordConfirm" class="form-control"
+                                placeholder="confirme sua nova senha">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="acessoActions-perfilPage-P">
+                    <div>
+                        <p class="text-perfilPage-P">Meus Pedidos</p>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="nome">
+                                <%= userLogged?.email %>
+                            </label>
+                            <input type="text" name="email" class="form-control" placeholder="digiter seu e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nome">
+                                <%= userLogged?.nomeCompleto %>
+                            </label>
+                            <input type="text" name="emailConfirm" required class="form-control"
+                                placeholder="confirme seu e-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="password" class="form-control" placeholder="nova senha">
+
+                            <div class="form-group">
+                                <input type="text" name="passwordConfirm" class="form-control"
+                                    placeholder="confirme sua nova senha">
+                            </div>
+                        </div>
+
+                        <div class="acessoActions-perfilPage-P">
+                            <div>
+                                <p class="text-perfilPage-P">Sair da Conta</p>
+                            </div>
+                        </div>
                 </div>
             </div>
-                
-            <div class="acessoActions-perfilPage-P">
-                <div>
-                    <p class="text-perfilPage-P">Meus Pedidos</p>
-                </div>
-            </div>
+    </body>
 
-            <div class="acessoActions-perfilPage-P">
-                <div>
-                    <p class="text-perfilPage-P">Sair da Conta</p>  
-                </div>
-            </div>
-
-
-            </div>           
-            </div>
-
-
-    
-    
-</body>
-</html>
+    </html>

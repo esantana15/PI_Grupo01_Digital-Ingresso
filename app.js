@@ -4,12 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var session = require('express-session')
+var session = require('express-session');
+const loggedUserDataMiddleware = require('./middlewares/loggedUserData')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const eventosRouter = require('./routes/eventos');
 var concertoRouter = require('./routes/concerto');
 const userRegisterRouter = require('./routes/users');
+var logMiddleware = require('./middlewares/logSite')
 const methodOverride = require('method-override');
 
 var app = express();
@@ -27,17 +29,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session( {secret: "Digital_Ingressos_(Elvis_e_Ivone",
-resave: true,
-saveUninitialized:true
+app.use(session( {secret: "verdao@15",
+resave: false,
+saveUninitialized: false,
 }));
 
+app.use(loggedUserDataMiddleware);
 
+app.use(logMiddleware)
 app.use('/', indexRouter);
 app.use('/concerto', concertoRouter);
 app.use('/users', usersRouter);
 app.use('/evento', eventosRouter);
-app.use('/cadastro', userRegisterRouter)
+app.use('/users', userRegisterRouter)
 app.use((req, res) =>{
   return res.status(404).render('not-found');
 })
