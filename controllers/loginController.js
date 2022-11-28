@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const bcrypt = require('bcrypt');
 const User = require("../database/models/User");
+const Events = require("../database/models/Events")
 
 
 const loginController = {
@@ -54,9 +55,8 @@ const loginController = {
     }
 },
     profile: (req, res) => {
-        return res.render("perfil2", {
-            userLogged: req.session.userLogged
-        });
+        //const listaConcertos = Events.findAll() 
+        return res.render("perfil2", {userLogged: req.session.userLogged}); //, concertos: listaConcertos});
     },
 
     logout: (req, res) => {

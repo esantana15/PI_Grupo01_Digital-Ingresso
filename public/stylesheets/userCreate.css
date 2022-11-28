@@ -16,16 +16,20 @@ main {
     flex-direction: column;
     flex-wrap: wrap;
     width: 60vw;
-    border: blue solid;
     justify-content: center;
     align-items: center;
+    margin: 5%;
+    padding: 10%;
+    border-radius: 3%;
+    background-color: #1F2239;
+
 }
 
-form_userRegistrer{
+#form_userRegistrer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     height: auto;
     max-width: 90%;
 }
@@ -36,6 +40,7 @@ form_userRegistrer{
 #form-mainForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 40vw;
     padding: 10px;
 }
@@ -93,6 +98,7 @@ footer{
     text-align: center;
     width: 40vw;
     max-width: 100%;
+    padding: 3% 0%;
 }
 
 
