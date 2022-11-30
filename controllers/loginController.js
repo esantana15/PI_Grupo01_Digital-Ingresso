@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const bcrypt = require('bcrypt');
-const User = require("../database/models/User");
-const Events = require("../database/models/Events")
+const { User, Address } = require("../database/models");
+
 
 
 const loginController = {
@@ -30,30 +30,65 @@ const loginController = {
     // }
 
     loginProcess: async function (req, res) {
-        let usersToLogin = await User.findOne('email', req.body.email);
-        console.log(req.session);
+        console.log('aqui')
 
-
-        if (usersToLogin) {
-            let isPasswordVerified = bcrypt.compareSync(req.body.password, usersToLogin.password);
-
-        if (isPasswordVerified) {
-            delete usersToLogin.password
-            req.session.userLogged = usersToLogin
-            console.log(req.session);
-
-            return res.redirect('/users/perfil');
-        }
-
-        return res.render("login_cadastro", {
-            errors: {
-                email: {
-                    msg: 'este email não foi encontrado'
+        try {
+            const usersToLogin = await User.findOne({
+                // attributes:['id', 'email', 'password'],
+                where: {
+                    email: req.body.email
                 }
+            });
+    
+            console.log('aqui')
+    // 
+            console.log(req.session);
+    
+            // if(!usersToLogin){
+            //     return res.render('login', usersToLogin)
+            // }
+    
+            // const isPasswordVerified = bcrypt.compareSync(req.body.password, usersToLogin.password);
+            // if(!isPasswordVerified){
+            //     return res.render('login', usersToLogin)
+            // }
+    
+            // req.session.usersToLogin ={
+            //     id: usersToLogin.id,
+            //     email: usersToLogin.email,
+            //     email: usersToLogin.emailConfirm,
+            //     nomeCompleto: usersToLogin.nomeCompleto,
+            //     password: usersToLogin.password,
+            //     password: usersToLogin.passwordConfirm,
+            // }
+            // return res.redirect('/')
+    
+            console.log('aqui', usersToLogin)
+            if (usersToLogin) {
+                let isPasswordVerified = bcrypt.compareSync(req.body.password, usersToLogin.password);
+    
+            if (isPasswordVerified) {
+                delete usersToLogin.password
+                req.session.userLogged = usersToLogin
+                console.log(req.session);
+    
+                return res.redirect('/users/perfil');
             }
-        })
+    
+            return res.render("login_cadastro", {
+                errors: {
+                    email: {
+                        msg: 'este email não foi encontrado'
+                    }
+                }
+            })
+        }
+        } catch (error) {
+            console.log("-------------------------------");
+                     console.log(">>>> ERRO: ", error)
     }
 },
+
     profile: (req, res) => {
         //const listaConcertos = Events.findAll() 
         return res.render("perfil2", {userLogged: req.session.userLogged}); //, concertos: listaConcertos});
@@ -61,7 +96,7 @@ const loginController = {
 
     logout: (req, res) => {
         req.session.destroy();
-        return res.render('/')
+        return res.render('/users/login')
     }
 }
 

@@ -3,6 +3,9 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #33305B;
+    background-color: #16172C;
+
+
 
 }
 
@@ -23,15 +26,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30vh;
+    /* border: yellow solid; */
 
     
 }
 
 .fotoPerfil-perfilPage img{
+    width: 30vw;
     max-width: 90%;
     max-height: 90%;   
     padding: 10% 0%;
+    /* border: red solid; */
 
 }
 
@@ -41,15 +46,19 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    padding: 5% 5% 0% 5%;
+    /* border: solid; */
 
 }
 
 #divPrincipal-perfilPage .text-perfilPage-H1{
     color: white;
     width: auto;
-    font-size: 200%;
+    font-size: 180%;
     max-width: 100%;
+    text-align: center;
+    /* border: red solid; */
+    padding: 5%;
+    margin: 10%;
 
 }
 
@@ -98,15 +107,16 @@ body{
 #divPrincipal-perfilPage .text-perfilPage-P{
     padding: 5px;
     color: white;
-    font-size: 90%;
+    font-size: 120%;
     margin: 10px;
-    width: 100px;
+    width: auto;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
 .text-perfilPage-pedidos{
+    text-align: center;
     color: white;
     font-size: 12px;
 
@@ -125,7 +135,7 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 5%;
-
+    color: white;
 
 }
 
@@ -148,5 +158,11 @@ body{
     text-align: center;
 
 }
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    /* border: solid red; */
+    align-items: center;}
 
 

@@ -21,7 +21,7 @@
             <div class="dadosPessoais-perfilPage">
                 <h1 class="text-perfilPage-H1"> Olá <%= users?.nomeCompleto %>
                 </h1>
-                <h2 class="text-perfilPage-H2"> Seja Bem vinde à sua área de usuário :) </h2>
+                <h2 class="text-perfilPage-H2"> Bem vindo(a) à sua área de usuário :) </h2>
                 <div class="fotoPerfil-perfilPage">
                     <% users?.fotoEvento %>
                         <img src='/upload/users/<%= users?.fotoPerfil %>'>
@@ -40,37 +40,47 @@
                     <br>
                     <br>
 
-                    <form id="form-PerfilPage" action="">
+                    <form id="form-PerfilPage" action="/users/update-user/<%= users.id %>" method="POST">
                         <div class="form-group">
-                            <label for="nome">
-                                
+                            <label for="email">
+                                <p class="text-perfilPage-pedidos">
+                                    Seu e-mail
+                                </p>
                             </label>
                             <input type="text" name="email" class="form-control" placeholder="<%= users?.email %>">
                         </div>
 
                         <div class="form-group">
-
+                            <label for="emailConfirm">
+                                <p class="text-perfilPage-pedidos">
+                                    Confirmação de e-mail
+                                </p>
+                            </label>
                             <input type="text" name="emailConfirm" class="form-control"
                                 placeholder="confirme seu e-mail">
                         </div>
 
                         <div class="form-group">
-                            <!-- <label for="nome">
-                                Digite sua Nova Senha
-                            </label> -->
+                            <label for="nome">
+                                <p class="text-perfilPage-pedidos">
+                                    Digite sua nova Senha
+                                </p>
+                            </label>
                             <input type="text" name="password" class="form-control" placeholder="nova senha">
                         </div>
 
 
                         <div class="form-group">
-                            <!-- <label for="nome">
-                                Confirme sua Nova Senha
-                            </label> -->
+                            <label for="nome">
+                                <p class="text-perfilPage-pedidos">
+                                    Confirme sua nova Senha
+                                </p> 
+                            </label>
                             <input type="text" name="passwordConfirm" class="form-control"
                                 placeholder="confirme sua nova senha">
                         </div>
 
-                            <button type="submit" class="text-perfilPage-btn">Alterar</button>
+                            <button type="submit" action="/users/update-user/<%= users.id %>" method="POST" class="text-perfilPage-btn">Alterar</button>
 
                     </form>
 

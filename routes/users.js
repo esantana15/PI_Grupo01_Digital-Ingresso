@@ -38,11 +38,11 @@ router.post('/login', loginController.loginProcess);
 //Rota de Logout
 router.get('/logout', loginController.logout);
 
-
-
-
-router.get('/perfil/:email', perfilController.profile); //perfil unico
+router.get('/perfil/:id', perfilController.profile); //perfil unico
 router.get('/perfil', loginController.profile); //perfil unico
+
+router.post('/update-user/:id', upload.single('picture'), perfilController.processUpdate);
+
 
 
 

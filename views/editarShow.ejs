@@ -34,7 +34,7 @@
             <img class="editConcert-pictureImg" src='/upload/concertos/<%= concert.fotoEvento %>'>
       </div>
 
-      <form method="post" action="/concerto/process-update/<%= concert.idEvento %>" enctype="multipart/form-data">
+      <form method="post" action="/concerto/process-update/<%= concert.idEvento %>" enctype="multipart/form-data" >
         <div class="form-group">
           <label for="picture">Foto do Evento</label>
           <input type="file" name="picture" class="form-control-file">

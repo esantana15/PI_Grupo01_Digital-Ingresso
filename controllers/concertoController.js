@@ -48,7 +48,7 @@ const concertoController = {
             return res.send('Evento cadastrado com sucesso!');
         
         })
-        return res.render('Arquivo enviado com sucesso')
+        return res.send('tudo ok')
         .catch((error) => console.log(error))  
 
     },
@@ -65,6 +65,7 @@ const concertoController = {
 
 
 updateEvents: function(req, res) {
+    console.log('aqui')
 
     let concertId = req.params.id;
     let concertsReturned;
@@ -80,25 +81,32 @@ updateEvents: function(req, res) {
     processUpdate: function(req, res) {
         console.log('aqui')
         console.log(req.body)
-        db.Events.update(
-            {
-                evento: req.body.event,
-                fotoEvento: req.file.filename,
-                cidadeEvento: req.body.city,
-                bairroEvento: req.body.neighborhood,
-                ruaEvento: req.body.address,
-                localEvento: req.body.location,
-                horaEvento: req.body.hour,
-                dataEvento: req.body.date,
-                precoEvento: req.body.price
-        },{
+        try {
+        db.Events.update({
+            evento: req.body.event,
+            fotoEvento: req?.file?.filename,
+            cidadeEvento: req.body.city,
+            bairroEvento: req.body.neighborhood,
+            ruaEvento: req.body.address,
+            localEvento: req.body.location,
+            horaEvento: req.body.hour,
+            dataEvento: req.body.date,
+            precoEvento: req.body.price
+        }
+        
+        ,{
                 where: {
                 idEvento: req.params.id
                 }
             }
         )
-        .then(() => res.redirect('/concerto/update-concert/' + req.params.id))
-        .catch((error) => console.log(error))
+        res.redirect('/concerto/update-concert/' + req.params.id)
+            
+        } catch (error) {
+            console.log("-------------------------------");
+                     console.log(">>>> ERRO: ", JSON.stringify(error))
+        }
+            
     },
 
             deleteConcert: function(req, res) {
