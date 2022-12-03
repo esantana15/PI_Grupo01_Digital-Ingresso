@@ -5,4 +5,5 @@ function logEventCreate(req, res, next){
     next();
 
 }
+
 module.exports = logEventCreate

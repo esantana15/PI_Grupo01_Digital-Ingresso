@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var session = require('express-session');
-const loggedUserDataMiddleware = require('./middlewares/loggedUserData')
+const loggedUserDataMiddleware = require('./middlewares/loggedUserDataMiddleware');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const eventosRouter = require('./routes/eventos');
@@ -33,6 +33,7 @@ app.use(session( {secret: "verdao@15",
 resave: false,
 saveUninitialized: false,
 }));
+
 
 app.use(loggedUserDataMiddleware);
 

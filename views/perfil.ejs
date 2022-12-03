@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/stylesheets/reset.css">
         <link rel="stylesheet" href="/stylesheets/perfilPage2.css">
         <title>
-            <%= users?.nomeCompleto %>
+            <%= userLogged?.nomeCompleto %>
         </title>
     </head>
 
@@ -19,12 +19,12 @@
         <div id="divPrincipal-perfilPage">
 
             <div class="dadosPessoais-perfilPage">
-                <h1 class="text-perfilPage-H1"> Olá <%= users?.nomeCompleto %>
+                <h1 class="text-perfilPage-H1"> Olá <%= userLogged?.nomeCompleto %>
                 </h1>
                 <h2 class="text-perfilPage-H2"> Bem vindo(a) à sua área de usuário :) </h2>
                 <div class="fotoPerfil-perfilPage">
-                    <% users?.fotoEvento %>
-                        <img src='/upload/users/<%= users?.fotoPerfil %>'>
+                    <% userLogged?.fotoEvento %>
+                        <img src='/upload/users/<%= userLogged?.fotoPerfil %>'>
                 </div>
             </div>
             <div class="acessoActions-perfilPage">
@@ -40,14 +40,14 @@
                     <br>
                     <br>
 
-                    <form id="form-PerfilPage" action="/users/update-user/<%= users.id %>" method="POST">
+                    <form id="form-PerfilPage" action="/users/update-user/<%= userLogged.id %>" method="POST">
                         <div class="form-group">
                             <label for="email">
                                 <p class="text-perfilPage-pedidos">
                                     Seu e-mail
                                 </p>
                             </label>
-                            <input type="text" name="email" class="form-control" placeholder="<%= users?.email %>">
+                            <input type="text" name="email" class="form-control" placeholder="<%= userLogged?.email %>">
                         </div>
 
                         <div class="form-group">
@@ -80,7 +80,7 @@
                                 placeholder="confirme sua nova senha">
                         </div>
 
-                            <button type="submit" action="/users/update-user/<%= users.id %>" method="POST" class="text-perfilPage-btn">Alterar</button>
+                            <button type="submit" action="/users/update-user/<%= userLogged.id %>" method="POST" class="text-perfilPage-btn">Alterar</button>
 
                     </form>
 

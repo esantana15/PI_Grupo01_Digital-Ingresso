@@ -24,14 +24,31 @@
 
             <div id="areaLogada">
                 <div class="caixa3">
+                    <% if(locals?.islogged) { %>
                     <div class="iconePerfil">
-                        <a href="/users/login"><img src="/images/icons/perfil.png" alt=""></a>
-                        <a href="/login">Logar/Cadastrar</a>
+                        <% islogged?.fotoPerfil %>
+                        <a href="/users/login"><img src='/upload/users/<%= islogged?.fotoPerfil %>' alt=""></a>
+
+                        <a href="/login"> Olá <br> <%= islogged?.nomeCompleto %></a>
+                        <form action="/users/logout" method="get">
+                            <button> sair </button>
+                        </form>
                     </div>
+                    
                     <div class="iconeCarrinho">
                         <a href="/carrinho"><img src="/images/icons/carrinho.png" alt=""></a>
                         <a href="/carrinho">Meu Carrinho</a>
                     </div>
+
+                    <% } else { %>
+
+                    <div class="iconePerfil">
+                        <a href="/users/login"><img src="/images/icons/perfil.png" alt=""></a>
+                        <a href="/login">Logar/Cadastrar</a>
+                    </div>
+
+                    <% } %>
+
                 </div>
             </div>
                 

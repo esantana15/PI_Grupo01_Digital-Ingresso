@@ -91,7 +91,7 @@ const loginController = {
 
     profile: (req, res) => {
         //const listaConcertos = Events.findAll() 
-        return res.render("perfil2", {userLogged: req.session.userLogged}); //, concertos: listaConcertos});
+        return res.render("perfil", {userLogged: req.session.userLogged}); //, concertos: listaConcertos});
     },
 
     logout: (req, res) => {
