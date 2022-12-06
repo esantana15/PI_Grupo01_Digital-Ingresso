@@ -14,6 +14,9 @@ const perfilController = {
             }
             
         })
+
+
+        
             console.log(usersReturned)
                 res.render('perfil', { users: usersReturned })
     },

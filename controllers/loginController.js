@@ -38,7 +38,7 @@ const loginController = {
                 where: {
                     email: req.body.email
                 }
-            });
+            });          
     
             console.log('aqui')
     // 
@@ -96,7 +96,7 @@ const loginController = {
 
     logout: (req, res) => {
         req.session.destroy();
-        return res.render('/users/login')
+        return res.redirect('/')
     }
 }
 

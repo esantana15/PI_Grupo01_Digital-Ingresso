@@ -9,6 +9,10 @@ body {
 
 }
 
+header{
+    width: 100vw;
+}
+
 #main-editConcert {
     display: flex;
     flex-direction: column;

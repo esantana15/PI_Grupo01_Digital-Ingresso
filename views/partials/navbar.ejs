@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/navBar.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navContent-naBar">
+            <a class="logo-navBar" href="/"> <img src="../../images/imagensEmComum/logo1.png" alt=""></a>
+            <div class="mobileMenu-navBar" onclick="clickMenu()">
+                <div class="line1-navBar"></div>
+                <div class="line2-navBar"></div>
+                <div class="line3-navBar"></div>
+            </div>
+            <ul id="navList2" class="nav-List">
+                <li> <a href="/concerto">Eventos</a></li>
+                <% if(locals?.islogged) { %>
+                <li> <a href="/users/perfil">Meu Perfil</a></li>
+                <li> <a href="/users/logout">Logout</a></li>
+
+                <% } else { %>
+                    <li> <a href="/users/login">Login</a></li>
+                    <li> <a href="/users/register">Cadastre-se</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+<script>
+            function clickMenu(){
+                let menu = document.getElementById("navList2")
+                menu.classList.toggle("active")
+            }
+</script>
+</body>
+</html>
