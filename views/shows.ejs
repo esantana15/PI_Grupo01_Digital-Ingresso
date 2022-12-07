@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/shows.css">
+    <script type="text/javascript" src="/scripts/scriptCart.js"></script>
 
     <title>Document</title>
 </head>
@@ -38,9 +39,8 @@
                 <h1> <%= 'R$ ' + concerto?.precoEvento %> </h3>
 
             </div>
-            <form class="showPage-buy1">
-                <input class="showPage-buy" type="button" value="comprar">
-            </form>
+            <button class="btn-buy">Comprar</button> 
+            
             
         </div>
         <% }) %>
@@ -62,8 +62,26 @@
     <footer id="footerShows">
          <%- include('./partials/footerCopy') %>
     </footer>
-     
     
+    <div id="modal-carrinho" class="modal-container">
+        <div class="modal-conteudo">
+        <button class="btn-close-cart">x</button>    
+            <h3>Carrinho</h3>  
+        </div>
+    </div>
+<script>
 
+function openCart (modalID) {
+    const modal = document.getElementById(modalID)
+    modal.classList.add("mostrar")
+    modal.addEventListener("click", (e)=> {
+        if (e.target.className == "btn-close-cart") {
+            modal.classList.remove("mostrar")
+        }
+    })
+}
+const comprar = document.querySelector(".btn-buy")
+comprar.addEventListener("click",() => openCart("modal-carrinho"))</script>
+    
 </body>
 </html>

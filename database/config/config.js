@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "Verdao@15",
-    "database": "db_digitalIngressos",
+    "password": "pasS*081026",
+    "database": "mydb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
