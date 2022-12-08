@@ -151,7 +151,7 @@ body {
 
 /* Modal Carrinho */
 .modal-container{
-    width: 50vw;
+    width: 30vw;
     height: 100vh;
     background-color: aqua;
     position: fixed;
@@ -188,3 +188,13 @@ body {
     animation: modal .3s;
 }
 
+
+
+.cart--area {
+    margin-top: 30px; /* ajuste */
+    padding:20px;
+}
+
+.cart--area h1 {
+    display: relative;
+}
