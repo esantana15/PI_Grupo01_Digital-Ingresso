@@ -12,3 +12,5 @@ function pesquisarShow(e) {
     console.logs(showPesquisar)
     e.preventDefault();
 }
+
+
