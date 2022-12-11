@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 const concertoController = require('../controllers/concertoController');
-const logEventCreate = require('../middlewares/logEventCreate')
+const checkoutController = require('../controllers/checkoutController');
+const logEventCreate = require('../middlewares/logEventCreate');
 const multer = require('multer');
-const{ storage } = require ('../src/config/photoConcert')
+const{ storage } = require ('../src/config/photoConcert');
 const upload = multer({storage})//inicialização do multer as configurações de storage
 
 
@@ -31,6 +32,10 @@ router.post('/delete/:id', concertoController.deleteConcert);
 
 router.get('/concerto', concertoController.create)
 router.post('/concerto', concertoController.register)
+
+router.get('/checkout', checkoutController.create);
+router.post('/checkout', checkoutController.register);
+
 
 
 module.exports = router;

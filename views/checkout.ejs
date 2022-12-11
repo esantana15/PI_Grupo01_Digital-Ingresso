@@ -1,57 +1,125 @@
+<%- include('./partials/navBar') %>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/checkout.css">
     <title>Document</title>
 </head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="../stylesheets/checkout.css">
-<%- include('./partials/header') %>
 
 <body>
-    <div>
 
-    <div id="containerCartao">
-        <h1>
-            Insira os seus dados de Pagamento
-        </h1>
-        <form>
-            <div class="row">
-              <div class="col">
-                <label for="Nome"></label>
-                <input type="text" class="form-control" placeholder="First name">
-              </div>
-              <div class="col">
-                <label for="Sobrenome"> </label>
-                <input type="text" class="form-control" placeholder="Last name">
-              </div>
-            </div>
-          </form>
-          <form>
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Numero do Cartão">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Data de Vencimento">
-              </div>
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="CVV">
-              </div>
-            </div>
-            </div>
-            </div>
-          </form>
+    <section class="pagamento">
 
-        
-    </div>
+        <div class="form-pagamento">
+            <div class="form-pagamento-img">
+                <img src="/images/imagensEmComum/logo1.png" alt="">
 
-</div>
+            </div>
+            <h3>Estamos a um passo para uma experiência incrivel</h3>
+            
+            <form action="/concerto/checkout" method="post">
+                <div class="form-100">
+                    <label>E-mail</label>
+                    <input type="email"
+                    name="email">
+                </div>
 
+                <div class="form-100">
+                    <label>Dados do Cartão</label>
+                    <input type="text" 
+                    name="numeroCartao" 
+                    placeholder="1234 12341234 1234">
+                    <div class="form-50">
+                        <input type="text"
+                        name="vencimentoCartao" 
+                        placeholder="12/23">
+                        <input type="text" 
+                        name="cvcCartao"
+                        placeholder="CVC">
+                    </div>
+                </div>
+
+                <div class="form-100">
+                    <label>Nome no Cartão</label>
+                    <input type="text" 
+                    name="nomeNoCartao" 
+                    placeholder="Nome impresso no cartão">
+                </div>
+
+                <div class="form-100">
+                    <label>Endereço de faturamento</label>
+                    <input type="text" 
+                    name="ruaPagamento" 
+                    placeholder="Rua/Número">
+
+                    <input type="text" 
+                    name="bairroPagamento" 
+                    placeholder="Bairro">
+
+                    <input type="text" 
+                    name="cidadePagamento" 
+                    placeholder="Cidade">
+
+                    <select id="estadoPagamento" 
+                    name="estadoPagamento">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                    <select id="pais" 
+                    name="paisPagamento" 
+                    aria-placeholder="País">
+                        <option value="Brasil">Brasil</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+                <p>Revise os valores antes de efetuar o pagamento</p>
+                <h2>R$ 400,00</h2>
+
+                <div class="form-110">
+                    <input type="submit" value="pagar">
+
+            </form>
+
+
+
+        </div>
+        </div>
+
+    </section>
 </body>
 
-<%- include('./partials/footer') %>
 </html>
+
+<%- include('./partials/footerCopy') %>

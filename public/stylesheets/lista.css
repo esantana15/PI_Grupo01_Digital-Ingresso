@@ -1,115 +1,94 @@
-
-
-#main-listPage {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap ;
-    align-items: center;
-    justify-content: center;
-    background-color:#16172C;
-    color: white; 
-    height: auto; 
-    width: 100vw;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: #ccc;
 }
 
-.firstDiv-listPage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 80vw;
-    height: auto;
-    border: solid yellow 1px;
-    padding: 2%;
-
+#main-listPage{
+    background-color: #16172C;
 
 }
 .ul-listPage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    flex-wrap: wrap;
-    width: 80%;
-    height: auto;
-    border: solid blue 1px;
-    background-color: red;
-    
-
+    width: 100%;
 }
 .li-listPage{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items:center;
+}
+
+.li-listPage-form{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    width: 80%;
-    height: auto;
-    padding: 30px 0px 30px 0px;
-    border: solid wheat 1px;
-
-}
-
-.text-errorPage {
-    height: 25vh;
-}
-
-.text-listPage .h2-listPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 45px;
-    text-align: center;
-    height: auto;
-
-}
-.text-listPage .h3-listPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 45px;
-    text-align: center;
-    height: 10vh;
-
-
-}
-
-.form-listPageImg {
-    display:flex;
-    flex-direction: column;
     align-items: center;
-    border: yellow solid;
-    width: 20%;
+    width: 50%;
+    margin: 20px;
 
 }
 
-.form-listPageImg p.form-listPageP {
-    text-align: center;
-    font-size: 25px;
-    font-weight: bolder;
-    padding: 3%;
+.form-listPageImg{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+.form-listPageImg img {
+    width: 100px;
 }
 
+.form-listPageImg h1 {
+    padding: 13px;
+}
 
-.form-listPage {
+.form-listPage{
+    display: block;
+    width: 60%;
+}
+
+.form-listPage  label{
+    display: block;
+    width: 100%;
+}
+.form-listPage input{
+    width: 100%;
+}
+
+.btn-listPage{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 60vw;
+
 }
 
-.imput-listPage{
+.btn-listPage button{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 80%;
-}
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    border-radius: 7px;
+    color: #33305B;
+    background: #EDE3F5;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    margin: 5px;
+    
+    }
 
-.btn-btn-listPage{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 30%;
-}
+    .btn-listPage button:hover{
+        color:  #EDE3F5;
+        background: #33305B;
+    }
+
+
 

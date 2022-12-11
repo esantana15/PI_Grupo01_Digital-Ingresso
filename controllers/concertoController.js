@@ -29,26 +29,9 @@ const concertoController = {
             dataEvento: req.body.date,
             precoEvento: req.body.price,
         
-            
-        }),
-        db.EventAddress.create({
-            cidadeEvento: req.body.city,
-            bairroEvento: req.body.neighborhood,
-            ruaEvento: req.body.address,
-            localEvento: req.body.location,
-            horaEvento: req.body.hour,
-            dataEvento: req.body.date,
         })
         
-        .then((req, res, next) => {
-            const file = req.file
-            if (!file) {
-                return res.send('Envio de foto obrigatório');
-            }
-            return res.send('Evento cadastrado com sucesso!');
-        
-        })
-        return res.send('tudo ok')
+        return res.redirect('/concerto')
         .catch((error) => console.log(error))  
 
     },

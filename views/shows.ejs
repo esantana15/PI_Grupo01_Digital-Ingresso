@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,62 +9,112 @@
 
     <title>Document</title>
 </head>
+
 <body>
-    
+
 
 
     <header>
         <%- include('./partials/navBar') %>
     </header>
-    
-    
-    <main>
-   
-        <div id="conteudoShows">
-            
-    <% if (concertos && concertos.length > 0) { %>
-                <% concertos.map(concerto => { %>
-                
-        <div class="show">            
-                <% console.log("nome da foto ", concerto.fotoEvento) %>
-                <img src='/upload/concertos/<%= concerto.fotoEvento %>' alt=""/>
-            <div class="text">
-                <h1> <%= concerto?.evento %></h1>
-                <h2> <%= concerto?.localEvento %></h2>
-                <h3> <%= concerto?.cidadeEvento %> </h3>
-                <h3> <%= concerto?.ruaEvento %> 
-                <h3> <%= concerto?.bairroEvento %></h3> 
-                <h3> <%= concerto?.dataEvento %>  </h3>
-                <h3> <%= concerto?.horaEvento + ' horas' %> </h3>
-                <h1> <%= 'R$ ' + concerto?.precoEvento %> </h3>
 
-            </div>
-            <form class="showPage-buy1">
-                <input class="showPage-buy" type="button" value="comprar">
+
+    <main>
+
+        <div class="content">
+            <form id="content1">
+                <label for="serarch">Buscar Shows</label>
+                <input type="text" id="pesquisar" name="" placeholder="Buscar show">
+                <button type="submit">Buscar</button>
             </form>
-            
+        </div>
+
+
+
+        <div id="conteudoShows">
+
+
+            <% if (concertos && concertos.length> 0) { %>
+                <% concertos.map(concerto=> { %>
+
+                    <div class="show">
+                        <% console.log("nome da foto ", concerto.fotoEvento) %>
+                <img src='/upload/concertos/<%= concerto.fotoEvento %>' alt=""/>
+            <div class=" text">
+                            <h1>
+                                <%= concerto?.evento %>
+                            </h1>
+                            <h2>
+                                <%= concerto?.localEvento %>
+                            </h2>
+                            <h3>
+                                <%= concerto?.cidadeEvento %>
+                            </h3>
+                            <h3>
+                                <%= concerto?.ruaEvento %>
+                                    <h3>
+                                        <%= concerto?.bairroEvento %>
+                                    </h3>
+                                    <h3>
+                                        <%= concerto?.dataEvento %>
+                                    </h3>
+                                    <h3>
+                                        <%= concerto?.horaEvento + ' horas' %>
+                                    </h3>
+                                    <h1>
+                                        <%= 'R$ ' + concerto?.precoEvento %>
+                            </h3>
+
+                    </div>
+                    <form class="showPage-buy1">
+                        <input class="showPage-buy" type="button" value="comprar">
+                    </form>
+
         </div>
         <% }) %>
 
-        <% } else { %>
-            <h4>Nenhum concerto cadatrado</h4>
-        <% } %>
-    
-    
-    </div>
-    
-    
-    <div id="conteudo">
-        <div id="enunciado2">
-            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloribus, modi, minus odit odio ad amet reiciendis quasi neque tempore quisquam impedit cum delectus dolor eligendi porro itaque, nihil perferendis!</h1>
-        </div>
+            <% } else { %>
+                <h4>Nenhum concerto cadatrado</h4>
+                <% } %>
+
+
+                    </div>
+
+
+                    <div id="conteudo">
+                        <div id="enunciado2">
+                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloribus, modi, minus odit
+                                odio ad amet reiciendis quasi neque tempore quisquam impedit cum delectus dolor eligendi
+                                porro itaque, nihil perferendis!</h1>
+                        </div>
+
+                        <script>
+                            document.getElementById('content1').addEventListener('submit', pesquisarShow);
+                            function pesquisarShow(e) {
+                                const showPesquisa = document.getElementById('pesquisar').value;
+                                buscarShows(showPesquisa);
+                                e.preventDefault();
+                            }
+
+                            function buscarShows(showPesquisa) {
+                                listaConcertos.findAll()
+                                    .then(function (listaConcertos) {
+                                        return res.render('lista', { lista: listaConcertos })
+                                    })
+                                    .catch((error) => res.render('not-found'))
+                            }
+
+                        </script>
+
+                        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
     </main>
-    
+
     <footer id="footerShows">
-         <%- include('./partials/footerCopy') %>
+        <%- include('./partials/footerCopy') %>
     </footer>
-     
-    
+
 
 </body>
+
 </html>

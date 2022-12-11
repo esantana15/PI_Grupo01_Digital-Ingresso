@@ -1,131 +1,115 @@
+<%- include('./partials/navBar') %>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/navBar">
     <link rel="stylesheet" href="/stylesheets/lista.css">
     <title>Lista</title>
 </head>
+
 <body>
 
-    <header>
-        <%- include('./partials/header') %>
-    </header>
+
+    <main id="main-listPage">
+
+        <ul class="ul-listPage">
 
 
-        <main id="main-listPage">
-            <div class="firstDiv-listPage">
+            <% for (item of lista) { %>
 
-                <ul class="ul-listPage">
-                <% for (item of lista) { %>  
-
-
-                  
                 <li class="li-listPage">
-                    <form method="post" action="/concerto/process-update/<%= item.idEvento %>" enctype="multipart/form-data" >
+
+
+                    <form class="li-listPage-form" method="post" action="/concerto/process-update/<%= item.idEvento %>"
+                        enctype="multipart/form-data">
+
                         <div class="form-listPageImg">
-                            <p class="form-listPageP"><%= item.evento %></p>
+                            <h1><%= item.evento %></h1>
                             <img src='/upload/concertos/<%= item.fotoEvento %>'>
-                            <label for="picture">Foto do Evento</label>
-                            <input type="file" 
-                            name="picture" 
-                            class="form-control-file" 
-                            >
-                            
+                            <input type="file" name="picture" class="form-control-file">
+
                         </div>
 
                         <div class="form-listPage">
                             <label for="event">Evento</label>
                             <input class="imput-listPage" 
-                            type="text"
-                            name="event" 
+                            type="text" name="event" 
                             class="form-control"
                             placeholder="<%=item.evento%>">
                         </div>
-            
+
                         <div class="form-listPage">
                             <label for="location">Local/Arena</label>
-                            <input class="imput-listPage" 
-                            type="text" 
-                            name="location" 
-                            class="form-control" 
+                            <input class="imput-listPage" type="text" 
+                            name="location"
+                            class="form-control"
                             placeholder="<%=item.localEvento%>">
                         </div>
-                        
+
                         <div class="form-listPage">
                             <label for="address">Rua/Numero</label>
-                            <input class="imput-listPage"
-                            type="text" 
-                            name="address" 
-                            value=" "
-                            class="form-control" 
+                            <input class="imput-listPage" 
+                            type="text" name="address" 
+                            value=" " 
+                            class="form-control"
                             placeholder="<%=item.ruaEvento%>">
                         </div>
-            
+
                         <div class="form-listPage">
                             <label for="neighborhood">Bairro</label>
-                            <input class="imput-listPage"
-                            type="text" 
-                            name="neighborhood" 
-                            value=""
-                            class="form-control" 
-                            placeholder="<%=item.bairroEvento%>">
-                          </div>
-            
-                          <div class="form-listPage">
+                            <input class="imput-listPage" type="text" name="neighborhood" value="" class="form-control"
+                                placeholder="<%=item.bairroEvento%>">
+                        </div>
+
+                        <div class="form-listPage">
                             <label for="city">Cidade</label>
-                            <input class="imput-listPage"
-                            type="text" 
-                            name="city" 
-                            class="form-control" 
-                            placeholder="<%=item.cidadeEvento%>">
-                          </div>
-            
-                          <div class="form-listPage">
+                            <input class="imput-listPage" type="text" name="city" class="form-control"
+                                placeholder="<%=item.cidadeEvento%>">
+                        </div>
+
+                        <div class="form-listPage">
                             <label for="date">Data</label>
-                            <input class="imput-listPage"
-                            type="date" 
-                            name="date" 
-                            class="form-control" 
-                            placeholder="<%=item.dataEvento%>">
-                          </div>
-            
-                          <div class="form-listPage">
+                            <input class="imput-listPage" type="date" name="date" class="form-control"
+                                placeholder="<%=item.dataEvento%>">
+                        </div>
+
+                        <div class="form-listPage">
                             <label for="hour">Horário</label>
-                            <input class="imput-listPage"
-                            type="datetime" 
-                            name="hour" 
-                            class="form-control" 
-                            placeholder="<%=item.horaEvento%>">
-                          </div>
+                            <input class="imput-listPage" type="datetime" name="hour" class="form-control"
+                                placeholder="<%=item.horaEvento%>">
+                        </div>
 
                         <div class="btn-btn-listPage">
                             <div class="btn-listPage">
-                                    <form action="/concerto/process-update/<%= item.idEveto %>" method="post" enctype="multipart/form-data">
-                                        <button type="submit" class="submitbtn">Atualizar Evento</button>
-                                    </form>
-                            </div>
+                                <form action="/concerto/process-update/<%= item.idEveto %>" method="post"
+                                    enctype="multipart/form-data">
+                                    <button type="submit" class="submitbtn">Atualizar Evento</button>
+                                </form>
 
-                            <div class="btn-listPage">
-                                    <form action="/concerto/delete/<%= item.idEvento %>" method="post">
-                                        <button type="submit" class="submitbtn">Excluir Evento</button>
-                                    </form>
+                                <form action="/concerto/delete/<%= item.idEvento %>" method="post">
+                                    <button type="submit" class="submitbtn">Excluir Evento</button>
+                                </form>
                             </div>
                         </div>
-                          </form>
-                </li> 
-                
-                <% } %>                                  
-            </div>
-                    
 
-    </ul>
+                    </form>
+
+                </li>
+                <% } %>
+        </ul>
 
 
 
 
-        </main>
+    </main>
 
 
 
@@ -133,6 +117,5 @@
 <footer>
     <%- include('./partials/footer') %>
 </footer>
+
 </html>
-
-
