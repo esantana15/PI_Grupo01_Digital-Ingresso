@@ -46,8 +46,14 @@
 
                         <div id="formLogin">
                             <form class="textfield" action="/users/login" method="POST">
+                                <% if(locals.errors && errors.email) { %>
+                                    <div style="color: red;" class="danger"> <%= errors.email.msg %> 
+                                    </div>
+                                <% } %>
+
                                 <label for="email">Usuário</label>
                                 <input type="email" name="email" placeholder="e-mail" />
+
 
                                 <label for="password">Senha</label>
                                 <input type="password" name="password" placeholder="senha" />

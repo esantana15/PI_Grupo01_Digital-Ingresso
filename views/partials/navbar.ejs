@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/navBar.css">
-    <title>Document</title>
 </head>
 <body>
     <header>
@@ -28,12 +27,13 @@
                 <% } %>
             </ul>
         </nav>
+        <script >
+            function clickMenu(){
+            let menu = document.getElementById("navList2")
+            menu.classList.toggle("active")
+        }
+        </script>
     </header>
-<script >
-    function clickMenu(){
-    let menu = document.getElementById("navList2")
-    menu.classList.toggle("active")
-}
-</script>
+
 </body>
 </html>

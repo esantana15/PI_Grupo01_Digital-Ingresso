@@ -1,7 +1,7 @@
 const { where } = require('sequelize');
 const db = require('../database/models');
 const bcrypt = require('bcrypt')
-const { validationsResults } = require('express-validator');
+const { validationResult } = require('express-validator');
  
 
 const usuarioController = {
@@ -17,15 +17,24 @@ const usuarioController = {
     
 
     register: async  (req, res) => {
+        try {
+            const errors = validationResult(req);
+
+            if(!errors.isEmpty()) {
+                console.log(errors.mapped());
+                return res.render("userRegister1", { errors: errors.mapped });
+            }
+        } catch (error) {
+            console.log("-------------------------------");
+                 console.log(">>>> ERRO: ", JSON.stringify(error?.parent?.sqlMessage));
+                 //Sempre use isso para saber o erro do sequelize
+                 console.log("-------------------------------"); 
+         }
+
+
         let password = req.body.password
         let senhaC = bcrypt.hashSync(password, 10)
 
-        // const errors = validationsResults(req);
-
-        // if(!errors.isEmpty()) {
-        //     console.log(errors.mapped());
-        //     return res.render('userRegister1', { errors: errors.mapped() });
-        // }
         try {
             const usuarios = await db.User.create({
                 nomeCompleto: req.body.nome,

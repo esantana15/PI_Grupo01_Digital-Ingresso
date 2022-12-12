@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const { User, Address } = require("../database/models");
 
 
-
 const loginController = {
     loginForm: (req, res) => {
         return res.render('login_cadastro');
@@ -41,29 +40,9 @@ const loginController = {
             });          
     
             console.log('aqui')
-    // 
-            console.log(req.session);
-    
-            // if(!usersToLogin){
-            //     return res.render('login', usersToLogin)
-            // }
-    
-            // const isPasswordVerified = bcrypt.compareSync(req.body.password, usersToLogin.password);
-            // if(!isPasswordVerified){
-            //     return res.render('login', usersToLogin)
-            // }
-    
-            // req.session.usersToLogin ={
-            //     id: usersToLogin.id,
-            //     email: usersToLogin.email,
-            //     email: usersToLogin.emailConfirm,
-            //     nomeCompleto: usersToLogin.nomeCompleto,
-            //     password: usersToLogin.password,
-            //     password: usersToLogin.passwordConfirm,
-            // }
-            // return res.redirect('/')
-    
+            console.log(req.session);  
             console.log('aqui', usersToLogin)
+            
             if (usersToLogin) {
                 let isPasswordVerified = bcrypt.compareSync(req.body.password, usersToLogin.password);
     
@@ -78,7 +57,7 @@ const loginController = {
             return res.render("login_cadastro", {
                 errors: {
                     email: {
-                        msg: 'este email não foi encontrado'
+                        msg: 'Usuário ou senha invalidos'
                     }
                 }
             })

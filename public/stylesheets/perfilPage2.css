@@ -1,9 +1,13 @@
-body{
+*{
+    text-decoration: none;
+}
+main{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #33305B;
     background-color: #16172C;
+    text-decoration: none;
 
 
 
@@ -164,5 +168,9 @@ body{
     flex-direction: column;
     /* border: solid red; */
     align-items: center;}
+
+    footer{
+        width: 100vw;
+    }
 
 

@@ -19,101 +19,114 @@
 
     <body>
 
-        <div id="divPrincipal-perfilPage">
+        <main>
 
-            <div class="dadosPessoais-perfilPage">
-                <h1 class="text-perfilPage-H1"> Olá <%= userLogged?.nomeCompleto %>
-                </h1>
-                <h2 class="text-perfilPage-H2"> Bem vindo(a) à sua área de usuário :) </h2>
-                <div class="fotoPerfil-perfilPage">
-                    <% userLogged?.fotoEvento %>
-                        <img src='/upload/users/<%= userLogged?.fotoPerfil %>'>
-                </div>
-            </div>
-            <div class="acessoActions-perfilPage">
-                <div class="acessoActions-perfilPage-P">
-                    <img src='/images/imagensEmComum/codigoBarra.png'>
+            <div id="divPrincipal-perfilPage">
 
-                    <p class="text-perfilPage-P">
-                        Editar Dados
-                    </p>
-
-                    <img src='/images/imagensEmComum/codigoBarra.png'>
-
-                    <br>
-                    <br>
-
-                    <form id="form-PerfilPage" action="/users/update-user/<%= userLogged.id %>" method="POST">
-                        <div class="form-group">
-                            <label for="email">
-                                <p class="text-perfilPage-pedidos">
-                                    Seu e-mail
-                                </p>
-                            </label>
-                            <input type="text" name="email" class="form-control" placeholder="<%= userLogged?.email %>">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="emailConfirm">
-                                <p class="text-perfilPage-pedidos">
-                                    Confirmação de e-mail
-                                </p>
-                            </label>
-                            <input type="text" name="emailConfirm" class="form-control"
-                                placeholder="confirme seu e-mail">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nome">
-                                <p class="text-perfilPage-pedidos">
-                                    Digite sua nova Senha
-                                </p>
-                            </label>
-                            <input type="text" name="password" class="form-control" placeholder="nova senha">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="nome">
-                                <p class="text-perfilPage-pedidos">
-                                    Confirme sua nova Senha
-                                </p> 
-                            </label>
-                            <input type="text" name="passwordConfirm" class="form-control"
-                                placeholder="confirme sua nova senha">
-                        </div>
-
-                            <button type="submit" action="/users/update-user/<%= userLogged.id %>" method="POST" class="text-perfilPage-btn">Alterar</button>
-
-                    </form>
-
-                </div>
-
-                <div class="acessoActions-perfilPage-P">
-                    <img src='/images/imagensEmComum/codigoBarra.png'>
-                    <div>
-                        <p class="text-perfilPage-P">Meus Eventos</p>
+                <div class="dadosPessoais-perfilPage">
+                    <h1 class="text-perfilPage-H1"> Olá <%= userLogged?.nomeCompleto %>
+                    </h1>
+                    <h2 class="text-perfilPage-H2"> Bem vindo(a) à sua área de usuário :) </h2>
+                    <div class="fotoPerfil-perfilPage">
+                        <% userLogged?.fotoEvento %>
+                            <img src='/upload/users/<%= userLogged?.fotoPerfil %>'>
                     </div>
-                    <img src='/images/imagensEmComum/codigoBarra.png'>
-
-                        <div class="form-group">
-                            <p class="text-perfilPage-pedidos">Você ainda não tem eventos :)</p>
-                        </div>
-
-                        <br>
-                        <br>
-
-                        <form action="/concerto">
-                            <button type="submit" class="text-perfilPage-btn">Confira</button>
-                        </form>
-
-
                 </div>
-            </div>
+                <div class="acessoActions-perfilPage">
+                    <div class="acessoActions-perfilPage-P">
+                        <img src='/images/imagensEmComum/codigoBarra.png'>
+    
+                        <p class="text-perfilPage-P">
+                            Editar Dados
+                        </p>
+    
+                        <img src='/images/imagensEmComum/codigoBarra.png'>
+    
+                        <br>
+                        <br>
+    
+                        <form id="form-PerfilPage" action="/users/update-user/" method="POST">
+                            <div class="form-group">
+                                <label for="email">
+                                    <p class="text-perfilPage-pedidos">
+                                        Seu e-mail
+                                    </p>
+                                </label>
+                                <input type="text" name="email" class="form-control" placeholder="<%= userLogged?.email %>">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="emailConfirm">
+                                    <p class="text-perfilPage-pedidos">
+                                        Confirmação de e-mail
+                                    </p>
+                                </label>
+                                <input type="text" name="emailConfirm" class="form-control"
+                                    placeholder="confirme seu e-mail">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="nome">
+                                    <p class="text-perfilPage-pedidos">
+                                        Digite sua nova Senha
+                                    </p>
+                                </label>
+                                <input type="text" name="password" class="form-control" placeholder="nova senha">
+                            </div>
+    
+    
+                            <div class="form-group">
+                                <label for="nome">
+                                    <p class="text-perfilPage-pedidos">
+                                        Confirme sua nova Senha
+                                    </p> 
+                                </label>
+                                <input type="text" name="passwordConfirm" class="form-control"
+                                    placeholder="confirme sua nova senha">
+                            </div>
+    
+                                <button type="submit" action="/users/update-user/<%= userLogged %>" method="POST" class="text-perfilPage-btn">Alterar</button>
+    
+                        </form>
+    
+                    </div>
+    
+                    <div class="acessoActions-perfilPage-P">
+                        <img src='/images/imagensEmComum/codigoBarra.png'>
+                        <div>
+                            <p class="text-perfilPage-P">Meus Eventos</p>
+                        </div>
+                        <img src='/images/imagensEmComum/codigoBarra.png'>
+    
+                            <div class="form-group">
+                                <p class="text-perfilPage-pedidos">Você ainda não tem eventos :)</p>
+                            </div>
+    
+                            <br>
+                            <br>
+    
+                            <form action="/concerto">
+                                <button type="submit" class="text-perfilPage-btn">Confira</button>
+                            </form>
+    
+    
+                    </div>
+                </div>
+
+        </main>
+
+        
 
 
 
 
     </body>
 
+    <%- include('./partials/footerCopy') %>
+
+
+
+
     </html>
+
+

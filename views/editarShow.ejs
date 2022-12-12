@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,21 +8,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/create.css">
-  <link rel="stylesheet" href="/stylesheets/navBar">
-  <script type="text/javascript" src="/javascripts/scripts.js"></script>
-  <title>Editar Concertos</title>
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel="stylesheet" href="/stylesheets/editShow.css">
+  <title>Editar Evento</title>
 </head>
-
 <header>
   <%- include('./partials/navBar') %>
-
 </header>
 
+
+
 <body>
-
-  
-
 
   <main id="main-editConcert">
 
@@ -87,20 +85,55 @@
         </div>
 
         <div id="editConcert-btns">
-            <button type="submit" class="submitbtn">Salvar Alterações</button>
+            <button onclick="alterar()" type="submit" class="submitbtn-save">Salvar Alterações</button>
           </form>
 
           <form action="/concerto/delete/<%= concert.idEvento %>" method="post">
-            <button type="submit" class="submitbtn">Deletar Evento</button>
+            <button onclick="alterar()" type="submit" class="submitbtn-delete" >Deletar Evento</button>
           </form>
 
         </div>
-
 
       </form>
     </div>
 
   </main>
 
+  <script>
+    function alterar()
+    {
+    var x;
+    var r=confirm("Realmente deseja alterar este evento?");
+    if (r==true)
+      {
+      x="Evento atualizado";
+      }
+    else
+      {
+      x="Você pressionou Cancelar!";
+      }
+    }
+
+    function excluir()
+    {
+    var x;
+    var r=confirm("Realmente deseja Excluir este evento?");
+    if (r==true)
+      {
+      x="Evento excluido";
+      }
+    else
+      {
+      x="Você pressionou Cancelar!";
+      }
+    }
+
+
+
+    </script>
+
 
 </body>
+</html>
+
+<%- include('./partials/footerCopy') %>

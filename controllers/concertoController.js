@@ -31,7 +31,7 @@ const concertoController = {
         
         })
         
-        return res.redirect('/concerto')
+        return res.redirect('update-concert')
         .catch((error) => console.log(error))  
 
     },
@@ -101,7 +101,7 @@ updateEvents: function(req, res) {
                 }
             }
         )
-            .then(() => res.redirect('/concerto/update-concert/'))
+            res.redirect('/concerto/update-concert')
             .catch((error) => console.log(error))
     }
 

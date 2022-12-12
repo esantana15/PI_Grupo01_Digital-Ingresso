@@ -1,168 +1,149 @@
-
-
 <header>
-    <%- include('./partials/navBar') %>
-  </header>
-  
-  
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/reset.css">
-    <link rel="stylesheet" href="/stylesheets/userCreate.css">
-    <script type="text/javascript" src="/javascripts/scripts.js" ></script>
-    <title>Document</title>
-  </head>
-  
-  <body>
-    
-  
-  
-      <main>
-        <div id="form_userRegistrer">
+  <%- include('./partials/navBar') %>
+</header>
 
 
-      
-                <form id="form-mainForm" method="post" 
-                action="/users/user-register" 
-                enctype="multipart/form-data" >
+<!DOCTYPE html>
+<html lang="en">
 
-                <h1 id="form_userRegisterH1">
-                  Dados Pessoais
-                </h1>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel="stylesheet" href="/stylesheets/userCreate.css">
+  <script type="text/javascript" src="/javascripts/scripts.js"></script>
+  <title>Document</title>
+</head>
 
-                <div class="form-group">
-                  <label for="picture">Foto de Perfil</label>
-                  <input type="file" 
-                  name="picture" 
-                  
-                  class="form-control-file">
-              </div>
-                    
-                  <div class="form-group">
-                      <label for="nome">Nome Completo</label>
-                      <input type="text"
-                      name="nome" 
-                      required
-                      class="form-control" 
-                      placeholder="Nome Completo">
-                    
-                  </div>
-      
-                  <div class="form-group">
-                    <label for="cpf">Data</label>
-                    <input type="text"
-                    name="cpf" 
-                    class="form-control" 
-                    placeholder="cpf"
-                    required>
-                    
-                  </div>
-    
-                  <div class="form-group">
-                    <label for="data">Data</label>
-                    <input type="date"
-                    name="data" 
-                    class="form-control" 
-                    placeholder="Data"
-                    required>
-                  </div>
-      
-                  <div class="form-group">
-                    <label for="sexo">Sexo</label>
-                    <select name="sexo" required>
-                      <option value="Masculino">Masculino</option>
-                      <option value="Feminino">Feminino</option>
-                      <option value="Não Informado">Não Informado</option>
-                    </select>
-                </div>
+<body>
 
-            <h1 id="form_userRegisterH1">
-              Endereço Residencial
-            </h1>
 
-            <div class="form-group">
-              <label for="rua">Rua</label>
-              <input type="text"
-              name="rua" 
-              required
-              class="form-control" 
-              placeholder="rua">
-          </div>
 
-          <div class="form-group">
-              <label for="numero">Número</label>
-              <input type="number" 
-              name="numero" 
-              required
-              class="form-control" 
-              placeholder="Número">
+  <main>
+    <div id="form_userRegistrer">
 
-          </div>
-          <div class="form-group">
-              <label for="complemento">Complemento</label>
-              <input type="text" 
-              name="complemento" 
-              required
-              class="form-control" 
-              placeholder="Complemento">
-          </div>
 
-          <div class="form-group">
-            <label for="bairro">Bairro</label>
-            <input type="text" 
-            name="bairro" 
-            required
-            class="form-control" 
-            placeholder="Bairro">
+
+
+      <form id="form-mainForm" method="post" action="/users/user-register" enctype="multipart/form-data">
+
+        <h1 id="form_userRegisterH1">
+          Dados Pessoais
+        </h1>
+        
+        <div>
+          <% if(typeof errors !=='undefined' ) { %>
+            <ul>
+              <% for(let error in errors) { %>
+                <li>
+                  <%= errors[error].msg %>
+                </li>
+                <% } %>
+            </ul>
+            <% } %>
+
         </div>
 
-          <div class="form-group">
-            <label for="cidade">Cidade</label>
-            <input type="text" 
-            name="cidade" 
-            required
-            class="form-control" 
-            placeholder="Cidade">
+        <div class="form-group">
+          <label for="picture">Foto de Perfil</label>
+          <input type="file" name="picture" class="form-control-file">
         </div>
 
-          <div class="form-group">
-            <label for="estado">Estado</label>
-            <select id="estado" name="estado">
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
-              <option value="EX">Estrangeiro</option>
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" name="nome" class="form-control" placeholder="Nome Completo">
+          <% if(locals.errors && errors.email) { %>
+            <div class="danger">
+              <%= errors.email.msg %>
+            </div>
+            <% } %>
+
+        </div>
+
+        <div class="form-group">
+          <label for="cpf">Data</label>
+          <input type="text" name="cpf" class="form-control" placeholder="cpf">
+
+        </div>
+
+        <div class="form-group">
+          <label for="data">Data</label>
+          <input type="date" name="data" class="form-control" placeholder="Data">
+        </div>
+
+        <div class="form-group">
+          <label for="sexo">Sexo</label>
+          <select name="sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Não Informado">Não Informado</option>
           </select>
         </div>
-       
+
+        <h1 id="form_userRegisterH1">
+          Endereço Residencial
+        </h1>
+
+        <div class="form-group">
+          <label for="rua">Rua</label>
+          <input type="text" name="rua" class="form-control" placeholder="rua">
+        </div>
+
+        <div class="form-group">
+          <label for="numero">Número</label>
+          <input type="number" name="numero" class="form-control" placeholder="Número">
+
+        </div>
+        <div class="form-group">
+          <label for="complemento">Complemento</label>
+          <input type="text" name="complemento" class="form-control" placeholder="Complemento">
+        </div>
+
+        <div class="form-group">
+          <label for="bairro">Bairro</label>
+          <input type="text" name="bairro" class="form-control" placeholder="Bairro">
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade</label>
+          <input type="text" name="cidade" class="form-control" placeholder="Cidade">
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+          </select>
+        </div>
+
         <div class="form-group">
           <label for="pais">País</label>
           <select name="pais" id="pais">
@@ -273,7 +254,8 @@
             <option value="Ilhas Geórgia do Sul e Sandwich do Sul">Ilhas Geórgia do Sul e Sandwich do Sul</option>
             <option value="Ilhas Malvinas">Ilhas Malvinas</option>
             <option value="Ilhas Marshall">Ilhas Marshall</option>
-            <option value="Ilhas Menores Distantes dos Estados Unidos">Ilhas Menores Distantes dos Estados Unidos</option>
+            <option value="Ilhas Menores Distantes dos Estados Unidos">Ilhas Menores Distantes dos Estados Unidos
+            </option>
             <option value="Ilhas Salomão">Ilhas Salomão</option>
             <option value="Ilhas Virgens Americanas">Ilhas Virgens Americanas</option>
             <option value="Ilhas Virgens Britânicas">Ilhas Virgens Britânicas</option>
@@ -418,75 +400,53 @@
             <option value="Zâmbia">Zâmbia</option>
           </select>
         </div>
-          <div class="form-group">
-            <label for="cep">CEP</label>
-            <input type="number" 
-            name="cep" 
-            required
-            class="form-control" 
-            placeholder="CEP">
+        <div class="form-group">
+          <label for="cep">CEP</label>
+          <input type="number" name="cep" class="form-control" placeholder="CEP">
         </div>
-                
 
-        
-                <h1 id="form_userRegisterH1">
-                  Dados de Acesso
-                </h1>
-    
-                <div class="form-group">
-                  <label for="password">Cadastre uma senha</label>
-                  <input type="password"
-                  name="password" 
-                  required
-                  class="form-control" 
-                  placeholder="Insira uma nova senha">
-              </div>
-    
-              <div class="form-group">
-                  <label for="passwordConfirm">Confirme sua senha</label>
-                  <input type="password" 
-                  name="passwordConfirm" 
-                  required
-                  class="form-control" 
-                  placeholder="Confirme sua nova senha">
-    
-              </div>
-              <div class="form-group">
-                  <label for="email">Digite seu e-mail</label>
-                  <input type="email" 
-                  name="email" 
-                  required
-                  class="form-control" 
-                  placeholder="Digite seu email">
-              </div>
-    
-              <div class="form-group">
-                <label for="emailConfirm">Confirme seu e-mail</label>
-                <input type="email" 
-                name="emailConfirm" 
-                required
-                class="form-control" 
-                placeholder="Confirme seu e-mail">
-            </div>
-      
-                      <br>
-                      <br>
-    
-                  <div class="submitBTN">
-                    <button type="submit" class="submitbtn">Enviar meus dados</button>
-                  </div>
-                </form>
+
+
+        <h1 id="form_userRegisterH1">
+          Dados de Acesso
+        </h1>
+
+        <div class="form-group">
+          <label for="password">Cadastre uma senha</label>
+          <input type="password" name="password" class="form-control" placeholder="Insira uma nova senha">
+        </div>
+
+        <div class="form-group">
+          <label for="passwordConfirm">Confirme sua senha</label>
+          <input type="password" name="passwordConfirm" class="form-control" placeholder="Confirme sua nova senha">
 
         </div>
-      
-      </main>
-          
-      <footer>
-        <%- include('./partials/footerCopy') %>
-      </footer>
-  </body>
+        <div class="form-group">
+          <label for="email">Digite seu e-mail</label>
+          <input type="email" name="email" class="form-control" placeholder="Digite seu email">
+        </div>
+
+        <div class="form-group">
+          <label for="emailConfirm">Confirme seu e-mail</label>
+          <input type="email" name="emailConfirm" class="form-control" placeholder="Confirme seu e-mail">
+        </div>
+
+        <br>
+        <br>
+
+        <div class="submitBTN">
+          <button type="submit" class="submitbtn">Enviar meus dados</button>
+        </div>
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <%- include('./partials/footerCopy') %>
+  </footer>
+</body>
 
 
 </html>
-
-  
