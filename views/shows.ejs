@@ -1,145 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/shows.css">
-    <script type="text/javascript" src="/scripts/scriptCart.js"></script>
 
-    <title>Document</title>
+    <title>Digital Ingresso</title>
 </head>
-
 <body>
-
+    
 
 
     <header>
         <%- include('./partials/navBar') %>
     </header>
-
-<<<<<<< HEAD
-
+    
+    
     <main>
-
-        <div class="content">
-            <form id="content1">
-                <label for="serarch">Buscar Shows</label>
-                <input type="text" id="pesquisar" name="" placeholder="Buscar show">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
-
-
-
+   
         <div id="conteudoShows">
-
-
-            <% if (concertos && concertos.length> 0) { %>
-                <% concertos.map(concerto=> { %>
-
-                    <div class="show">
-                        <% console.log("nome da foto ", concerto.fotoEvento) %>
+            
+    <% if (concertos && concertos.length > 0) { %>
+                <% concertos.map(concerto => { %>
+                
+        <div class="show">            
+                <% console.log("nome da foto ", concerto.fotoEvento) %>
                 <img src='/upload/concertos/<%= concerto.fotoEvento %>' alt=""/>
-            <div class=" text">
-                            <h1>
-                                <%= concerto?.evento %>
-                            </h1>
-                            <h2>
-                                <%= concerto?.localEvento %>
-                            </h2>
-                            <h3>
-                                <%= concerto?.cidadeEvento %>
-                            </h3>
-                            <h3>
-                                <%= concerto?.ruaEvento %>
-                                    <h3>
-                                        <%= concerto?.bairroEvento %>
-                                    </h3>
-                                    <h3>
-                                        <%= concerto?.dataEvento %>
-                                    </h3>
-                                    <h3>
-                                        <%= concerto?.horaEvento + ' horas' %>
-                                    </h3>
-                                    <h1>
-                                        <%= 'R$ ' + concerto?.precoEvento %>
-                            </h3>
+            <div class="text">
+                <h1> <%= concerto?.evento %></h1>
+                <h2> <%= concerto?.localEvento %></h2>
+                <h3> <%= concerto?.cidadeEvento %> </h3>
+                <h3> <%= concerto?.ruaEvento %> 
+                <h3> <%= concerto?.bairroEvento %></h3> 
+                <h3> <%= concerto?.dataEvento %>  </h3>
+                <h3> <%= concerto?.horaEvento + ' horas' %> </h3>
+                <h1> <%= 'R$ ' + concerto?.precoEvento %> </h3>
 
-                    </div>
-                    <form class="showPage-buy1">
-                        <input class="showPage-buy" type="button" value="comprar">
-                    </form>
-
-=======
             </div>
-            <button class="btn-buy">Comprar</button> 
+            <form action="/concerto/checkout" method="get" class="showPage-buy1">
+                <input class="showPage-buy" type="submit" value="comprar">
+            </form>
             
-            
->>>>>>> 9709cb18ea7a724e23e9a2c530c54e567a47737a
         </div>
         <% }) %>
 
-            <% } else { %>
-                <h4>Nenhum concerto cadatrado</h4>
-                <% } %>
-
-
-                    </div>
-
-
-                    <div id="conteudo">
-                        <div id="enunciado2">
-                            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloribus, modi, minus odit
-                                odio ad amet reiciendis quasi neque tempore quisquam impedit cum delectus dolor eligendi
-                                porro itaque, nihil perferendis!</h1>
-                        </div>
-
-    </main>
-
-    <footer id="footerShows">
-        <%- include('./partials/footerCopy') %>
-    </footer>
-<<<<<<< HEAD
-
-=======
+        <% } else { %>
+            <h4>Nenhum concerto cadatrado</h4>
+        <% } %>
     
-    <div id="modal-carrinho" class="modal-container">
-        <div class="modal-conteudo">
-        <button class="btn-close-cart">x</button> 
-        <div class="cart--area">
-            <h1>Seus ingressos</h1>
-            <div class="cart"></div>
-            <div class="cart--details">
-                <div class="cart--totalitem subtotal">
-                    <span>Subtotal</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--totalitem desconto">
-                    <span>Desconto</span>
-                    <span>R$ --</span>
-                </div>
-                <div class="cart--totalitem total big">
-                    <span>Total</span>
-                    <span>R$ --</span>
-                </div>   
+    
     </div>
-<script>
->>>>>>> 9709cb18ea7a724e23e9a2c530c54e567a47737a
-
-function openCart (modalID) {
-    const modal = document.getElementById(modalID)
-    modal.classList.add("mostrar")
-    modal.addEventListener("click", (e)=> {
-        if (e.target.className == "btn-close-cart") {
-            modal.classList.remove("mostrar")
-        }
-    })
-}
-const comprar = document.querySelector(".btn-buy")
-comprar.addEventListener("click",() => openCart("modal-carrinho"))</script>
     
-</body>
+    
+    <div id="conteudo">
+        <div id="enunciado2">
+            <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id doloribus, modi, minus odit odio ad amet reiciendis quasi neque tempore quisquam impedit cum delectus dolor eligendi porro itaque, nihil perferendis!</h1>
+        </div>
+    </main>
+    
+    <footer id="footerShows">
+         <%- include('./partials/footerCopy') %>
+    </footer>
+     
+    
 
+</body>
 </html>

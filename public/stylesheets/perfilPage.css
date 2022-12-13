@@ -47,6 +47,7 @@ body{
     border: solid 1px blue;
     width: 30vw;
     max-width: 100%;
+    border: red;
 }
 
 

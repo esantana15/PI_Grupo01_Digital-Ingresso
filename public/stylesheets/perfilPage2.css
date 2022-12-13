@@ -56,13 +56,10 @@ main{
 
 #divPrincipal-perfilPage .text-perfilPage-H1{
     color: white;
-    width: auto;
-    font-size: 180%;
-    max-width: 100%;
+    font-size: 150%;
     text-align: center;
-    /* border: red solid; */
-    padding: 5%;
-    margin: 10%;
+    width: auto;
+    margin: 10px;
 
 }
 
@@ -73,9 +70,6 @@ main{
     font-size: 150%;
     text-align: center;
     width: auto;
-
-
-
 }
 
 #divPrincipal-perfilPage .text-perfilPage-btn{

@@ -217,3 +217,9 @@ body {
 .shows__description button:hover {
     cursor: pointer;
 }
+
+
+#footer-index{
+    border: greenyellow
+
+}

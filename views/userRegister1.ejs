@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/stylesheets/reset.css">
   <link rel="stylesheet" href="/stylesheets/userCreate.css">
   <script type="text/javascript" src="/javascripts/scripts.js"></script>
-  <title>Document</title>
+  <title>Digital Ingresso</title>
 </head>
 
 <body>
@@ -29,21 +29,25 @@
       <form id="form-mainForm" method="post" action="/users/user-register" enctype="multipart/form-data">
 
         <h1 id="form_userRegisterH1">
-          Dados Pessoais
+          <img src='/images/imagensEmComum/codigoBarra.png'> <br> <br>
+          Dados Pessoais <br> <br>
+          <img src='/images/imagensEmComum/codigoBarra.png'>
+          <br>
+          <br>
         </h1>
         
-        <div>
+        <!-- <div>
           <% if(typeof errors !=='undefined' ) { %>
             <ul>
               <% for(let error in errors) { %>
                 <li>
-                  <%= errors[error].msg %>
+                  <%= JSON.stringify(error) %>
                 </li>
                 <% } %>
             </ul>
             <% } %>
 
-        </div>
+        </div> -->
 
         <div class="form-group">
           <label for="picture">Foto de Perfil</label>
@@ -82,7 +86,13 @@
         </div>
 
         <h1 id="form_userRegisterH1">
+          <img src='/images/imagensEmComum/codigoBarra.png'>
+          <br>
+          <br>
           Endereço Residencial
+          <br>
+          <br>
+          <img src='/images/imagensEmComum/codigoBarra.png'>
         </h1>
 
         <div class="form-group">
@@ -408,7 +418,16 @@
 
 
         <h1 id="form_userRegisterH1">
+
+          <img src='/images/imagensEmComum/codigoBarra.png'>
+          <br>
+          <br>
           Dados de Acesso
+          <br>
+          <br>
+          <img src='/images/imagensEmComum/codigoBarra.png'>
+
+
         </h1>
 
         <div class="form-group">
@@ -434,9 +453,18 @@
         <br>
         <br>
 
+        <img src='/images/imagensEmComum/codigoBarra.png'>
+        <br>
+        <br>
+
         <div class="submitBTN">
           <button type="submit" class="submitbtn">Enviar meus dados</button>
         </div>
+
+        <br>
+        <br>
+        <img src='/images/imagensEmComum/codigoBarra.png'>
+
       </form>
 
     </div>

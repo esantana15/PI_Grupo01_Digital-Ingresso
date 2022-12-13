@@ -32,6 +32,16 @@ const loginController = {
         console.log('aqui')
 
         try {
+            if(!req.body.email){
+                return res.render("login_cadastro", {
+                    errors: {
+                        email: {
+                            msg: 'Insira suas credenciais'
+                        }
+                    }
+                })
+            }
+            
             const usersToLogin = await User.findOne({
                 // attributes:['id', 'email', 'password'],
                 where: {
@@ -45,7 +55,9 @@ const loginController = {
             
             if (usersToLogin) {
                 let isPasswordVerified = bcrypt.compareSync(req.body.password, usersToLogin.password);
-    
+                console.log(isPasswordVerified)
+                console.log('ali')
+
             if (isPasswordVerified) {
                 delete usersToLogin.password
                 req.session.userLogged = usersToLogin

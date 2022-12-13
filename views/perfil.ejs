@@ -24,9 +24,14 @@
             <div id="divPrincipal-perfilPage">
 
                 <div class="dadosPessoais-perfilPage">
-                    <h1 class="text-perfilPage-H1"> Olá <%= userLogged?.nomeCompleto %>
-                    </h1>
-                    <h2 class="text-perfilPage-H2"> Bem vindo(a) à sua área de usuário :) </h2>
+                    <h1 class="text-perfilPage-H1"> <br> 
+                        <img src='/images/imagensEmComum/codigoBarra.png'> <br> <br>
+                        Olá <%= userLogged?.nomeCompleto %></h1>
+                    <h2 class="text-perfilPage-H2">
+                        Bem vindo(a) à sua área de usuário :) <br> <br>
+                        <img src='/images/imagensEmComum/codigoBarra.png'>
+                    </h2>
+
                     <div class="fotoPerfil-perfilPage">
                         <% userLogged?.fotoEvento %>
                             <img src='/upload/users/<%= userLogged?.fotoPerfil %>'>
@@ -45,7 +50,7 @@
                         <br>
                         <br>
     
-                        <form id="form-PerfilPage" action="/users/update-user/" method="POST">
+                        <form id="form-PerfilPage" action="/users/update-user/<%= userLogged.id %>" method="POST">
                             <div class="form-group">
                                 <label for="email">
                                     <p class="text-perfilPage-pedidos">
@@ -71,7 +76,7 @@
                                         Digite sua nova Senha
                                     </p>
                                 </label>
-                                <input type="text" name="password" class="form-control" placeholder="nova senha">
+                                <input type="password" name="password" class="form-control" placeholder="nova senha">
                             </div>
     
     
@@ -81,11 +86,11 @@
                                         Confirme sua nova Senha
                                     </p> 
                                 </label>
-                                <input type="text" name="passwordConfirm" class="form-control"
+                                <input type="password" name="passwordConfirm" class="form-control"
                                     placeholder="confirme sua nova senha">
                             </div>
     
-                                <button type="submit" action="/users/update-user/<%= userLogged %>" method="POST" class="text-perfilPage-btn">Alterar</button>
+                                <button type="submit" action="/users/update-user/<%= userLogged.id %>" method="POST" class="text-perfilPage-btn">Alterar</button>
     
                         </form>
     

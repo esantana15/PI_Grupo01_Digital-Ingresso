@@ -12,39 +12,10 @@ const validatiions = require("../middlewares/validacoes")
 
 //inicialização do multer as configurações de storageno
 const upload = multer({storage})
-const validacoes = [
-body("nome")
-.notEmpty().withMessage("Favor Insira seu nome completo"),
-body('cpf')
-.notEmpty().withMessage('Favor Insira seu CPF'),
-body('data')
-.notEmpty().withMessage('Favor Insira sua data de nascimento'),
-body('sexo')
-.notEmpty().withMessage('Favor Insira sua rua'),
-body('rua')
-.notEmpty().withMessage('Favor Insira sua senha'),
-body('numero')
-.notEmpty().withMessage('Favor Insira o número da residencia'),
-body('complemento')
-.notEmpty().withMessage('Favor Insira seu complemento'),
-body('bairro')
-.notEmpty().withMessage('Favor Insira seu bairro'),
-body('cidade')
-.notEmpty().withMessage('Favor Insira sua cidade'),
-body('estado')
-.notEmpty().withMessage('Favor Insira uma UF'),
-body('pais')
-.notEmpty().withMessage('Favor Insira o país'),
-body('pais')
-.notEmpty().withMessage('Favor Insira seu CEP'),
-
-];
-
-
 
 // rota de cadastro de clientes
 router.get('/register', loggedUserMiddleware, usuarioController.create);
-router.post('/user-register', upload.single('picture'), validacoes, usuarioController.register);
+router.post('/user-register', upload.single('picture'), validatiions, usuarioController.register);
 
 // rota de cadastro de endereço de clientes
 router.get('/create-address', usuarioController.createAddress);

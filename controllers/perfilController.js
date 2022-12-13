@@ -44,7 +44,7 @@ const perfilController = {
                     }
                 }
             )
-            res.redirect('/users/perfil/' + req.params.id)
+            res.redirect('/users/perfil')
             
         }   catch (error) {
                 console.log("-------------------------------");

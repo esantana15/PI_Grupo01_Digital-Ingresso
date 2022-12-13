@@ -17,13 +17,16 @@ const usuarioController = {
     
 
     register: async  (req, res) => {
+        console.log("cheguei aqui")
         try {
             const errors = validationResult(req);
 
             if(!errors.isEmpty()) {
-                console.log(errors.mapped());
-                return res.render("userRegister1", { errors: errors.mapped });
+                let msgErro =  errors;
+                console.log(msgErro);
+                return res.render("userRegister1", { errors: msgErro});
             }
+
         } catch (error) {
             console.log("-------------------------------");
                  console.log(">>>> ERRO: ", JSON.stringify(error?.parent?.sqlMessage));
@@ -31,7 +34,7 @@ const usuarioController = {
                  console.log("-------------------------------"); 
          }
 
-
+console.log("passou")
         let password = req.body.password
         let senhaC = bcrypt.hashSync(password, 10)
 

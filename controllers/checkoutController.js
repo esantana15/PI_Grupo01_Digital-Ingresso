@@ -25,7 +25,7 @@ const checkoutController = {
         
         })
         
-        return res.send('Dados enviados com sucesso. Aguarde uma confirmação por e-mail')
+        return res.render('confirmacaoPMT')
         .catch((error) => console.log(error))  
 
     },
